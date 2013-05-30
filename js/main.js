@@ -28,7 +28,7 @@
     
 })(jQuery);
 
-$(window).bind("load scroll",function(e){
+$(window).on("load scroll",function(e){
 	$(".works").each(function(i, el) {
 		var el = $(el);
 		
