@@ -41,14 +41,24 @@ $(window).scroll(function(event) {
 		var es = $(es);
 		
 		if (es.visible(true)) {
-			es.children('li:first-child').addClass("active").on('animationend webkitAnimationEnd oAnimationEnd mozAnimationend', function() {
-			    es.children('li:first-child')
-			    .removeClass('active')
-			    .next()
-			    .addClass('active')
-			    .end()
-			    .appendTo(es);
+			es.children('li').each(function() {
+				es.children('li:first-child').addClass('active');
+				$(this).on('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function() {
+					$(this).removeClass('active')
+						.next()
+						.addClass('active')
+						.end()
+						.appendTo(es);
+				});
 			});
 		}
 	});
+});
+
+$(window).scroll(function(event) {
+
+});
+
+$(window).load(function(event) {
+
 });
