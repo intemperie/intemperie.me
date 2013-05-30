@@ -295,6 +295,7 @@ footer::before {
 }
 	
 .slideshow li {
+	width: 100%;
 	position: absolute;
 	bottom: 0;
 	opacity: 0;
