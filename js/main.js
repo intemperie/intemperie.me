@@ -28,7 +28,7 @@
     
 })(jQuery);
 
-$(window).scroll(function(event) {
+$(window).bind("load scroll",function(e){
 	$(".works").each(function(i, el) {
 		var el = $(el);
 		
@@ -53,12 +53,4 @@ $(window).scroll(function(event) {
 			});
 		}
 	});
-});
-
-$(window).scroll(function(event) {
-
-});
-
-$(window).load(function(event) {
-
 });

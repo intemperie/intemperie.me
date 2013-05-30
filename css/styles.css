@@ -365,6 +365,11 @@ footer::before {
 		-webkit-perspective: 1000; /*Enabling hardware acceleration for better performance*/
 		-webkit-transform-origin: bottom center;
 	}
+	
+	/*.slideshow.visible:hover li.active {
+		-webkit-animation-play-state: paused;
+		cursor: wait;
+	}*/
 
 @-webkit-keyframes cycle2 { /*(Total time/100) x Percentage = Current time*/
 	0% { opacity: 0; -webkit-transform: scale(.99); }
