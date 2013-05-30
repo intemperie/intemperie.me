@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+<g transform="translate(100,100)">
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-68.938" y1="-66.039" x2="-68.17" y2="-63.17">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.06s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-71.062" y1="-66.039" x2="-71.83" y2="-63.17">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.12s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-72.9" y1="-67.1" x2="-75" y2="-65">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.18s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-73.961" y1="-68.938" x2="-76.83" y2="-68.17">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.24s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-73.961" y1="-71.062" x2="-76.83" y2="-71.83">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.3s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-72.9" y1="-72.9" x2="-75" y2="-75">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.36s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-71.062" y1="-73.961" x2="-71.83" y2="-76.83">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.42s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-68.938" y1="-73.961" x2="-68.17" y2="-76.83">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.48s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-67.1" y1="-72.9" x2="-65" y2="-75">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.54s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-66.039" y1="-71.062" x2="-63.17" y2="-71.83">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.6s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-66.039" y1="-68.938" x2="-63.17" y2="-68.17">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.6599999999999999s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+	<line fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" x1="-67.1" y1="-67.1" x2="-65" y2="-65">
+	
+		<animate  restart="always" calcMode="linear" additive="replace" accumulate="none" begin="0.72s" repeatCount="indefinite" dur="0.68s" to="0.1" from="0.7" attributeName="opacity" attributeType="CSS" fill="remove">
+		</animate>
+	</line>
+</g>
+</svg>
