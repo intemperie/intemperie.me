@@ -341,6 +341,11 @@ footer::before {
 				opacity: 1;
 			}
 		}
+		
+.works {
+	background: url(img/spin.svg) no-repeat center center;
+	background-size: 4em;
+}
 	
 .works img {
 	width: 100%;
