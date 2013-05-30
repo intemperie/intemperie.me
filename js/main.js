@@ -28,35 +28,27 @@
     
 })(jQuery);
 
-var win = $(window);
-
-var allMods = $(".works");
-
-//allMods.each(function(i, el) {
-//  var el = $(el);
-//  if (el.visible(true)) {
-//    el.addClass("already-visible"); 
-//  } 
-//});
-
-win.load(function () {
-    $('html').addClass("js");
-    
-    allMods.each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("visible"); 
-      } 
-    });
-});
-
-win.scroll(function(event) {
-  
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("visible"); 
-    } 
-  });
-  
+$(window).scroll(function(event) {
+	$(".works").each(function(i, el) {
+		var el = $(el);
+		
+		if (el.visible(true)) {
+			el.addClass("visible");
+		}
+	});
+	
+	$(".slideshow").each(function(i, es) {
+		var es = $(es);
+		
+		if (es.visible(true)) {
+			es.children('li:first-child').addClass("active").on('animationend webkitAnimationEnd oAnimationEnd mozAnimationend', function() {
+			    es.children('li:first-child')
+			    .removeClass('active')
+			    .next()
+			    .addClass('active')
+			    .end()
+			    .appendTo(es);
+			});
+		}
+	});
 });
