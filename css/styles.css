@@ -833,7 +833,8 @@ footer::before {
 .brands li {
 	float: left;
 	width: 25%; /*4 per row*/
-	opacity: .65;	
+	opacity: .65;
+	z-index: 99; /*Preventing WebKit flickering bug*/
 	-webkit-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-moz-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-ms-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
