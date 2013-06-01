@@ -833,11 +833,11 @@ footer::before {
 	float: left;
 	width: 25%; /*4 per row*/
 	opacity: .65;
-	-webkit-transition: all .25s ease-in-out;
-	-moz-transition: all .25s ease-in-out;
-	-ms-transition: all .25s ease-in-out;
-	-o-transition: all .25s ease-in-out;
-	transition: all .25s ease-in-out;
+	-webkit-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
+	-moz-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
+	-ms-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
+	-o-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
+	transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 }
 
 	.brands li.highlight {
