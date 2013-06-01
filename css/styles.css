@@ -30,6 +30,12 @@ body {
 	text-shadow: none;
 }
 
+	::-moz-selection {
+		color: #fff;
+		background: #778da8;
+		text-shadow: none;
+	}
+
 ::selection:window-inactive {
 	background: #8a98a8;
 }
@@ -113,7 +119,7 @@ body > * {
 	position: relative;
 }
 	
-	/* !Steep borders */
+	/* !Slanted borders */
 	body > *::before {
 		display: block;
 		content: "";
@@ -834,7 +840,7 @@ footer::before {
 	transition: all .25s ease-in-out;
 }
 
-	.brands li.active {
+	.brands li.highlight {
 		opacity: 1;
 		-webkit-transform: scale(1.2);
 		-moz-transform: scale(1.2);

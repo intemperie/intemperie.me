@@ -58,9 +58,12 @@ $(window).on("load scroll",function(e){
 	});
 });
 
-// !WIP
-var toggleSlide = function(){
+// !Randomly highlight the brands
+// ToDo avoid repetition
+var randomHighlight = function(){
 	$(".brands li ").removeClass();
-//   .next().add(".brands li:first").last().addClass("active");
+	var brands = $('.brands li');
+	var rand = Math.floor(Math.random() * brands.length);
+	brands.eq(rand).addClass('highlight');
 }
-setInterval(toggleSlide, 2000);
+setInterval(randomHighlight, 2000);
