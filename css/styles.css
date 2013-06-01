@@ -127,7 +127,7 @@ body > * {
 		border-style: solid;
 		border-color: transparent;
 		position: absolute;
-		top: -1.5em; /*Preventing a nasty bug in Chrome*/
+		top: -1.49em; /*Preventing a nasty bug in Chrome*/
 		left: 0;
 		right: 0;
 		-moz-transform: scale(1.1); /*Fixes dent rendering on FF*/
@@ -852,7 +852,7 @@ footer::before {
 	}
 
 .brands img {
-	max-width: 100%;
+	width: 100%;
 }
 /* @end */
 
@@ -916,6 +916,10 @@ footer::before {
 		
 		.slideshow {
 			padding-bottom: 738px;
+		}
+		
+		.brands {
+			max-width: 70%;
 		}
 	}
 	
