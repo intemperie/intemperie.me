@@ -60,7 +60,7 @@ $(window).on("load scroll",function(e){
 
 // !WIP
 var toggleSlide = function(){
-	$(".brands li.active").removeClass();
+	$(".brands li ").removeClass();
 //   .next().add(".brands li:first").last().addClass("active");
 }
 setInterval(toggleSlide, 2000);
