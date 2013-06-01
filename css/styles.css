@@ -245,6 +245,27 @@ footer::before {
 	top: -1em;
 	width: 2.8em;
 }
+
+/* !Footer Links */
+a[href*="facebook"]:hover,
+a[href*="facebook"]:focus {
+	color: #3b5998;
+}
+
+a[href*="instagram"]:hover,
+a[href*="instagram"]:focus {
+	color: #326288;
+}
+
+a[href*="last.fm"]:hover,
+a[href*="last.fm"]:focus {
+	color: #d51007;
+}
+
+a[href*="github"]:hover,
+a[href*="github"]:focus {
+	color: #4183c4;
+}
 /* @end */
 
 
