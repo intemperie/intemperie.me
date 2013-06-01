@@ -55,3 +55,13 @@ $(window).on("load scroll",function(e){
 		}
 	});
 });
+
+
+var toggleSlide = function(){
+	$(".brands li.active").removeClass();
+	$('.brands li:random').addClass('active');
+
+//  $(".brands li.active").removeClass()
+//   .next().add(".brands li:first").last().addClass("active");
+}
+setInterval(toggleSlide, 2000);
