@@ -61,8 +61,8 @@ $(window).on("load scroll",function(e){
 // !Randomly highlight the brands
 // ToDo avoid repetition
 var randomHighlight = function(){
+	var brands = $('.brands li:not(.highlight)');
 	$(".brands li ").removeClass();
-	var brands = $('.brands li');
 	var rand = Math.floor(Math.random() * brands.length);
 	brands.eq(rand).addClass('highlight');
 }
