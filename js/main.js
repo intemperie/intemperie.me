@@ -1,37 +1,42 @@
-(function($) {
+$(function() {
+	$('html').addClass('js');
 
-  /**
-   * Copyright 2012, Digital Fusion
-   * Licensed under the MIT license.
-   * http://teamdf.com/jquery-plugins/license/
-   *
-   * @author Sam Sehnert
-   * @desc A small plugin that checks whether elements are within
-   *     the user visible viewport of a web browser.
-   *     only accounts for vertical position, not horizontal.
-   */
-
-  $.fn.visible = function(partial) {
-    
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
-    
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-  };
-    
-})(jQuery);
+    // !Randomly highlight the brands
+    var randomHighlight = function(){
+    	var brands = $('.brands li:not(.highlight)');
+    	$(".brands li ").removeClass();
+    	var rand = Math.floor(Math.random() * brands.length);
+    	brands.eq(rand).addClass('highlight');
+    }
+    setInterval(randomHighlight, 2000);
+      
+	/**
+	* Copyright 2012, Digital Fusion
+	* Licensed under the MIT license.
+	* http://teamdf.com/jquery-plugins/license/
+	*
+	* @author Sam Sehnert
+	* @desc A small plugin that checks whether elements are within
+	*     the user visible viewport of a web browser.
+	*     only accounts for vertical position, not horizontal.
+	*/
+	
+	$.fn.visible = function(partial) {
+		var $t            = $(this),
+			$w            = $(window),
+			viewTop       = $w.scrollTop(),
+			viewBottom    = viewTop + $w.height(),
+			_top          = $t.offset().top,
+			_bottom       = _top + $t.height(),
+			compareTop    = partial === true ? _bottom : _top,
+			compareBottom = partial === true ? _top : _bottom;
+	
+		return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+	};
+});
 
 // !Initializing the works show!
 $(window).on("load scroll",function(e){
-	$('html').addClass('js');
-
 	$(".works").each(function(i, el) {
 		var el = $(el);
 		
@@ -57,13 +62,3 @@ $(window).on("load scroll",function(e){
 		}
 	});
 });
-
-// !Randomly highlight the brands
-// ToDo avoid repetition
-var randomHighlight = function(){
-	var brands = $('.brands li:not(.highlight)');
-	$(".brands li ").removeClass();
-	var rand = Math.floor(Math.random() * brands.length);
-	brands.eq(rand).addClass('highlight');
-}
-setInterval(randomHighlight, 2000);
