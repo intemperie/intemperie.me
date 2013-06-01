@@ -901,6 +901,10 @@ footer::before {
 		.slideshow {
 			padding-bottom: 603px;
 		}
+		
+		.brands {
+			max-width: 70%;
+		}
 	}
 	
 	/* ~1920x1200 screens with a margin for 16:9 (1080) */
@@ -916,10 +920,6 @@ footer::before {
 		
 		.slideshow {
 			padding-bottom: 738px;
-		}
-		
-		.brands {
-			max-width: 70%;
 		}
 	}
 	
