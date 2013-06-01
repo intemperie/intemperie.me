@@ -22,21 +22,19 @@ body {
 	text-align: center;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: subpixel-antialiased;
-	/*-webkit-animation: fadeIn .65s;
-	-webkit-transform: translate3d(0);*/
+	-webkit-animation: fadeIn .65s;
+	-webkit-transform: translate3d(0); /*Enabling hardware acceleration*/
 }
 
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
-        -webkit-filter: blur(10px);
-        /*-webkit-transform: scale(.99);
-        -webkit-transform-origin: bottom center;*/
+        -webkit-transform: scale(.99);
+        -webkit-transform-origin: bottom center;
     }
     to {
         opacity: 1;
-        /*-webkit-filter: blur(0);
-        -webkit-transform: scale(1);*/
+        -webkit-transform: scale(1);
     }
 }
 
