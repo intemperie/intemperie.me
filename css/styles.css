@@ -264,7 +264,7 @@ a[href*="last.fm"]:focus {
 
 a[href*="github"]:hover,
 a[href*="github"]:focus {
-	color: #4183c4;
+	color: #333;
 }
 /* @end */
 
