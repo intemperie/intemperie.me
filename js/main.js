@@ -30,6 +30,8 @@
 
 // !Initializing the works show!
 $(window).on("load scroll",function(e){
+	$('html').addClass('js');
+
 	$(".works").each(function(i, el) {
 		var el = $(el);
 		
