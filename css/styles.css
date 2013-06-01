@@ -127,14 +127,10 @@ body > * {
 		border-style: solid;
 		border-color: transparent;
 		position: absolute;
-		top: -1.59em; /*Preventing a nasty bug in Chrome*/
+		top: -1.5em; /*Preventing a nasty bug in Chrome*/
 		left: 0;
 		right: 0;
-		-webkit-transform: scale(1.2); /*Giving the smallest side a bit more height*/
-		-moz-transform: scale(1.2); /*Fixes dent rendering on FF*/
-		-ms-transform: scale(1.2);
-		-o-transform: scale(1.2);
-		transform: scale(1.2);
+		-moz-transform: scale(1.1); /*Fixes dent rendering on FF*/
 	}
 	
 	body > *:nth-child(even)::before {
@@ -837,7 +833,7 @@ footer::before {
 .brands li {
 	float: left;
 	width: 25%; /*4 per row*/
-	opacity: .65;
+	opacity: .65;	
 	-webkit-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-moz-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-ms-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
@@ -961,7 +957,7 @@ footer::before {
 			font-size: 14px;
 		}
 		
-		body > * {
+		.me {
 			padding: 1em .5em;
 		}
 		

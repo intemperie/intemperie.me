@@ -36,7 +36,7 @@ $(function() {
 });
 
 // !Initializing the works show!
-$(window).on("load scroll",function(e){
+$(window).on("load scroll", function(e) {
 	$(".works").each(function(i, el) {
 		var el = $(el);
 		
