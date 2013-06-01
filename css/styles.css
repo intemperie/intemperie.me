@@ -127,17 +127,22 @@ body > * {
 		border-style: solid;
 		border-color: transparent;
 		position: absolute;
-		top: -1.49em; /*Preventing a nasty bug in Chrome*/
-		left: -5em;
-		right: 0; /*Preventing overflow on iOS*/
+		top: -1.59em; /*Preventing a nasty bug in Chrome*/
+		left: 0;
+		right: 0;
+		-webkit-transform: scale(1.2); /*Giving the smallest side a bit more height*/
+		-moz-transform: scale(1.2); /*Fixes dent rendering on FF*/
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
 	}
 	
 	body > *:nth-child(even)::before {
-		border-left-width: 100em;
+		border-left-width: 90em;
 	}
 	
 	body > *:nth-child(odd)::before {
-		border-right-width: 100em;
+		border-right-width: 90em;
 	}
 	
 h1 > small::before {
