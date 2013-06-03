@@ -51,6 +51,8 @@ $(window).on("load scroll", function(e) {
 		if (es.visible(true)) {
 			es.children('li').each(function() {
 				es.children('li:first-child').addClass('active');
+				
+				//Thanks to Benjamin de Cock (@bdc) for the advice on this
 				$(this).on('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function() {
 					$(this).removeClass('active')
 						.next()
