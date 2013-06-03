@@ -770,59 +770,44 @@ a[href*="github"]:focus {
 /*ToDo: Make something more generic*/
 .tuenti .works li {
 	opacity: 0;
+	-webkit-transform: scale(.99);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+	-webkit-transform-origin: bottom center;
+	-webkit-transition: all .5s linear;
+	
+	-moz-transform: scale(.99);
+	-moz-backface-visibility: hidden;
+	-moz-perspective: 1000;
+	-moz-transform-origin: bottom center;
+	-moz-transition: all .5s linear;
+	
+	-ms-transform: scale(.99);
+	-ms-backface-visibility: hidden;
+	-ms-perspective: 1000;
+	-ms-transform-origin: bottom center;
+	-ms-transition: all .5s linear;
+	
+	-o-transform: scale(.99);
+	-o-backface-visibility: hidden;
+	-o-perspective: 1000;
+	-o-transform-origin: bottom center;
+	-o-transition: all .5s linear;
+	
+	transform: scale(.99);
+	backface-visibility: hidden;
+	perspective: 1000;
+	transform-origin: bottom center;
+	transition: all .5s linear;
 }
 
 	.tuenti .works.visible li {
-		-webkit-animation: grow 8s linear;
-		-webkit-backface-visibility: hidden;
-		-webkit-perspective: 1000; /*Enabling hardware acceleration for better performance*/
-		-webkit-transform-origin: bottom center;
-		
-		-moz-animation: grow 8s linear;
-		-moz-backface-visibility: hidden;
-		-moz-perspective: 1000;
-		-moz-transform-origin: bottom center;
-		
-		-ms-animation: grow 8s linear;
-		-ms-backface-visibility: hidden;
-		-ms-perspective: 1000;
-		-ms-transform-origin: bottom center;
-		
-		-o-animation: grow 8s linear;
-		-o-backface-visibility: hidden;
-		-o-perspective: 1000;
-		-o-transform-origin: bottom center;
-		
-		animation: grow 8s linear;
-		backface-visibility: hidden;
-		perspective: 1000;
-		transform-origin: bottom center;
-	}
-	
-	/*(Total time/100) x Percentage = Current time*/
-	@-webkit-keyframes grow {
-		0% { opacity: 0; -webkit-transform: scale(.99); }
-		6.25%, 100% { opacity: 1; -webkit-transform: scale(1); }
-	}
-	
-	@-moz-keyframes grow {
-		0% { opacity: 0; -moz-transform: scale(.99); }
-		6.25%, 100% { opacity: 1; -moz-transform: scale(1); }
-	}
-	
-	@-ms-keyframes grow {
-		0% { opacity: 0; -ms-transform: scale(.99); }
-		6.25%, 100% { opacity: 1; -ms-transform: scale(1); }
-	}
-	
-	@-o-keyframes grow {
-		0% { opacity: 0; -o-transform: scale(.99); }
-		6.25%, 100% { opacity: 1; -o-transform: scale(1); }
-	}
-	
-	@keyframes grow {
-		0% { opacity: 0; transform: scale(.99); }
-		6.25%, 100% { opacity: 1; transform: scale(1); }
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
 	}
 
 .slideshow {
