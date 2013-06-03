@@ -152,7 +152,7 @@ h1 > small::before {
 }
 
 .quasar {
-	background-color: #04c2f4/*18d4fa*/;
+	background-color: #04c2f4;
 }
 
 	.quasar::before {
@@ -176,11 +176,11 @@ h1 > small::before {
 	}
 	
 .freelance {
-	background-color: #444/*554e4e*/;
+	background-color: #444;
 }
 
 	.freelance::before {
-		border-bottom-color: #444/*554e4e*/;
+		border-bottom-color: #444;
 	}
 
 .havas {
@@ -197,7 +197,7 @@ footer::before {
 
 /* !Content coloring */
 .me small {
-	color: hsla(12, 4%, 25%, 0.65) /*hsla(0, 0%, 13%, .65)*/;
+	color: hsla(12, 4%, 25%, 0.65);
 }
 
 .company small,
@@ -677,25 +677,25 @@ a[href*="github"]:focus {
 	
 	-moz-animation: appear .4s ease-in-out;
 	-moz-backface-visibility: hidden;
-	-moz-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+	-moz-perspective: 1000;
 	-moz-transform-origin: bottom left;
 	-moz-animation-play-state: paused;
 	
 	-ms-animation: appear .4s ease-in-out;
 	-ms-backface-visibility: hidden;
-	-ms-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+	-ms-perspective: 1000;
 	-ms-transform-origin: bottom left;
 	-ms-animation-play-state: paused;
 	
 	-o-animation: appear .4s ease-in-out;
 	-o-backface-visibility: hidden;
-	-o-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+	-o-perspective: 1000;
 	-o-transform-origin: bottom left;
 	-o-animation-play-state: paused;
 	
 	animation: appear .4s ease-in-out;
 	backface-visibility: hidden;
-	perspective: 1000; /*Enabling hardware acceleration for better performance*/
+	perspective: 1000;
 	transform-origin: bottom left;
 	animation-play-state: paused;
 }
@@ -790,22 +790,22 @@ a[href*="github"]:focus {
 		
 		-moz-animation: slideshow 8s linear;
 		-moz-backface-visibility: hidden;
-		-moz-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+		-moz-perspective: 1000;
 		-moz-transform-origin: bottom center;
 		
 		-ms-animation: slideshow 8s linear;
 		-ms-backface-visibility: hidden;
-		-ms-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+		-ms-perspective: 1000;
 		-ms-transform-origin: bottom center;
 		
 		-o-animation: slideshow 8s linear;
 		-o-backface-visibility: hidden;
-		-o-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+		-o-perspective: 1000;
 		-o-transform-origin: bottom center;
 		
 		animation: slideshow 8s linear;
 		backface-visibility: hidden;
-		perspective: 1000; /*Enabling hardware acceleration for better performance*/
+		perspective: 1000;
 		transform-origin: bottom center;
 	}
 	
