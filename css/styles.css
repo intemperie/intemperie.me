@@ -128,8 +128,8 @@ body > * {
 		border-color: transparent;
 		position: absolute;
 		top: -1.49em; /*Preventing a nasty bug in Chrome*/
-		left: 0;
-		right: 0;
+		left: -5em; /*Improving the inclination on the even ones*/
+		right: 0; /*ToDo: -5 makes iOS overflow. Not perfect. Fix it!*/
 		-moz-transform: scale(1.1); /*Fixes dent rendering on FF*/
 	}
 	
@@ -855,7 +855,7 @@ a[href*="github"]:focus {
 	float: left;
 	width: 25%; /*4 per row*/
 	opacity: .65;
-	z-index: 99; /*Preventing WebKit flickering bug*/
+	z-index: 99; /*Preventing WebKit's flickering bug*/
 	-webkit-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-moz-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-ms-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
@@ -887,6 +887,7 @@ a[href*="github"]:focus {
 			max-width: 720px;
 		}
 		
+		/*ToDo: This needs improvement. Find the way*/
 		.slideshow {
 			padding-bottom: 452px;
 		}
@@ -1127,7 +1128,7 @@ a[href*="github"]:focus {
 	}
 }
 
-/* Specific iPhone retina fixes (Check this out) */
+/* ToDo: Specific iPhone retina fixes */
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 640px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 1.3) {
 	.me img {
 		margin: 1.4em auto;
