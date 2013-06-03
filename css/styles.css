@@ -14,14 +14,14 @@ html {
 
 body {
 	margin: 0;
-	overflow-x: hidden; /*Preventing steep borders to overflow in Firefox*/
+	overflow-x: hidden; /*Preventing slanted borders to overflow in Firefox*/
 	position: relative;
 	background: #fff;
 	color: #433f3e;
 	font: 200 20px/1.5 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 	text-align: center;
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: subpixel-antialiased; /*Just in case ;)*/
 }
 
 ::selection {
@@ -70,7 +70,8 @@ a {
 /* Preserve aspect ratio and scale image */
 img {
 	border: 0;
-	/*max-width: 70%;
+	/*ToDo:
+	max-width: 70%;
 	max-height: 80%;*/
 	display: block;
 	margin: 0 auto;
@@ -850,11 +851,6 @@ a[href*="github"]:focus {
 		perspective: 1000;
 		transform-origin: bottom center;
 	}
-	
-	/*.slideshow.visible:hover li.active {
-		-webkit-animation-play-state: paused;
-		cursor: wait;
-	}*/
 
 	/*(Total time/100) x Percentage = Current time*/
 	@-webkit-keyframes slideshow {
