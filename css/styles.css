@@ -564,14 +564,14 @@ a[href*="github"]:focus {
 
 	.me a[href*="mailto"]:hover .type,
 	.me a[href*="mailto"]:focus .type {
-		-webkit-animation: speed .25s ease-in-out;
-		-moz-animation: speed .25s ease-in-out;
-		-ms-animation: speed .25s ease-in-out;
-		-o-animation: speed .25s ease-in-out;
-		animation: speed .25s ease-in-out;
+		-webkit-animation: planeLand .25s ease-in-out;
+		-moz-animation: planeLand .25s ease-in-out;
+		-ms-animation: planeLand .25s ease-in-out;
+		-o-animation: planeLand .25s ease-in-out;
+		animation: planeLand .25s ease-in-out;
 	}
 	
-	@-webkit-keyframes speed {
+	@-webkit-keyframes planeLand {
 		0% {
 			-webkit-transform: translateX(-2.5ex);
 			-webkit-transform-origin: center left;
@@ -580,7 +580,7 @@ a[href*="github"]:focus {
 		100% { -webkit-transform: translateX(0); }
 	}
 	
-	@-moz-keyframes speed {
+	@-moz-keyframes planeLand {
 		0% {
 			-moz-transform: translateX(-2.5ex);
 			-moz-transform-origin: center left;
@@ -589,7 +589,7 @@ a[href*="github"]:focus {
 		100% { -moz-transform: translateX(0); }
 	}
 	
-	@-ms-keyframes speed {
+	@-ms-keyframes planeLand {
 		0% {
 			-ms-transform: translateX(-2.5ex);
 			-ms-transform-origin: center left;
@@ -598,7 +598,7 @@ a[href*="github"]:focus {
 		100% { -ms-transform: translateX(0); }
 	}
 	
-	@-o-keyframes speed {
+	@-o-keyframes planeLandUp {
 		0% {
 			-o-transform: translateX(-2.5ex);
 			-o-transform-origin: center left;
@@ -607,7 +607,7 @@ a[href*="github"]:focus {
 		100% { -o-transform: translateX(0); }
 	}
 	
-	@keyframes speed {
+	@keyframes planeLand {
 		0% {
 			transform: translateX(-2.5ex);
 			transform-origin: center left;
