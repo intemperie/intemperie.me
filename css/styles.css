@@ -493,17 +493,17 @@ a[href*="github"]:focus {
 		100% { transform: scale(1); }
 	}
 
-.me a[href="/notes"]:hover,
-.me a[href="/notes"]:focus {
+.me a[href*="blog"]:hover,
+.me a[href*="blog"]:focus {
 	color: #573c99;
 }
 
-	.me a[href*="/notes"] .type span {
+	.me a[href*="blog"] .type span {
 		opacity: 0;
 	}
 
-	.me a[href*="/notes"]:hover .type span,
-	.me a[href*="/notes"]:focus .type span {
+	.me a[href*="blog"]:hover .type span,
+	.me a[href*="blog"]:focus .type span {
 		opacity: 1;
 		-webkit-transition: opacity .25s ease-in-out;
 		-moz-transition: opacity .25s ease-in-out;
@@ -512,8 +512,8 @@ a[href*="github"]:focus {
 		transition: opacity .25s ease-in-out;
 	}
 		
-		.me a[href*="/notes"]:hover .type span:nth-child(1),
-		.me a[href*="/notes"]:focus .type span:nth-child(1) {
+		.me a[href*="blog"]:hover .type span:nth-child(1),
+		.me a[href*="blog"]:focus .type span:nth-child(1) {
 			-webkit-transition-delay: 0s;
 			-moz-transition-delay: 0s;
 			-ms-transition-delay: 0s;
@@ -521,8 +521,8 @@ a[href*="github"]:focus {
 			transition-delay: 0s;
 		}	
 	
-		.me a[href*="/notes"]:hover .type span:nth-child(2),
-		.me a[href*="/notes"]:focus .type span:nth-child(2) {
+		.me a[href*="blog"]:hover .type span:nth-child(2),
+		.me a[href*="blog"]:focus .type span:nth-child(2) {
 			-webkit-transition-delay: .05s;
 			-moz-transition-delay: .05s;
 			-ms-transition-delay: .05s;
@@ -530,8 +530,8 @@ a[href*="github"]:focus {
 			transition-delay: .05s;
 		}
 		
-		.me a[href*="/notes"]:hover .type span:nth-child(3),
-		.me a[href*="/notes"]:focus .type span:nth-child(3) {
+		.me a[href*="blog"]:hover .type span:nth-child(3),
+		.me a[href*="blog"]:focus .type span:nth-child(3) {
 			-webkit-transition-delay: .1s;
 			-moz-transition-delay: .1s;
 			-ms-transition-delay: .1s;
@@ -539,8 +539,8 @@ a[href*="github"]:focus {
 			transition-delay: .1s;
 		}
 		
-		.me a[href*="/notes"]:hover .type span:nth-child(4),
-		.me a[href*="/notes"]:focus .type span:nth-child(4) {
+		.me a[href*="blog"]:hover .type span:nth-child(4),
+		.me a[href*="blog"]:focus .type span:nth-child(4) {
 			-webkit-transition-delay: .15s;
 			-moz-transition-delay: .15s;
 			-ms-transition-delay: .15s;
@@ -548,8 +548,8 @@ a[href*="github"]:focus {
 			transition-delay: .15s;
 		}
 		
-		.me a[href*="/notes"]:hover .type span:nth-child(5),
-		.me a[href*="/notes"]:focus .type span:nth-child(5) {
+		.me a[href*="blog"]:hover .type span:nth-child(5),
+		.me a[href*="blog"]:focus .type span:nth-child(5) {
 			-webkit-transition-delay: .2s;
 			-moz-transition-delay: .2s;
 			-ms-transition-delay: .2s;
