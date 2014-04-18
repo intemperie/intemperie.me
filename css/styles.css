@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600,200italic);
 /* @group Preset */
 /**
  * 1. Set default font family to sans-serif.
@@ -18,7 +18,7 @@ body {
 	position: relative;
 	background: #fff;
 	color: #433f3e;
-	font: 200 20px/1.5 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	font: 300 20px/1.5 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 	text-align: center;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: subpixel-antialiased; /*Just in case ;)*/
@@ -57,7 +57,6 @@ a {
 	-webkit-transition: color .25s ease-out, background-color .25s ease-out;
 	-moz-transition: color .25s ease-out, background-color .25s ease-out;
 	-ms-transition: color .25s ease-out, background-color .25s ease-out;
-	-o-transition: color .25s ease-out, background-color .25s ease-out;
 	transition: color .25s ease-out, background-color .25s ease-out;
 }
 
@@ -83,6 +82,7 @@ img {
 b,
 strong {
     font-weight: 100;
+    color: #fff;
 }
 
 p {
@@ -152,6 +152,22 @@ h1 > small::before {
 	color: #fff;
 }
 
+.bohemian-coding {
+	background-color: #061524;
+}
+
+	.bohemian-coding::before {
+		border-bottom-color: #061524;
+	}
+
+.dymotics {
+	background-color: hsl(79, 73%, 40%);
+}
+
+	.dymotics::before {
+		border-bottom-color: hsl(79, 73%, 40%);
+	}
+
 .quasar {
 	background-color: #04c2f4;
 }
@@ -213,6 +229,13 @@ footer::before {
 	padding: 0 .3ex;
 	margin: 0 -.3ex;
 }
+
+	.bohemian-coding a:hover,
+	.bohemian-coding a:focus {
+		background: #fff;
+		/*color: #4084D0;*/
+		color: #061524;
+	}
 
 	.youzee a:hover,
 	.youzee a:focus {
@@ -296,7 +319,6 @@ a[href*="github"]:focus {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	-o-user-select: none;
 	user-select: none;
 }
 
@@ -346,7 +368,6 @@ a[href*="github"]:focus {
 		-webkit-animation: tweet .25s ease-in;
 		-moz-animation: tweet .25s ease-in;
 		-ms-animation: tweet .25s ease-in;
-		-o-animation: tweet .25s ease-in;
 		animation: tweet .25s ease-in;
 	}
 	
@@ -374,14 +395,6 @@ a[href*="github"]:focus {
 		100% { -ms-transform: scale(1) rotate(0); }
 	}
 	
-	@-o-keyframes tweet {
-		0% { -o-transform: scale(1); }	
-		10% { -o-transform: scale(0.85) rotate(-6deg); }
-		25%, 75% { -o-transform: scale(1.15) rotate(6deg); }
-		50% { -o-transform: scale(1.15) rotate(-6deg); }
-		100% { -o-transform: scale(1) rotate(0); }
-	}
-	
 	@keyframes tweet {
 		0% { transform: scale(1); }	
 		10% { transform: scale(0.85) rotate(-6deg); }
@@ -400,7 +413,6 @@ a[href*="github"]:focus {
 		-webkit-animation: ballBounce .25s ease-in;
 		-moz-animation: ballBounce .25s ease-in;
 		-ms-animation: ballBounce .25s ease-in;
-		-o-animation: ballBounce .25s ease-in;
 		animation: ballBounce .25s ease-in;
 	}
 	
@@ -431,15 +443,6 @@ a[href*="github"]:focus {
 		65% { -ms-transform: scale(1.05, .95); }
 	}
 	
-	@-o-keyframes ballBounce {
-		0% { -o-transform: translateY(-16px) skewX(-10deg); }
-		50% { -o-transform: translateY(-8px); }
-		80% { -o-transform: translateY(-4px); }
-		40%, 60%, 100% { -o-transform: translateY(0); }
-		45% { -o-transform: scale(1.1, .9); }
-		65% { -o-transform: scale(1.05, .95); }
-	}
-	
 	@keyframes ballBounce {
 		0% { transform: translateY(-16px) skewX(-10deg); }
 		50% { transform: translateY(-8px); }
@@ -459,7 +462,6 @@ a[href*="github"]:focus {
 		-webkit-animation: grow .25s ease-in-out;
 		-moz-animation: grow .25s ease-in-out;
 		-ms-animation: grow .25s ease-in-out;
-		-o-animation: grow .25s ease-in-out;
 		animation: grow .25s ease-in-out;
 	}
 	
@@ -479,12 +481,6 @@ a[href*="github"]:focus {
 		0% { -ms-transform: scale(0); }
 		75% { -ms-transform: scale(1.2); }
 		100% { -ms-transform: scale(1); }
-	}
-	
-	@-o-keyframes grow {
-		0% { -o-transform: scale(0); }
-		75% { -o-transform: scale(1.2); }
-		100% { -o-transform: scale(1); }
 	}
 	
 	@keyframes grow {
@@ -508,7 +504,6 @@ a[href*="github"]:focus {
 		-webkit-transition: opacity .25s ease-in-out;
 		-moz-transition: opacity .25s ease-in-out;
 		-ms-transition: opacity .25s ease-in-out;
-		-o-transition: opacity .25s ease-in-out;
 		transition: opacity .25s ease-in-out;
 	}
 		
@@ -517,7 +512,6 @@ a[href*="github"]:focus {
 			-webkit-transition-delay: 0s;
 			-moz-transition-delay: 0s;
 			-ms-transition-delay: 0s;
-			-o-transition-delay: 0s;
 			transition-delay: 0s;
 		}	
 	
@@ -526,7 +520,6 @@ a[href*="github"]:focus {
 			-webkit-transition-delay: .05s;
 			-moz-transition-delay: .05s;
 			-ms-transition-delay: .05s;
-			-o-transition-delay: .05s;
 			transition-delay: .05s;
 		}
 		
@@ -535,7 +528,6 @@ a[href*="github"]:focus {
 			-webkit-transition-delay: .1s;
 			-moz-transition-delay: .1s;
 			-ms-transition-delay: .1s;
-			-o-transition-delay: .1s;
 			transition-delay: .1s;
 		}
 		
@@ -544,7 +536,6 @@ a[href*="github"]:focus {
 			-webkit-transition-delay: .15s;
 			-moz-transition-delay: .15s;
 			-ms-transition-delay: .15s;
-			-o-transition-delay: .15s;
 			transition-delay: .15s;
 		}
 		
@@ -553,7 +544,6 @@ a[href*="github"]:focus {
 			-webkit-transition-delay: .2s;
 			-moz-transition-delay: .2s;
 			-ms-transition-delay: .2s;
-			-o-transition-delay: .2s;
 			transition-delay: .2s;
 		}
 
@@ -567,7 +557,6 @@ a[href*="github"]:focus {
 		-webkit-animation: planeLand .25s ease-in-out;
 		-moz-animation: planeLand .25s ease-in-out;
 		-ms-animation: planeLand .25s ease-in-out;
-		-o-animation: planeLand .25s ease-in-out;
 		animation: planeLand .25s ease-in-out;
 	}
 	
@@ -596,15 +585,6 @@ a[href*="github"]:focus {
 		}
 		80% { -ms-transform: translateX(.5ex) skewX(-10deg); }
 		100% { -ms-transform: translateX(0); }
-	}
-	
-	@-o-keyframes planeLandUp {
-		0% {
-			-o-transform: translateX(-2.5ex);
-			-o-transform-origin: center left;
-		}
-		80% { -o-transform: translateX(.5ex) skewX(-10deg); }
-		100% { -o-transform: translateX(0); }
 	}
 	
 	@keyframes planeLand {
@@ -653,13 +633,13 @@ a[href*="github"]:focus {
 	-webkit-transition: background 0s 2s; /*Giving it a slight margin*/
 	-moz-transition: background 0s 2s;
 	-ms-transition: background 0s 2s;
-	-o-transition: background 0s 2s;
 	transition: background 0s 2s;
 }
 
 	/*Removing the spinners as the performance isn't as good as I'd like*/
 	.works.visible {
 		background: none;
+		background-repeat: no-repeat; /*Fixes odd behavior in Chrome*/
 	}
 
 .works img {
@@ -687,12 +667,6 @@ a[href*="github"]:focus {
 	-ms-transform-origin: bottom left;
 	-ms-animation-play-state: paused;
 	
-	-o-animation: appear .4s ease-in-out;
-	-o-backface-visibility: hidden;
-	-o-perspective: 1000;
-	-o-transform-origin: bottom left;
-	-o-animation-play-state: paused;
-	
 	animation: appear .4s ease-in-out;
 	backface-visibility: hidden;
 	perspective: 1000;
@@ -704,7 +678,6 @@ a[href*="github"]:focus {
 		-webkit-animation-play-state: running;
 		-moz-animation-play-state: running;
 		-ms-animation-play-state: running;
-		-o-animation-play-state: running;
 		animation-play-state: running;
 	}
 	
@@ -744,18 +717,6 @@ a[href*="github"]:focus {
 		}
 	}
 	
-	@-o-keyframes appear { 
-		0% {
-			-o-transform: translate(-100px, 100px);
-			opacity: 0;
-		}
-		80% { -o-transform: translate(5px, -5px); }
-		100% {
-			-o-transform: translate(0, 0);
-			opacity: 1;
-		}
-	}
-	
 	@keyframes appear { 
 		0% {
 			transform: translate(-100px, 100px);
@@ -789,12 +750,6 @@ a[href*="github"]:focus {
 	-ms-transform-origin: bottom center;
 	-ms-transition: all .5s linear;
 	
-	-o-transform: scale(.99);
-	-o-backface-visibility: hidden;
-	-o-perspective: 1000;
-	-o-transform-origin: bottom center;
-	-o-transition: all .5s linear;
-	
 	transform: scale(.99);
 	backface-visibility: hidden;
 	perspective: 1000;
@@ -807,7 +762,6 @@ a[href*="github"]:focus {
 		-webkit-transform: scale(1);
 		-moz-transform: scale(1);
 		-ms-transform: scale(1);
-		-o-transform: scale(1);
 		transform: scale(1);
 	}
 
@@ -841,11 +795,6 @@ a[href*="github"]:focus {
 		-ms-perspective: 1000;
 		-ms-transform-origin: bottom center;
 		
-		-o-animation: slideshow 8s linear;
-		-o-backface-visibility: hidden;
-		-o-perspective: 1000;
-		-o-transform-origin: bottom center;
-		
 		animation: slideshow 8s linear;
 		backface-visibility: hidden;
 		perspective: 1000;
@@ -871,12 +820,6 @@ a[href*="github"]:focus {
 		100% { opacity: 0; -ms-transform: scale(.98); }
 	}
 	
-	@-o-keyframes slideshow {
-		0% { opacity: 0; -o-transform: scale(.99); }
-		6.25%, 95% { opacity: 1; -o-transform: scale(1); }
-		100% { opacity: 0; -o-transform: scale(.98); }
-	}
-	
 	@keyframes slideshow {
 		0% { opacity: 0; transform: scale(.99); }
 		6.25%, 95% { opacity: 1; transform: scale(1); }
@@ -897,7 +840,6 @@ a[href*="github"]:focus {
 	-webkit-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-moz-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	-ms-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
-	-o-transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 	transition: all .25s cubic-bezier(0.615, -0.400, 0.495, 1.650);
 }
 
@@ -906,7 +848,6 @@ a[href*="github"]:focus {
 		-webkit-transform: scale(1.2);
 		-moz-transform: scale(1.2);
 		-ms-transform: scale(1.2);
-		-o-transform: scale(1.2);
 		transform: scale(1.2);
 	}
 
@@ -1133,7 +1074,6 @@ a[href*="github"]:focus {
 			-webkit-animation: none;
 			-moz-animation: none;
 			-ms-animation: none;
-			-o-animation: none;
 			animation: none;
 		}
 		
