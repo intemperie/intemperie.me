@@ -646,12 +646,12 @@ a[href*="github"]:focus {
 	width: 100%;
 }
 
-.quasar .works li {
-	margin-bottom: -2.5em; /*Assuring the image cut doesn't show up*/
+/*.quasar .works li {
+	margin-bottom: -2.5em; /*Assuring the image cut doesn't show up*!/
 
 	-webkit-animation: appear .4s ease-in-out;
 	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000; /*Enabling hardware acceleration for better performance*/
+	-webkit-perspective: 1000; /*Enabling hardware acceleration for better performance*!/
 	-webkit-transform-origin: bottom left;
 	-webkit-animation-play-state: paused;
 	
@@ -679,7 +679,7 @@ a[href*="github"]:focus {
 		-moz-animation-play-state: running;
 		-ms-animation-play-state: running;
 		animation-play-state: running;
-	}
+	}*/
 	
 	@-webkit-keyframes appear { 
 		0% {
