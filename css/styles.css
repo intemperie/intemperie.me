@@ -646,7 +646,6 @@ a[href*="github"]:focus {
 	width: 100%;
 }
 
-/*ToDo: Make something more generic*/
 .works:not(.slideshow) li {
 	opacity: 0;
 	-webkit-transform: scale(.99);
