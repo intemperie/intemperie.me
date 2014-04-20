@@ -132,6 +132,7 @@ body > * {
 		left: -5em; /*Improving the inclination on the even ones*/
 		right: 0; /*ToDo: -5 makes iOS overflow. Not perfect. Fix it!*/
 		-moz-transform: scale(1.1); /*Fixes dent rendering on FF*/
+		z-index: 2;
 	}
 	
 	body > *:nth-child(even)::before {
@@ -692,6 +693,7 @@ a[href*="github"]:focus {
 	position: absolute;
 	bottom: 0;
 	opacity: 0;
+	z-index: 0;
 }
 
 	/*Transitions between elements controlled by JS*/
@@ -715,6 +717,16 @@ a[href*="github"]:focus {
 		backface-visibility: hidden;
 		perspective: 1000;
 		transform-origin: bottom center;
+		z-index: 1;
+	}
+	
+	.slideshow li.active:hover {
+		-webkit-animation-play-state: paused;
+		-moz-animation-play-state: paused;
+		-ms-animation-play-state: paused;
+		animation-play-state: paused;
+		
+		cursor: wait;
 	}
 
 	/*(Total time/100) x Percentage = Current time*/
