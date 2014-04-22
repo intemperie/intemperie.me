@@ -720,14 +720,14 @@ a[href*="github"]:focus {
 		z-index: 1;
 	}
 	
-	.slideshow li.active:hover {
+	/*.slideshow li.active:hover {
 		-webkit-animation-play-state: paused;
 		-moz-animation-play-state: paused;
 		-ms-animation-play-state: paused;
 		animation-play-state: paused;
 		
 		cursor: wait;
-	}
+	}*/
 
 	/*(Total time/100) x Percentage = Current time*/
 	@-webkit-keyframes slideshow {
