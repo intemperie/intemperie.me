@@ -1,0 +1,28 @@
+# Site settings
+title: intemperie
+email: contact@intemperie.me
+url: "https://intemperie.me"
+show_dir_listing: true
+
+# Build settings
+# permalink: pretty
+incremental: true
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    fenced_code_blocks: true
+    default_lang: javascript
+    span:
+      disable: true
+    block:
+      line_numbers: true
+
+sass:
+  style: compressed
+
+# Exclude this from being processed by Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - _vendor
+  - run

@@ -1,0 +1,27 @@
+.icon {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  position: relative;
+}
+
+.icon:before {
+  width: 13px;
+  height: 13px;
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.icon.icon-info:before {
+  background-image: url(/images/licensemanager/info-sm.svg);
+}
+
+.icon.icon-go {
+  width: 5px;
+  height: 5px;
+}
+
+.icon.icon-go:before {
+  background-image: url(/images/icons/arrow-right-warning.svg);
+}

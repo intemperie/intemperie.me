@@ -1,0 +1,12 @@
+.deploying
+.DS_Store
+.jekyll-metadata
+.sass-cache
+.bundle
+bin
+deploys
+htdocs-apache
+node_modules
+_data/plugins.json
+_site
+_vendor
