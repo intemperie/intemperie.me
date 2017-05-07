@@ -24,5 +24,4 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - _vendor
   - run
