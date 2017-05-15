@@ -1,50 +1,57 @@
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font: $font-regular 16px/1.5 Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; //1.48125
   color: $text-dark-primary;
   // Enabling kerning and optional ligatures
   text-rendering: optimizeLegibility;
 }
 
-.masthead h1 {
-  font-size: 3.375rem; /*54px*/
-  line-height: 3.5rem; /*56px*/
-  margin: 3rem 0 2rem; /*48px*/
+/*Basic heading styles*/
+h1, .display1,
+h2, .display2,
+h3, .display3,
+h4, .display4,
+h5, .display5 {
+  font-family: "League Gothic Webfont";
+  font-weight: $font-regular;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  color: $text-dark-primary;
 }
 
-h1, .h1 {
+  .dark-theme h1, .dark-theme .display1,
+  .dark-theme h2, .dark-theme .display2,
+  .dark-theme h3, .dark-theme .display3,
+  .dark-theme h4, .dark-theme .display4,
+  .dark-theme h5, .dark-theme .display5,
+  .dark-theme th {
+    color: $text-light-primary;
+  }
+
+h1, .display1 {
   font-size: 2.75rem; /*44px*/
   line-height: 3rem; /*48px*/
   margin: 3rem 0 2rem; /*48px*/
 }
 
-h2, .h2 {
+h2, .display2 {
   font-size: 2rem; /*32px*/
   line-height: 2.5rem; /*40px*/
   margin: 3rem 0 1.5rem; /*40px*/
 }
 
-h3, .h3 {
+h3, .display3 {
   font-size: 1.625rem; /*26px*/
   line-height: 2rem; /*32px*/
   margin: 2rem 0 1rem; /*32px*/
 }
 
-h4, .h4 {
+h4, .display4 {
   font-size: 1.375rem; /*22px*/
   line-height: 1.75rem; /*28px*/
   margin: 2rem 0 1rem; /*32px*/
 }
 
-h1:not([class]) + p,
-.lead {
-  font-size: 1.25rem; /*20px*/
-  line-height: 1.75rem; /*28px*/
-  margin: 1.5rem 0;
-}
-
-h5, .h5 {
+h5, .display5 {
   font-size: 1rem; /*16px*/
   line-height: 1.5rem; /*24px*/
   margin: 1.5rem 0 .5rem; /*32px*/
@@ -59,67 +66,33 @@ h6, .h6 {
   letter-spacing: 0.02em;
 }
 
-/*Basic heading styles*/
-display-1,
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-nav a,
 th {
-  word-wrap: break-word;
-  font-weight: $font-bold;
+  text-align: left;
 }
 
-display-1,
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-th {
-  color: $text-dark-primary;
-}
-
-  .dark-theme display-1,
-  .dark-theme h1, .dark-theme .h1,
-  .dark-theme h2, .dark-theme .h2,
-  .dark-theme h3, .dark-theme .h3,
-  .dark-theme h4, .dark-theme .h4,
-  .dark-theme h5, .dark-theme .h5,
-  .dark-theme th {
-    color: $text-light-primary;
-  }
-
-display-1 a,
-h1 a, .h1 a,
-h2 a, .h2 a,
-h3 a, .h3 a,
-h4 a, .h4 a,
-h5 a, .h5 a,
+h1 a, .display1 a,
+h2 a, .display2 a,
+h3 a, .display3 a,
+h4 a, .display4 a,
+h5 a, .display5 a,
 th a {
   font-weight: inherit;
   font-style: inherit;
 }
 
-.heading-main-title {
-  display: block;
-  margin-top: 0;
-  padding-bottom: 1rem;
-  color: $text-dark-secondary;
+h1 strong, .display1 strong,
+h2 strong, .display2 strong,
+h3 strong, .display3 strong,
+h4 strong, .display4 strong,
+h5 strong, .display5 strong,
+th strong {
+  font-weight: inherit;
 }
-
-  .dark-theme .heading-main-title {
-    color: $text-light-secondary;
-  }
-
 
 p,
 ul, ol,
-:root pre,
-blockquote,
-.note {
+pre,
+blockquote {
   margin: 0 0 1rem; //32px
 }
 
@@ -127,56 +100,30 @@ p {
   word-wrap: break-word;
 }
 
+.lead {
+  font-size: 1.25rem; /*20px*/
+  line-height: 1.75rem; /*28px*/
+  margin: 1.5rem 0;
+}
+
 ul, ol {
   list-style-position: outside;
   margin-top: 0;
   padding-left: 1.2em;
-  &.row,
-  &.row { padding-left: 0; }
 }
 
 ul {
-  list-style-type: square;
+  //list-style-type: disc;
 }
 
-strong {
-  font-weight: $font-bold;
-  color: $text-dark-primary;
-}
-
-  .dark-theme strong {
-    color: $text-light-primary;
-  }
-
-  .display-1 strong,
-  h1 strong, .h1 strong,
-  h2 strong, .h2 strong,
-  h3 strong, .h3 strong,
-  h4 strong, .h4 strong,
-  h5 strong, .h5 strong,
-  th strong {
-    font-weight: inherit;
-  }
-
-pre code,
-article blockquote,
-.note {
+pre code {
   display: block;
   padding: 1rem; /*16px*/
   border-radius: $radius-default;
 }
 
 blockquote {
-  color: $text-dark-secondary;
-  position: relative;
-}
 
-  .dark-theme blockquote {
-    color: $text-light-secondary;
-  }
-
-th {
-  text-align: left;
 }
 
 q::before {
@@ -186,10 +133,6 @@ q::before {
 
 q::after {
   content: "\201D";
-}
-
-cite {
-  font-style: normal;
 }
 
 pre, code, kbd {
@@ -223,34 +166,5 @@ kbd {
   box-shadow: inset 0 0 0 1px $border-dark-primary , inset 0 -2px 0 $border-dark-secondary;
 }
 
-  .dark-theme code {
-
-  }
-
-  .dark-theme kbd {
-
-  }
-
-small,
-.small {
-  display: block;
-  font-size: .8125rem; //13px
-  line-height: 1.25rem; //20px
-  color: $text-dark-secondary;
-  font-weight: $font-regular;
+small {
 }
-
-  .dark-theme small,
-  .dark-theme .small {
-    color: $text-light-secondary;
-  }
-
-small strong,
-.small strong {
-  color: $text-dark-secondary;
-}
-
-  .dark-theme small strong,
-  .dark-theme .small strong {
-    color: $text-light-secondary;
-  }

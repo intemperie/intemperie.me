@@ -3,30 +3,32 @@ title:
 layout: base
 permalink: /
 ---
-<section>
-  <header>
-    <nav>
-      <ol>
-        <li><a href="#">intemperie</a></li>
-        <li><a href="#">work</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">contact</a></li>
-      </ol>
-    </nav>
-  </header>
-  <h1 class="caption">Alberto Calvo</h1>
-  <h2>Product Designer</h2>
-  <ul class="core-values">
+<header>
+  <nav>
+    <h1><a href="#" title="Home">intemperie</a></h1>
+    <ol>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+</header>
+
+<section id="me" itemscope itemtype="http://schema.org/Person">
+  <h1 class="caption" itemprop="name">Alberto Calvo</h1>
+  <h2 itemprop="jobTitle">Product Designer</h2>
+  <img src="" class="background" alt="Photo of Alberto Calvo" itemprop="image">
+  <ol class="core-values">
     <li>Empathy</li>
     <li>Humility</li>
     <li>Dedication</li>
   </ul>
 </section>
 
-<section class="work">
+<section id="work" class="work">
   <h1>Work</h1>
   <h2 class="caption">Featured Projects</h2>
-  <ul>
+  <ol>
     <li>
       <a href="">
         <h3>Pilot</h3>
@@ -69,10 +71,10 @@ permalink: /
         <small>Web</small>
       </a>
     </li>
-  </ul>
+  </ol>
 </section>
 
-<section class="about">
+<section id="about" class="about">
   <h1>About</h1>
   <h2 class="caption">Hi, I’m Alberto</h2>
   <p>I’ve never liked to stand out too much. When I face a problem, I always start with the why. I can say “I don’t know”, and I’ll always listen to the people around me, because I know that everyone has something valuable to contribute, but also because I love learning. I always prefer the obvious solution rather than the clever one, because it’s not about me, but about the people. I consider myself a practical person, and I try to take advantage of the limited resources in the best way possible at any time.</p>
@@ -111,14 +113,21 @@ permalink: /
     </li>
   </ol>
 
-  <blockquote>
-    <q>Alberto is an inspiration because of his passion to strive for the best.
-He also leads by example, and many people at Youzee found his enthusiasm and dedication both inspiring and motivating, including myself.</q>
-    <cite><a href="">Fran Pérez</a>, Product Director at Youzee</cite>
-  </blockquote>
+<h2 class="caption">What others say</h2>
+  <ul>
+    <li>
+      <blockquote>
+        <p>Alberto is an inspiration because of his passion to strive for the best.</p>
+        <p>He also leads by example, and many people at Youzee found his enthusiasm and dedication both inspiring and motivating, including myself.</p>
+        <footer>
+          <cite><a href="">Fran Pérez</a>, Product Director at Youzee</cite>
+        </p>
+      </blockquote>
+    </li>
+  </ul>
 </section>
 
-<footer>
+<footer id="contact" class="contact">
   <h1>Contact</h1>
   <nav>
     <ul>

@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'Eina01-SemiBold-webfont';
-  src: url('webfonts/3237E4_0_0.woff2') format('woff2'),
-       url('webfonts/3237E4_0_0.woff') format('woff');
+  font-family: "League Gothic Webfont";
+  src: url('webfonts/leaguegothic-italic-webfont.woff') format('woff');
   //unicode-range: U+000-5FF; /* Latin glyphs */
   font-display: swap;
+  font-weight: normal;
+  font-style: italic;
 }
