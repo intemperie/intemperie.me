@@ -1,16 +1,15 @@
 ---
 # Main CSS
 ---
-/* SCSS */
-// Base
+//Base
 @import "base/web-fonts";
 @import "base/variables";
 @import "base/mediaqueries";
 @import "base/typography";
 
-// Layout
+//Layout
 @import "layout/grid";
 @import "layout/layout";
 
-// Helpers
+//Helpers
 @import "helpers/helpers";

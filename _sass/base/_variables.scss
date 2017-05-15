@@ -1,13 +1,34 @@
 // Variables
-
 /* --- Font weights --- */
 $font-regular:            400;
-$font-semibold:           600;
+$font-bold:               700;
+
+$color-dark-base:         hsl(0,0%,0%);
+$color-light-base:        hsl(0,100%,100%);
+
+//Text (dark on light backgrounds)
+$text-dark-primary:       rgba( $color-dark-base, .85 );
+$text-dark-secondary:     rgba( $color-dark-base, .55 );
+
+//Text (light on dark backgrounds)
+$text-light-primary:      rgba( $color-light-base, .85 );
+$text-light-secondary:    rgba( $color-light-base, .55 );
+
+//Backgrounds
+$background-dark:         #222;
+$background-light-base:   #ffffff;
+
+//Borders and Dividers (dark on light backgrounds)
+$border-dark-primary:     rgba( $color-dark-base, .20 );
+$border-dark-secondary:   rgba( $color-dark-base, .10 );
+
+//Borders and Dividers (light on dark backgrounds)
+$border-light-primary:    rgba( $color-light-base, .20 );
+$border-light-secondary:  rgba( $color-light-base, .10 );
 
 /* --- Border Radii --- */
-$radius-default:          .1875rem; /*3px*/
+$radius-default:          .25rem;
 $radius-big:              10rem; /*In order to make circular elements*/
-$radius-small:            .0625rem; /*1px*/
 
 /* --- Easing --- */
 $ease-in-quad: cubic-bezier(.55, .085, .68, .53);
@@ -30,169 +51,3 @@ $ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
 $ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
 $ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
 $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
-
-/* --- Colors --- */
-//Sketch Palette
-$sk-red8:                 #2c0606;
-$sk-red6:                 #590c0c;
-$sk-red4:                 #861313;
-$sk-red2:                 #b31919;
-$sk-red:                  #e02020;
-$sk-red-2:                #e64c4c;
-$sk-red-4:                #ec7979;
-$sk-red-6:                #f2a5a5;
-$sk-red-8:                #f8d2d2;
-
-$sk-orange8:              #321400;
-$sk-orange6:              #642800;
-$sk-orange4:              #963c00;
-$sk-orange2:              #c85000;
-$sk-orange:               #fa6400;
-$sk-orange-2:             #fb8332;
-$sk-orange-4:             #fca266;
-$sk-orange-6:             #fdc199;
-$sk-orange-8:             #fee0cc;
-
-$sk-yellow8:              #312400;
-$sk-yellow6:              #624800;
-$sk-yellow4:              #946c00;
-$sk-yellow2:              #c59000;
-$sk-yellow:               #f7b500;
-$sk-yellow-2:             #f8c332;
-$sk-yellow-4:             #fad266;
-$sk-yellow-6:             #fbe199;
-$sk-yellow-8:             #fdf0cc;
-
-$sk-green8:               #152a00;
-$sk-green6:               #2b5400;
-$sk-green4:               #417f00;
-$sk-green2:               #57a900;
-$sk-green:                #6dd400;
-$sk-green-2:              #8adc32;
-$sk-green-4:              #a7e566;
-$sk-green-6:              #c4ed99;
-$sk-green-8:              #e1f6cc;
-
-$sk-teal8:                #0d2b24;
-$sk-teal6:                #1b5648;
-$sk-teal4:                #28816d;
-$sk-teal2:                #36ac91;
-$sk-teal:                 #44d7b6;
-$sk-teal-2:               #69dfc4;
-$sk-teal-4:               #8ee7d3;
-$sk-teal-6:               #b4efe1;
-$sk-teal-8:               #d9f7f0;
-
-$sk-baby-blue8:           #0a2733;
-$sk-baby-blue6:           #144e66;
-$sk-baby-blue4:           #1e7699;
-$sk-baby-blue2:           #289dcc;
-$sk-baby-blue:            #32c5ff;
-$sk-baby-blue-2:          #5ad0ff;
-$sk-baby-blue-4:          #84dcff;
-$sk-baby-blue-6:          #ade7ff;
-$sk-baby-blue-8:          #d6f3ff;
-
-$sk-blue8:                #001d33;
-$sk-blue6:                #003a66;
-$sk-blue4:                #005799;
-$sk-blue2:                #0074cc;
-$sk-blue:                 #0091ff;
-$sk-blue-2:               #32a7ff;
-$sk-blue-4:               #66bdff;
-$sk-blue-6:               #99d3ff;
-$sk-blue-8:               #cce9ff;
-
-$sk-indigo8:              #130a33;
-$sk-indigo6:              #271566;
-$sk-indigo4:              #3a2099;
-$sk-indigo2:              #4e2bcc;
-$sk-indigo:               #6236ff;
-$sk-indigo-2:             #815eff;
-$sk-indigo-4:             #a086ff;
-$sk-indigo-6:             #c0aeff;
-$sk-indigo-8:             #dfd6ff;
-
-$sk-purple8:              #24062c;
-$sk-purple6:              #480c59;
-$sk-purple4:              #6d1386;
-$sk-purple2:              #9119b3;
-$sk-purple:               #b620e0;
-$sk-purple-2:             #c44ce6;
-$sk-purple-4:             #d379ec;
-$sk-purple-6:             #e1a5f2;
-$sk-purple-8:             #f0d2f8;
-
-$sk-tungsten8:            #151618;
-$sk-tungsten6:            #2b2d30;
-$sk-tungsten4:            #414448;
-$sk-tungsten2:            #575b60;
-$sk-tungsten:             #6d7278;
-$sk-tungsten-2:           #8a8e93;
-$sk-tungsten-4:           #a7aaae;
-$sk-tungsten-6:           #c4c6c9;
-$sk-tungsten-8:           #e1e2e4;
-
-$sk-graphite8:            #0a0b0d;
-$sk-graphite6:            #14161a;
-$sk-graphite4:            #1e2127;
-$sk-graphite2:            #282c34;
-$sk-graphite:             #333842;
-$sk-graphite-2:           #5b5f67;
-$sk-graphite-4:           #84878d;
-$sk-graphite-6:           #adafb3;
-$sk-graphite-8:           #d6d7d9;
-
-//Text (dark on light backgrounds)
-$sk-dark-base:            hsl(0,0%,0%);
-$sk-dark-primary:         rgba( $sk-dark-base, .85 );
-$sk-dark-secondary:       rgba( $sk-dark-base, .65 );
-$sk-dark-tertiary:        rgba( $sk-dark-base, .40 );
-
-//Text (light on dark backgrounds)
-$sk-light-base:           hsl(0,100%,100%);
-$sk-light-primary:        rgba( $sk-light-base, .85 );
-$sk-light-secondary:      rgba( $sk-light-base, .65 );
-$sk-light-tertiary:       rgba( $sk-light-base, .40 );
-
-//Actions (Links and buttons)
-$action-high:             #fdac32;
-$action:                  #fd9800;
-$action-low:              #ca7900;
-$action-border:           rgba( $action, .4 );
-
-//Actions for text on light backgrounds only
-$action-dark-high:        #f38b32;
-$action-dark:             #f06e00;
-$action-dark-low:         #c05800;
-
-//Negative
-$negative-high:           $sk-red;
-$negative:                $sk-red2;
-$negative-low:            $sk-red4;
-$negative-border:         rgba( $negative, .4 );
-
-//Positive
-$positive:                $sk-green2;
-$positive-border:         rgba( $positive, .4 );
-
-//Warning
-$warning:                 $sk-yellow4;
-
-// Backgrounds
-$background-dark:            $sk-indigo8;
-$background-light-base:      #ffffff;
-$background-light-primary:   #FCFCFC;
-$background-light-secondary: lighten(desaturate(adjust-hue( $sk-indigo8 , -1.1707), 31.7586), 85.8824); //F8F7FC
-
-//Borders and Dividers (dark on light backgrounds)
-$border-dark-ultra-high:  hsla(0, 0%, 0%, .20);
-$border-dark-high:        hsla(0, 0%, 0%, .10);
-$border-dark:             hsla(0, 0%, 0%, .06);
-$border-dark-low:         hsla(0, 0%, 0%, .03);
-
-//Borders and Dividers (light on dark backgrounds)
-$border-light-ultra-high: hsla(0, 100%, 100%, .30);
-$border-light-high:       hsla(0, 100%, 100%, .20);
-$border-light:            hsla(0, 100%, 100%, .10);
-$border-light-low:        hsla(0, 100%, 100%, .06);
