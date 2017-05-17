@@ -5,6 +5,7 @@ $font-bold:               700;
 
 $color-dark-base:         hsl(0,0%,0%);
 $color-light-base:        hsl(0,100%,100%);
+$color-accent:            #F54C5F;
 
 //Text (dark on light backgrounds)
 $text-dark-primary:       rgba( $color-dark-base, .85 );
@@ -16,7 +17,7 @@ $text-light-secondary:    rgba( $color-light-base, .55 );
 
 //Backgrounds
 $background-dark:         #222;
-$background-light-base:   #ffffff;
+$background-light:        $color-light-base;
 
 //Borders and Dividers (dark on light backgrounds)
 $border-dark-primary:     rgba( $color-dark-base, .20 );
