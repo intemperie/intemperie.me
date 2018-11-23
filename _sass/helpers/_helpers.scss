@@ -64,3 +64,8 @@
 
 /* Avoid the ugly focus ring in form elements in Safari */
 *:focus { outline: none; }
+
+.list-unmarked {
+  list-style: none;
+  padding-left: 0;
+}

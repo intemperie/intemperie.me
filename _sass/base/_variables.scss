@@ -3,20 +3,22 @@
 $font-regular:            400;
 $font-bold:               700;
 
-$color-dark-base:         hsl(0,0%,0%);
+$color-dark-base:         hsl(198, 17%, 20%);
 $color-light-base:        hsl(0,100%,100%);
-$color-accent:            #F54C5F;
+$color-accent:            hsla(340, 100%, 64%, 1);
 
 //Text (dark on light backgrounds)
-$text-dark-primary:       rgba( $color-dark-base, .85 );
-$text-dark-secondary:     rgba( $color-dark-base, .55 );
+$text-dark-primary:       $color-dark-base;
+$text-dark-secondary:     rgba( $color-dark-base, .85 );
+$text-dark-tertiary:      rgba( $color-dark-base, .55 );
 
 //Text (light on dark backgrounds)
-$text-light-primary:      rgba( $color-light-base, .85 );
-$text-light-secondary:    rgba( $color-light-base, .55 );
+$text-light-primary:      $color-light-base;
+$text-light-secondary:    rgba( $color-light-base, .85 );
+$text-light-tertiary:     rgba( $color-light-base, .55 );
 
 //Backgrounds
-$background-dark:         #222;
+$background-dark:         $color-dark-base;
 $background-light:        $color-light-base;
 
 //Borders and Dividers (dark on light backgrounds)
@@ -52,3 +54,96 @@ $ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
 $ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
 $ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
 $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+
+/* Variables */
+:root {
+  // Spacing
+  --space-unit: 0.5rem;
+
+  --module-space-sm: calc(1 * var(--space-unit)); //8px (10px)
+  --module-space-md: calc(2 * var(--space-unit)); //16px (20px)
+  --module-space-lg: calc(3 * var(--space-unit)); //24px (30px)
+  --module-space-xl: calc(5 * var(--space-unit)); //40px (50px)
+  --module-space-xxl: calc(7 * var(--space-unit)); //56px (70px)
+  --module-space-xxxl: calc(9 * var(--space-unit)); //72px (90px)
+
+  // Typography
+  --scalar: 1.414; // Ratio 1:√2 – Augmented fourth
+
+  --font-size-sm: calc(1 / var(--scalar) * 1rem);
+  --font-size-md: 1rem;
+  --font-size-lg: calc(var(--scalar) * 1rem);
+  --font-size-xl: calc(var(--scalar) * var(--scalar) * 1rem);
+  --font-size-xxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
+  --font-size-xxxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
+  --font-size-max: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) *var(--scalar) * 1rem);
+
+  --font-space-sm: calc(1 * var(--space-unit)); //8px (10px)
+  --font-space-md: calc(2 * var(--space-unit)); //16px (20px)
+  --font-space-lg: calc(3 * var(--space-unit)); //24px (30px)
+  --font-space-xl: calc(4 * var(--space-unit)); //32px (40px)
+  --font-space-xxl: calc(5 * var(--space-unit)); //40px (50px)
+  --font-space-xxxl: calc(6 * var(--space-unit)); //48px (60px)
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  // Primary colors
+  --color-base-martinique: 238, 32%, 19%;
+  --color-base-white: 100, 100%, 100%;
+
+  --color-moradul: hsl(257, 100%, 61%);
+  --color-moradul-light: hsl(260, 100%, 63%);
+  --color-moradul-dark: hsl(254, 100%, 58%);
+
+  --color-martinique: hsl(var(--color-base-martinique));
+  --color-martinique-light: hsl(238, 31%, 24%);
+  --color-martinique-dark: hsl(238, 35%, 14%);
+
+  --color-azura: hsl(213, 91%, 56%);
+  --color-azura-light: hsl(209, 93%, 59%);
+  --color-azura-dark: hsl(216, 88%, 53%);
+
+  // Secondary colors
+  --color-pink: hsl(336, 100%, 72%);
+  --color-pink-light: hsl(333, 100%, 76%);
+  --color-pink-dark: hsl(339, 100%, 68%);
+
+  --color-blue-love: hsl(201, 100%, 73%);
+  --color-blue-love-light: hsl(199, 100%, 77%);
+  --color-blue-love-dark: hsl(203, 100%, 69%);
+
+  --color-mac-and-cheese: rgb(255, 188, 73);
+  --color-mac-and-cheese-light: rgba(255, 188, 73, 0.16);
+  --color-mac-and-cheese-dark: rgba(255, 188, 73, 0.16);
+
+  --color-shamrock: hsl(161, 77%, 81%);
+  --color-shamrock-light: hsl(162, 79%, 85%);
+  --color-shamrock-dark: #8deecc;
+
+  // Light background colors
+  --color-selago: #fafafe;
+  --color-white: hsl(var(--color-base-white));
+
+  //Setting a default background color
+  --background-color: var(--color-selago);
+
+  // Text color
+  --color-text-dark-primary: hsl(var(--color-base-martinique));
+  --color-text-dark-secondary: hsl(var(--color-base-martinique), 64%);
+  --color-text-dark-tertiary: hsl(var(--color-base-martinique), 40%);
+  //hsla(238, 32%, 19%, .64);
+
+  --color-text-light-primary: hsl(var(--color-base-white));
+  --color-text-light-secondary: hsl(var(--color-base-white), 72%);
+  --color-text-light-tertiary: hsl(var(--color-base-white), 40%);
+
+  // UI detail color
+  --color-shadow-dark: hsla(var(--color-base-martinique), 0.24);
+  --color-border-dark-primary: hsla(var(--color-base-martinique), 0.16);
+  --color-border-dark-secondary: hsla(var(--color-base-martinique), 0.08);
+
+  --color-shadow-light: hsla(var(--color-base-white), 0.24);
+  --color-border-light-primary: hsla(var(--color-base-white), 0.16);
+  --color-border-light-secondary: hsla(var(--color-base-white), 0.08);
+}

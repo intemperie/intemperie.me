@@ -1,0 +1,30 @@
+.masthead {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.masthead header {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead .background {
+  width: calc(100% + 2rem);
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  position: absolute;
+  left: 0;
+  opacity: .1;
+  z-index: 0;
+}
+
+.work {
+  background: $background-light;
+  // transform: skewY(-2deg);
+  // margin-top: -3rem;
+}

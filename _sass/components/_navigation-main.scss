@@ -1,0 +1,17 @@
+.navigation-main {
+  display: flex;
+  padding-top: 1.25rem;
+  align-items: baseline;
+}
+
+.navigation-main h1 {
+  margin: 0;
+  flex-basis: 70%;
+}
+
+.navigation-main ol {
+  display: flex;
+  margin-top: 0;
+  flex-basis: 30%;
+  justify-content: space-between;
+}

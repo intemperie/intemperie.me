@@ -11,7 +11,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     fenced_code_blocks: true
-    default_lang: javascript
+    default_lang: css
     span:
       disable: true
     block:
