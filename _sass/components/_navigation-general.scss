@@ -1,0 +1,18 @@
+/*Basic navigation styles*/
+nav ul,
+nav ol {
+  list-style: none;
+}
+
+nav ul,
+nav ol {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+@include tablet-and-above {
+  nav li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: var(--background-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  position: relative;
+}
+
+.wrapper,
+.wrapper-inner {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, 100%) 1fr;
+}
+
+.wrapper > *:not(.full-width) {
+  grid-column: 2;
+  padding: 3rem 1rem;
+}
+
+.full-width {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.dim {
+  background-color: var(--background-color-dim);
+}
+
+// Reading progress scroll bar with CSS
+.progress-indicator {
+  background: linear-gradient(to right top, var(--color-accent) 50%, var(--background-color) 50%) no-repeat;
+  background-size: 100% calc(100% - 100vh + .16rem);
+}
+
+.progress-indicator::before {
+  content:"";
+  position: fixed;
+  left: 0;
+  top: .158rem;
+  bottom: 0;
+  width: 100%;
+  background: var(--background-color);
+  z-index: -1;
+}

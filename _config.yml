@@ -1,0 +1,34 @@
+title: intemperie
+email: contact@intemperie.me
+url: "http://intemperie.me" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: pumpkin
+github_username:  intemperie
+show_dir_listing: true
+
+# Build settings
+incremental: true
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    fenced_code_blocks: true
+    default_lang: css
+    span:
+      disable: true
+    block:
+      line_numbers: true
+
+sass:
+  style: compressed
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Exclude this from being processed by Jekyll
+exclude:
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - _vendor
+  - run

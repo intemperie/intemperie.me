@@ -1,0 +1,69 @@
+// Responsive embed container for YouTube videos
+.embed-container {
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*Clearfix*/
+.group:before,
+.group:before,
+.group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { zoom: 1; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*Image replacement*/
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}
+
+/*Right to left. Used for images that need to overflow backwards*/
+.rtl { direction: rtl; }
+
+/*Selection color for pages*/
+*::selection {
+  background: hsla(var(--color-highlight), .24);
+}
+
+  *::selection:window-inactive {
+    background: hsla(var(--color-highlight), .48);
+  }
+
+/* Avoid the ugly focus ring in form elements in Safari */
+*:focus { outline: none; }
+
+.list-unmarked {
+  list-style: none;
+  padding-left: 0;
+}
