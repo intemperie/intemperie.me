@@ -1,49 +1,55 @@
-/*Easier sizing*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: var(--background-color);
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  position: relative;
 }
 
-@include tablet-and-above {
-  body > * {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  body > section,
-  body > footer {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
+.wrapper,
+.wrapper-inner {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, 100%) 1fr;
 }
 
-@include tablet-and-below {
-  body > * {
-    padding: 0 1rem; /*16px*/
-  }
+.wrapper > *:not(.full-width) {
+  grid-column: 2;
+  padding: 3rem 1rem;
 }
 
-section > *:first-child {
-  margin-top: 0;
+.full-width {
+  width: 100%;
+  grid-column: 1 / 4;
 }
 
-section > *:last-child {
-  margin-bottom: 0;
+.dim {
+  background-color: var(--background-color-dim);
 }
 
-body > footer {
-  text-align: center;
+// Reading progress scroll bar with CSS
+.progress-indicator {
+  background: linear-gradient(to right top, var(--color-accent) 50%, var(--background-color) 50%) no-repeat;
+  background-size: 100% calc(100% - 100vh + .16rem);
 }
 
-.main-footer {
-  background-color: $color-accent;
+.progress-indicator::before {
+  content:"";
+  position: fixed;
+  left: 0;
+  top: .158rem;
+  bottom: 0;
+  width: 100%;
+  background: var(--background-color);
+  z-index: -1;
 }

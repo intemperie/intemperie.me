@@ -1,85 +1,64 @@
 :root {
   font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
   line-height: 1.5;
-  font-family: "FS Ostro";
+  font-family: "Source Serif Pro", Georgia, serif;
+  text-rendering: optimizeLegibility;
 }
 
 // Small devices in landscape and above (360 × 576)
 @media screen and (min-width: 22.5em) and (min-height: 36em) {
   :root {
-    // Variable font size locking from a 16px minimum size to 28px at 1200px
-    font-size: calc(1em + 1vmin); // ((28-16)/1200) * 100
-  }
-}
-
-@media screen and (min-width: 768px) {
-  :root {
-    --scalar: 1.618; // Ratio 2:3 – perfect fifth
+    // Variable font size locking from a 16px minimum size to 26px at 1200px
+    font-size: calc(1em + .8333vmin); // ((26-16)/1200) * 100
   }
 }
 
 // Wide screens (1200 × 675) – 16:9 aspect ratio
 @media screen and (min-width: 75em) and (min-height: 42.1875em) {
   :root {
-    font-size: 1.75em; // Locking at 28px maximum
+    font-size: 1.625em; // Locking at 26px maximum
   }
 }
 
-// TODO investigate why we can't declare this at the body, as letter-spacing should cascade to the rest of the page, but it doesn't in practice
-// * {
-//   letter-spacing: -0.01em;
-// }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.display {
+  font-family: "Barlow Condensed", "FS Industrie Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: "liga" 1, "swsh" 1, "calt" 1, "salt" 1, "ss07" 1;
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
+  font-style: italic;
+  text-transform: uppercase;
 }
 
-.display0 {
-  font-size: var(--font-size-max);
-}
-
-.display-hint {
-  opacity: .05;
-}
-
-// All values are calculated with 16px as reference base size
 h1,
 .display1 {
   font-size: var(--font-size-xxxl);
-  margin: var(--font-space-xxxl) 0 var(--font-space-lg); //48 x 24px
+  margin: var(--font-space-xxxl) 0 var(--font-space-md); //48 x 24px
   line-height: 1; //40px
+  font-weight: var(--font-weight-extra-bold);
 }
 
 h2,
 .display2 {
   font-size: var(--font-size-xxl);
-  margin: var(--font-space-xl) 0 var(--font-space-lg); //32 x 20px
+  margin: var(--font-space-xxl) 0 var(--font-space-lg); //32 x 20px
   line-height: 1.157323689; //32px
 }
 
 h3,
 .display3 {
   font-size: var(--font-size-xl);
-  margin: var(--font-space-lg) 0 var(--font-space-md); //24 x 16px
+  margin: var(--font-space-xxl) 0 var(--font-space-md); //24 x 16px
   line-height: 1.215277778; //28px
 }
 
 h4,
 .display4 {
   font-size: var(--font-size-lg);
-  margin: var(--font-space-lg) 0 var(--font-space-sm); //24 x 8px
+  margin: var(--font-space-xl) 0 var(--font-space-sm); //24 x 8px
   line-height: 1.25; //24px
 }
 
 h5,
-.display5,
-.caption {
+.display5 {
   font-size: var(--font-size-md);
   margin: var(--font-space-lg) 0 var(--font-space-sm); //24 x 8px
   line-height: 1.25; //20px
@@ -89,28 +68,49 @@ h6,
 .display6,
  {
   font-size: var(--font-size-sm);
-  margin: var(--font-space-md) 0 var(--font-space-sm); //24 x 8px
+  margin: var(--font-space-md) 0 0; //24 x 8px
   line-height: 1.506024096; //20px
-  text-transform: uppercase;
-}
-
-h6,
-.caption {
-  letter-spacing: 0.02em;
+  letter-spacing: .04em;
 }
 
 .caption {
+  margin-bottom: var(--font-space-sm);
   display: block;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-tertiary);
-  color: $color-accent;
+  color: var(--color-accent);
+  display: flex;
+  flex-direction: row;
 }
 
-h1 + p,
-.lead {
-  font-size: var(--font-size-lg);
-  margin: 1.25em 0; //24px
-  line-height: 1.458333333; //28px
+.caption::before,
+.caption::after {
+  content: "";
+  display: inline-block;
+  transform: translateY(50%);
+  margin: auto;
+  border-bottom: .16rem solid var(--color-accent);
+}
+
+.caption::before {
+  flex: .025 1;
+  margin-right: 1ch;
+}
+
+.caption::after {
+  margin-left: 1ch;
+  flex: 1 1;
+}
+
+article .caption {
+  width: calc(100% + 1rem);
+  transform: translateX(-1rem);
+}
+
+.caption + :is(h2, h3, h4, h5, h6) {
+  margin-top: var(--font-space-lg);
+}
+
+:is(h1, h2, h3, h4, h5, h6) + p {
+  margin-top: 0;
 }
 
 ul,
@@ -132,169 +132,23 @@ hr {
   color: #eee;
   border: 1px solid #eee;
   margin: 2em 0 1em;
+
 }
-
-
-
-
-
-// html {
-//   font: $font-regular 24px/1.5 "FS Ostro", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-//   color: $text-dark-secondary;
-//   text-rendering: optimizeLegibility;
-// }
-
-.dark-theme {
-  background-color: $background-dark;
-  color: $text-light-secondary;
-}
-
-/*Basic heading styles*/
-.display {
-  font-family: "FS Industrie Condensed", DINPro-CondBlackIta, "League Gothic Webfont";
-  font-weight: $font-bold;
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: -.02em;
-}
-//
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   word-wrap: break-word;
-//   color: $text-dark-primary;
-// }
-//
-//   .dark-theme h1,
-//   .dark-theme h2,
-//   .dark-theme h3,
-//   .dark-theme h4,
-//   .dark-theme h5
-//   .dark-theme h6 {
-//     color: $text-light-primary;
-//   }
-//
-// :root .display-hint {
-//   font-size: 20rem;
-//   position: sticky;
-//   opacity: .05;
-// }
-//
-// .text-tertiary {
-//   color: $text-dark-tertiary;
-// }
-//
-//   .dark-theme .text-tertiary {
-//     color: $text-light-tertiary;
-//   }
-//
-// h1, .display1 {
-//   font-size: 8.5rem;
-//   line-height: 1;
-//   margin: 0 0 2rem;
-// }
-//
-// h2, .display2 {
-//   font-size: 2rem; /*32px*/
-//   line-height: 2.5rem; /*40px*/
-//   margin: 3rem 0 1.5rem; /*40px*/
-// }
-//
-// h3, .display3 {
-//   font-size: 1.625rem; /*26px*/
-//   line-height: 2rem; /*32px*/
-//   margin: 2rem 0 1rem; /*32px*/
-// }
-//
-// h4, .display4 {
-//   font-size: 1.375rem; /*22px*/
-//   line-height: 1.75rem; /*28px*/
-//   margin: 2rem 0 1rem; /*32px*/
-// }
-//
-// h5, .display5, .caption {
-//   font-size: 1.5625rem;
-//   line-height: 1.5rem; /*24px*/
-//   margin: 1.5rem 0 .5rem; /*32px*/
-// }
-//
-// h6, .h6 {
-//   display: block;
-//   font-size: .75rem; /*12px*/
-//   line-height: 1.25rem; /*20px*/
-//   margin: 1.5rem 0 .5rem; /*32px*/
-//   text-transform: uppercase;
-//   letter-spacing: 0.02em;
-// }
-//
-// th {
-//   text-align: left;
-// }
-//
-// h1 strong,
-// h2 strong,
-// h3 strong,
-// h4 strong,
-// h5 strong,
-// th strong {
-//   font-weight: inherit;
-// }
-//
-// :root .caption {
-//   color: $color-accent;
-// }
-//
-// p,
-// ul, ol,
-// pre,
-// blockquote {
-//   margin: 0 0 1rem;
-//   font-size: 1.25rem;
-// }
-//
-// p {
-//   word-wrap: break-word;
-// }
-//
-// .lead {
-//   font-size: 1.25rem;
-//   line-height: 1.75rem;
-//   margin: 1.5rem 0;
-// }
-//
-// ul, ol {
-//   list-style-position: outside;
-//   margin-top: 0;
-//   padding-left: 1.2em;
-// }
-//
-// ol ol,
-// ul ul,
-// ol ul,
-// ul ol {
-//   margin-bottom: 0;
-// }
-//
-// pre code {
-//   display: block;
-//   padding: 1rem;
-//   border-radius: $radius-default;
-// }
-//
-// blockquote {
-//
-// }
-//
 
 blockquote {
-  margin: 1rem 0;
+  margin: 2rem 0;
+  color: var(--color-accent);
+  border: 2em 0 solid var(--color-accent);
+}
+
+blockquote p {
+  font-size: var(--font-size-lg);
+  line-height: 1.25;
+  font-style: italic;
 }
 
 q {
-  color: $color-accent;
+  color: var(--color-accent);
 }
 
 q > p {
@@ -316,34 +170,21 @@ q::before {
 q::after {
   content: "\201D";
 }
-//
-// pre, code, kbd {
-//   border-radius: $radius-default;
-//   overflow-wrap: break-word; /*Preventing ultra long stuff to overflow the container*/
-//   overflow-x: auto;
-//   font-weight: $font-regular;
-//   background-color: $background-light;
-//   color: $text-dark-secondary;
-//   font-size: .875em;
-// }
-//
-// pre, code {
-//   font-family: "SF Mono", "Source Code Pro", Consolas, Menlo, monospace;
-// }
-//
-// code {
-//   padding: .0625em .25em;
-//   box-shadow: inset 0 0 0 1px $border-dark-primary;
-// }
-//
-// pre code {
-//   font-size: .875rem;
-//   box-shadow: inset 0 0 0 1px $border-dark-secondary;
-// }
-//
-// kbd {
-//   padding: .2em .4em;
-//   font-family: inherit;
-//   box-shadow: inset 0 0 0 1px $border-dark-primary,
-//               inset 0 -2px 0 $border-dark-secondary;
-// }
+
+abbr {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: .10em;
+  text-underline-offset: .16em;
+  text-decoration-skip-ink: auto;
+  cursor: help;
+}
+
+@supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
+  .stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var(--color-text);
+    -webkit-text-stroke-width: .0625rem;
+    paint-order: stroke fill;
+  }
+}

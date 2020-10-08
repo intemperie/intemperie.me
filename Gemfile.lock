@@ -34,6 +34,9 @@ GEM
       jekyll
     jekyll-redirect-from (0.14.0)
       jekyll (~> 3.3)
+    jekyll-sass (1.1.0)
+      jekyll (>= 0.10.0)
+      sass (>= 3.0.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-sitemap (1.2.0)
@@ -70,6 +73,8 @@ DEPENDENCIES
   jekyll
   jekyll-contentblocks
   jekyll-redirect-from
+  jekyll-sass
+  jekyll-sass-converter
   jekyll-sitemap
 
 BUNDLED WITH

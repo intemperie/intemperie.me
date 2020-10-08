@@ -1,17 +1,29 @@
-.navigation-main {
-  display: flex;
-  padding-top: 1.25rem;
-  align-items: baseline;
+.nav-main {
+  border-bottom: 1px solid var(--color-border);
+  display: grid;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-mask-image: linear-gradient(to right, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 4%, hsla(0,0%,0%,1) 94%, hsla(0,0%,0%,0) 100%);
 }
 
-.navigation-main h1 {
-  margin: 0;
-  flex-basis: 70%;
+.nav-main::-webkit-scrollbar {
+  display: none;
 }
 
-.navigation-main ol {
+.nav-main ol {
   display: flex;
-  margin-top: 0;
-  flex-basis: 30%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+  max-width: 62.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.nav-main li {
+  padding: 0 1rem;
+}
+
+.nav-main a {
+  display: block;
+  white-space: nowrap;
 }

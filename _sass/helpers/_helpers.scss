@@ -6,7 +6,6 @@
   margin-bottom: 2rem;
   overflow: hidden;
   position: relative;
-  border-radius: $radius-default;
 }
 
 .embed-container iframe,
@@ -17,7 +16,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: $radius-default;
 }
 
 /*Clearfix*/
@@ -55,11 +53,11 @@
 
 /*Selection color for pages*/
 *::selection {
-
+  background: hsla(var(--color-highlight), .24);
 }
 
   *::selection:window-inactive {
-
+    background: hsla(var(--color-highlight), .48);
   }
 
 /* Avoid the ugly focus ring in form elements in Safari */
