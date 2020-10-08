@@ -41,6 +41,7 @@ body {
 .progress-indicator {
   background: linear-gradient(to right top, var(--color-accent) 50%, var(--background-color) 50%) no-repeat;
   background-size: 100% calc(100% - 100vh + .16rem);
+  z-index: -1;
 }
 
 .progress-indicator::before {
