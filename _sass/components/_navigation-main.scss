@@ -1,8 +1,7 @@
 .nav-main {
+  display: flex;
+  overflow-x: auto;
   border-bottom: 1px solid var(--color-border);
-  display: grid;
-  width: 100%;
-  overflow-x: scroll;
   -webkit-mask-image: linear-gradient(to right, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 4%, hsla(0,0%,0%,1) 94%, hsla(0,0%,0%,0) 100%);
 }
 
@@ -12,18 +11,28 @@
 
 .nav-main ol {
   display: flex;
-  width: 100%;
   justify-content: space-around;
+  align-items: flex-start;
   max-width: 62.5rem;
-  padding: 1rem .5rem;
+  padding: 0 .5rem;
   margin: 0 auto;
 }
 
 .nav-main li {
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .nav-main a {
   display: block;
-  white-space: nowrap;
+}
+
+// Improve touch targets of the navigation for limited pointer devices (as touch)
+@media (pointer: coarse) {
+  .nav-main li {
+    padding: 0;
+  }
+
+  .nav-main a {
+    padding: 1rem;
+  }
 }

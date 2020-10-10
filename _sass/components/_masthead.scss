@@ -1,4 +1,25 @@
-@media screen and (min-width: 768px) {
+.masthead header {
+  padding: 1rem;
+}
+
+.masthead .display1 {
+  padding-bottom: var(--font-space-md);
+  border-bottom: .16rem solid var(--color-accent);
+}
+
+.masthead .caption {
+  margin-bottom: 0;
+}
+
+.masthead .caption + h2 {
+  margin-top: 0;
+}
+
+.masthead img {
+  display: block;
+}
+
+@include tablet-and-above {
   .masthead {
     height: 85vh;
   }
@@ -13,21 +34,13 @@
 
   .masthead header {
     max-width: 58%;
-    padding: 2rem;
     position: relative;
+    padding: 2rem;
     z-index: 1;
   }
 
   .masthead .display1 {
     font-size: var(--font-size-max);
-  }
-
-  .masthead .caption {
-    margin-bottom: 0;
-  }
-
-  .masthead .caption + h2 {
-    margin-top: 0;
   }
 
   // Scrim
@@ -58,13 +71,4 @@
       hsla(0, 0%, 0%, 0.143) 95.3%,
       hsla(0, 0%, 0%, 0) 100%);
   }
-}
-
-.masthead .display1 {
-  padding-bottom: var(--font-space-md);
-  border-bottom: .16rem solid var(--color-accent);
-}
-
-.masthead img {
-  display: block;
 }

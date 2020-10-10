@@ -74,11 +74,10 @@ h6,
 }
 
 .caption {
-  margin-bottom: var(--font-space-sm);
-  display: block;
-  color: var(--color-accent);
   display: flex;
   flex-direction: row;
+  margin-bottom: var(--font-space-sm);
+  color: var(--color-accent);
 }
 
 .caption::before,
@@ -102,7 +101,8 @@ h6,
 
 article .caption {
   width: calc(100% + 1rem);
-  transform: translateX(-1rem);
+  position: relative;
+  left: -1rem;
 }
 
 .caption + .display {

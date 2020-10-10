@@ -2,8 +2,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color: var(--background-color);
-  width: 100%;
-  height: 100%;
+  color: var(--color-text);
 }
 
 *,
@@ -14,36 +13,47 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  position: relative;
 }
 
-.wrapper,
-.wrapper-inner {
+.wrapper {
   display: grid;
-  grid-template-columns: 1fr min(65ch, 100%) 1fr;
+  grid-template-columns: 1fr min(68ch, 100%) 1fr;
 }
 
 .wrapper > *:not(.full-width) {
   grid-column: 2;
-  padding: 3rem 1rem;
+  padding: 0 1rem;
 }
 
-.full-width {
+.wrapper .full-width {
   width: 100%;
   grid-column: 1 / 4;
+}
+
+article {
+  padding: 3rem 0;
 }
 
 .dim {
   background-color: var(--background-color-dim);
 }
 
+.dim::before {
+
+}
+
+@include tablet-and-above {
+  .dim {
+    margin: 0 .5rem;
+  }
+}
+
 // Reading progress scroll bar with CSS
 .progress-indicator {
   background: linear-gradient(to right top, var(--color-accent) 50%, var(--background-color) 50%) no-repeat;
   background-size: 100% calc(100% - 100vh + .16rem);
-  z-index: -1;
+  z-index: 0;
+  position: relative;
 }
 
 .progress-indicator::before {
@@ -52,8 +62,8 @@ body {
   left: 0;
   top: .158rem;
   bottom: -8rem;
-  width: 100%;
-  background: var(--background-color);
   z-index: -1;
-  will-change: transform;
+  width: 100%;
+  background-color: var(--background-color);
+  pointer-events: none;
 }
