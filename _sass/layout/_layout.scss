@@ -52,7 +52,7 @@ article {
 .progress-indicator {
   background: linear-gradient(to right top, var(--color-accent) 50%, var(--background-color) 50%) no-repeat;
   background-size: 100% calc(100% - 100vh + .16rem);
-  z-index: 0;
+  z-index: 0; // -1 prevents the main nav to scroll
   position: relative;
 }
 
