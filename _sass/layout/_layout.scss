@@ -2,6 +2,8 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
 }
 
 *,
@@ -45,7 +47,7 @@ body {
 }
 
 .progress-indicator::before {
-  content:"";
+  content: "";
   position: fixed;
   left: 0;
   top: .158rem;
@@ -53,4 +55,5 @@ body {
   width: 100%;
   background: var(--background-color);
   z-index: -1;
+  will-change: transform;
 }

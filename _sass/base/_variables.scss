@@ -62,9 +62,9 @@ $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
 
   // Light background colors
   --color-background-light: hsl(var(--color-base-light));
-  --color-background-light-dim: hsla(var(--color-highlight), .02);
+  --color-background-light-dim: hsla(var(--color-highlight), .04);
   --color-background-dark: hsl(var(--color-base-dark));
-  --color-background-dark-dim: hsla(var(--color-highlight), .06);
+  --color-background-dark-dim: hsla(var(--color-highlight), .10);
 
   // Text color
   --color-text-light: hsl(var(--color-base-dark));
