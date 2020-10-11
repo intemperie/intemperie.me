@@ -15,10 +15,6 @@
   margin-top: 0;
 }
 
-.masthead p {
-  font-size: var(--font-size-lg);
-}
-
 .masthead img {
   display: block;
 }
@@ -43,9 +39,9 @@
     z-index: 1;
   }
 
-  .masthead .display1 {
-    font-size: var(--font-size-max);
-  }
+  // .masthead .display1 {
+  //   font-size: var(--font-size-max);
+  // }
 
   // Scrim
   .masthead .background {

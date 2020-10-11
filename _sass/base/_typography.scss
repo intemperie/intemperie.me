@@ -3,6 +3,12 @@
   text-rendering: optimizeLegibility;
 }
 
+@include tablet-and-below {
+  :root {
+    --scalar: 1.333;
+  }
+}
+
 // Small devices in landscape and above (360 × 576)
 @media screen and (min-width: 22.5em) and (min-height: 36em) {
   :root {
@@ -38,21 +44,21 @@ h2,
 .display2 {
   font-size: var(--font-size-xxl);
   margin: var(--font-space-xxl) 0 var(--font-space-lg); //32 x 20px
-  line-height: 1.157323689; //32px
+  line-height: 1.15
 }
 
 h3,
 .display3 {
   font-size: var(--font-size-xl);
   margin: var(--font-space-xxl) 0 var(--font-space-md); //24 x 16px
-  line-height: 1.215277778; //28px
+  line-height: 1.20
 }
 
 h4,
 .display4 {
   font-size: var(--font-size-lg);
   margin: var(--font-space-xl) 0 var(--font-space-sm); //24 x 8px
-  line-height: 1.25; //24px
+  line-height: 1.25;
 }
 
 h5,
@@ -67,7 +73,7 @@ h6,
  {
   font-size: var(--font-size-sm);
   margin: var(--font-space-md) 0 0; //24 x 8px
-  line-height: 1.506024096; //20px
+  line-height: 1.5
   letter-spacing: .04em;
 }
 
