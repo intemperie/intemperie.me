@@ -1,6 +1,7 @@
 .nav-main {
-  display: flex;
+  display: block;
   overflow-x: auto;
+  width: 100%;
   border-bottom: 1px solid var(--color-border);
   -webkit-mask-image: linear-gradient(to right, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 4%, hsla(0,0%,0%,1) 94%, hsla(0,0%,0%,0) 100%);
 }

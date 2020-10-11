@@ -15,13 +15,17 @@
   margin-top: 0;
 }
 
+.masthead p {
+  font-size: var(--font-size-lg);
+}
+
 .masthead img {
   display: block;
 }
 
 @include tablet-and-above {
   .masthead {
-    height: 85vh;
+    min-height: 85vh;
   }
 
   .masthead {

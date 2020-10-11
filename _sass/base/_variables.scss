@@ -25,6 +25,9 @@ $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
 /* Variables */
 :root {
   // Typography
+  font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
+  line-height: 1.5;
+
   --scalar: 1.414; // Ratio 1:√2 – Augmented fourth
 
   --font-size-sm: calc(1 / var(--scalar) * 1rem);

@@ -1,6 +1,4 @@
 :root {
-  font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
-  line-height: 1.5;
   font-family: "Source Serif Pro", Georgia, serif;
   text-rendering: optimizeLegibility;
 }
@@ -106,11 +104,16 @@ article .caption {
 }
 
 .caption + .display {
-  margin-top: var(--font-space-lg);
+  margin-top: var(--font-space-sm);
 }
 
 .display + p {
   margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 ul,
