@@ -1,5 +1,5 @@
 .masthead header {
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
 }
 
 .masthead .display1 {
@@ -17,6 +17,8 @@
 
 .masthead img {
   display: block;
+  position: relative;
+  z-index: 0;
 }
 
 @include tablet-and-above {
@@ -38,10 +40,6 @@
     padding: 2rem;
     z-index: 1;
   }
-
-  // .masthead .display1 {
-  //   font-size: var(--font-size-max);
-  // }
 
   // Scrim
   .masthead .background {

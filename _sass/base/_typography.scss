@@ -65,7 +65,7 @@ h5,
 .display5 {
   font-size: var(--font-size-md);
   margin: var(--font-space-lg) 0 var(--font-space-sm); //24 x 8px
-  line-height: 1.25; //20px
+  line-height: 1.25;
 }
 
 h6,
@@ -118,8 +118,8 @@ article .caption {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 1rem 0 0;
+  word-wrap: break-word; //Preventing ultra long words to break the layout
 }
 
 ul,

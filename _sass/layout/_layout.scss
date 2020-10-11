@@ -30,9 +30,9 @@ body {
   grid-column: 1 / 4;
 }
 
-// article {
-//   padding: 3rem 0;
-// }
+article > .wrapper {
+  padding: 2rem 0;
+}
 
 .dim {
   background-color: var(--background-color-dim);
