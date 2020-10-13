@@ -158,16 +158,9 @@ small,
 }
 
 .display small {
-  margin-left: .25em;
+  display: block;
   font-size: .6em;
   color: var(--color-accent);
-}
-
-@include tablet-and-below {
-  .display small {
-    margin-left: 0;
-    display: block;
-  }
 }
 
 cite {
