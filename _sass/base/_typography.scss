@@ -163,6 +163,13 @@ small,
   color: var(--color-accent);
 }
 
+@include tablet-and-below {
+  .display small {
+    margin-left: 0;
+    display: block;
+  }
+}
+
 cite {
   font-style: normal;
 }
