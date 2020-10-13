@@ -12,6 +12,7 @@
 
 .nav-main ol {
   display: flex;
+  flex: 1;
   justify-content: space-around;
   align-items: flex-start;
   max-width: 62.5rem;
