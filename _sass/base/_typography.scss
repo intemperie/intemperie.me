@@ -24,7 +24,8 @@
   }
 }
 
-.display {
+.display,
+.recommendations li::after {
   font-family: "Barlow Condensed", "FS Industrie Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
   font-feature-settings: "liga" 1, "swsh" 1, "calt" 1, "salt" 1, "ss07" 1;
   font-weight: var(--font-weight-bold);
@@ -59,6 +60,10 @@ h4,
   font-size: var(--font-size-lg);
   margin: var(--font-space-xl) 0 var(--font-space-sm); //24 x 8px
   line-height: 1.25;
+}
+
+h3 + h4 {
+  margin-top: var(--font-space-sm);
 }
 
 h5,
@@ -122,14 +127,40 @@ p {
   word-wrap: break-word; //Preventing ultra long words to break the layout
 }
 
+.first__letter::first-letter {
+  -webkit-initial-letter: 2;
+  initial-letter: 2;
+  margin-right: 1ch;
+}
+
 ul,
 ol {
-  list-style: none;
+  list-style-position: outside;
+  margin-top: 0;
+  padding-left: 1em;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ul li::marker {
+  color: var(--color-accent);
+}
+
+ul li + li {
+  margin-top: .25rem;
 }
 
 small,
 .small {
   font-size: var(--font-size-sm);
+}
+
+.display small {
+  margin-left: .25em;
+  font-size: .6em;
+  color: var(--color-accent);
 }
 
 cite {
@@ -145,39 +176,59 @@ hr {
 }
 
 blockquote {
-  margin: 2rem 0;
-  color: var(--color-accent);
-  border: 2em 0 solid var(--color-accent);
+  margin: 0;
+  padding: 2rem 0rem;
 }
 
 blockquote p {
-  font-size: var(--font-size-lg);
-  line-height: 1.25;
+  margin: 0;
+  position: relative;
+}
+
+blockquote cite {
+  font-size: var(--font-size-sm);
   font-style: italic;
 }
 
-q {
+blockquote p::before,
+blockquote p::after {
   color: var(--color-accent);
 }
 
-q > p {
-  display: inline;
-}
-
-q > p + p::before {
-  content: "";
-  display: block;
-  margin-top: .5em;
-}
-
-q::before {
+blockquote p::before {
   content: "\201C";
-  margin-left: -.6ex;
-  display: inline-block;
+  left: -1ch;
+  top: -.25rem;
+  position: absolute;
+  font-size: var(--font-size-xl);
 }
 
-q::after {
+blockquote p::after {
   content: "\201D";
+}
+
+.recommendations {
+  counter-reset: recommendations;
+  list-style: none;
+}
+
+.recommendations li {
+  position: relative;
+  border-top: .16rem solid var(--background-color-dim);
+}
+
+.recommendations li:last-child {
+  border-bottom: .16rem solid var(--background-color-dim);
+}
+
+.recommendations li::after {
+  counter-increment: recommendations;
+  content: counter(recommendations, decimal-leading-zero);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: var(--font-size-xl);
+  color: var(--background-color-dim);
 }
 
 abbr {
@@ -187,6 +238,23 @@ abbr {
   text-underline-offset: .16em;
   text-decoration-skip-ink: auto;
   cursor: help;
+}
+
+pre, code, kbd {
+  border-radius: 1px;
+  overflow-wrap: break-word; /*Preventing ultra long stuff to overflow the container*/
+  overflow-x: auto;
+  font-weight: var(--font-weight-regular);
+  font-size: .84em;
+}
+
+pre, code {
+  font-family: "SF Mono", "Source Code Pro", Consolas, Menlo, monospace;
+}
+
+code {
+  padding: .2em .4em;
+  background-color: var(--color-border);
 }
 
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
