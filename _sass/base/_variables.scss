@@ -24,10 +24,6 @@ $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
 
 /* Variables */
 :root {
-  // Typography
-  font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
-  line-height: 1.5;
-
   --scalar: 1.414; // Ratio 1:√2 – Augmented fourth
 
   --font-size-sm: calc(1 / var(--scalar) * 1rem);
@@ -61,13 +57,13 @@ $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
   // Primary colors
   --color-base-dark: 198, 17%, 16%;
   --color-base-light: 100, 100%, 100%;
-  --color-highlight: 340, 82%, 52%;
+  --color-highlight: 340, 82%, 48%;
 
   // Light background colors
   --color-background-light: hsl(var(--color-base-light));
   --color-background-light-dim: hsla(var(--color-highlight), .04);
   --color-background-dark: hsl(var(--color-base-dark));
-  --color-background-dark-dim: hsla(var(--color-highlight), .10);
+  --color-background-dark-dim: hsla(var(--color-highlight), .06);
 
   // Text color
   --color-text-light: hsl(var(--color-base-dark));
@@ -92,5 +88,6 @@ $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
     --background-color-dim: var(--color-background-dark-dim);
     --color-text: var(--color-text-dark);
     --color-border: var(--color-border-dark);
+    --color-highlight: 350, 100%, 70%;
   }
 }

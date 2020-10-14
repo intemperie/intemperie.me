@@ -1,4 +1,7 @@
 :root {
+  // Typography
+  font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
+  line-height: 1.5;
   font-family: "Source Serif Pro", Georgia, serif;
   text-rendering: optimizeLegibility;
 }
@@ -82,15 +85,15 @@ h6,
   letter-spacing: .04em;
 }
 
-.caption {
+.overline {
   display: flex;
   flex-direction: row;
   margin-bottom: var(--font-space-sm);
   color: var(--color-accent);
 }
 
-.caption::before,
-.caption::after {
+.overline::before,
+.overline::after {
   content: "";
   display: inline-block;
   transform: translateY(50%);
@@ -98,23 +101,23 @@ h6,
   border-bottom: .16rem solid var(--color-accent);
 }
 
-.caption::before {
-  flex: .025 1;
+.overline::before {
+  width: calc(1rem - 1ch);
   margin-right: 1ch;
 }
 
-.caption::after {
+.overline::after {
   margin-left: 1ch;
   flex: 1 1;
 }
 
-article .caption {
+section:not(.masthead) .overline {
   width: calc(100% + 1rem);
   position: relative;
   left: -1rem;
 }
 
-.caption + .display {
+.overline + .display {
   margin-top: var(--font-space-sm);
 }
 
@@ -165,14 +168,6 @@ small,
 
 cite {
   font-style: normal;
-}
-
-hr {
-  height: 0;
-  color: #eee;
-  border: 1px solid #eee;
-  margin: 2em 0 1em;
-
 }
 
 blockquote {

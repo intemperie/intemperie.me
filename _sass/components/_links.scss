@@ -1,4 +1,8 @@
 a {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
   text-decoration: underline solid;
   text-decoration-color: var(--color-accent);
   text-decoration-thickness: .10em;
@@ -6,38 +10,19 @@ a {
   text-decoration-skip-ink: auto;
   color: inherit;
   font-style: inherit;
+
 }
 
-h1 a, .display1 a,
-h2 a, .display2 a,
-h3 a, .display3 a,
-h4 a, .display4 a,
-h5 a, .display5 a,
-th a {
-  font-weight: inherit;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-a {
-  display: inline-block;
-  white-space: nowrap;
-  position: relative;
-  z-index: 2;
-  transition: color .16s $ease-out-quart;
-}
-
-a:hover {
-  color: var(--color-text-dark);
+a:hover,
+a:focus {
+  color: var(--background-color);
 }
 
 a::before {
   content: "";
   display: block;
-  height: 0;
   position: absolute;
+  height: 100%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -45,15 +30,25 @@ a::before {
   background-color: var(--color-accent);
   border-radius: 1px;
   backface-visibility: hidden;
-  will-change: auto;
-  transition: all .16s cubic-bezier(.46, .01, .14, 1.35);
+  will-change: transform;
+  transform: scale(1, 0);
+  transform-origin: bottom;
   mix-blend-mode: color;
 }
 
-a:hover::before {
-  height: 100%;
-  left: -.125em;
-  right: -.125em;
-  transform: rotate(.6deg);
+a:hover::before,
+a:focus:before {
+  transform: rotate(.6deg) scale(1.04, 1);
   backface-visibility: hidden;
+}
+
+//Animate links if user hasn't set reduce motion (accessibility preference)
+@media (prefers-reduced-motion: no-preference) {
+  a {
+    transition: color .16s $ease-out-quart;
+  }
+
+  a::before {
+    transition: transform .16s cubic-bezier(.46, .01, .14, 1.35);
+  }
 }
