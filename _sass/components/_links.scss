@@ -46,6 +46,7 @@ a:focus:before {
   a:hover::before,
   a:focus:before {
     transform: scale(1.04, 1);
+  }
 }
 
 //Animate links if user hasn't set reduce motion (accessibility preference)
