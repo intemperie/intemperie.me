@@ -82,12 +82,12 @@ $ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
 }
 
 // Dark mode
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--color-background-dark);
-    --background-color-dim: var(--color-background-dark-dim);
-    --color-text: var(--color-text-dark);
-    --color-border: var(--color-border-dark);
-    --color-highlight: 350, 100%, 70%;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background-color: var(--color-background-dark);
+//     --background-color-dim: var(--color-background-dark-dim);
+//     --color-text: var(--color-text-dark);
+//     --color-border: var(--color-border-dark);
+//     --color-highlight: 350, 100%, 70%;
+//   }
+// }

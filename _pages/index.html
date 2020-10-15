@@ -3,13 +3,23 @@ title:
 layout: base
 permalink: /
 ---
-<main class="wrapper">
-  <section id="me" class="masthead full-width">
-    <header>
-      <h1 class="display display5 caption">Alberto Calvo</h1>
-      <h2 class="display display1">Diseño cosas que <em class="stroke">importan</em></h2>
-      <p>Soy un diseñador generalista al que le apasiona solucionar problemas <em>relevantes</em> de forma <em>sencilla</em>, <em>inclusiva</em> y <em>ética</em>; a través de una misión y visión compartidas, transparencia, buena comunicación, pragmatismo y atención al detalle.</p>
-    </header>
-    <img src="images/alberto.jpg" class="background" alt="Me smiling with a laptop full of stickers (wasn't mine, I promise)" width="100%">
-  </section>
-</main>
+<section id="intro" class="masthead">
+  <header>
+    <h1 class="display display5 overline">Alberto Calvo</h1>
+    <h2 class="display display1">I design things that <em class="stroke">matter</em></h2>
+    <p>I’m a generalist designer who is passionate about solving <em>relevant</em> problems in a <em>simple</em>, <em>inclusive</em>, and <em>ethical</em> way.</p>
+  </header>
+  <picture class="full-width">
+    <source
+      media="(min-width: 1024px)"
+      srcset="images/alberto-calvo-desktop.jpg 1x,
+              images/alberto-calvo-desktop@2x.jpg 2x">
+    <source
+      media="(min-width: 415px)"
+      srcset="images/alberto-calvo-tablet.jpg 1x,
+              images/alberto-calvo-tablet@2x.jpg 2x">
+    <img class="background"
+      src="images/alberto-calvo-phone.jpg" alt="Me smiling in front of a laptop full of stickers. It wasn't mine, I promise"
+      srcset="/images/alberto-calvo-phone@2x.jpg 2x" width="100%">
+  </picture>
+</section>

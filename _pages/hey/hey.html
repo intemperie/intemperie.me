@@ -11,17 +11,29 @@ body-class: progress-indicator
       <h2 class="display display1">I design things that <em class="stroke">matter</em></h2>
       <p>I’m a generalist designer who is passionate about solving <em>relevant</em> problems in a <em>simple</em>, <em>inclusive</em>, and <em>ethical</em> way.</p>
     </header>
-    <img src="images/alberto.jpg" class="background full-width" alt="Me smiling in front of a laptop full of stickers. It wasn't mine, I promise" width="100%">
+    <picture class="full-width">
+      <source
+        media="(min-width: 1024px)"
+        srcset="images/alberto-calvo-desktop.jpg 1x,
+                images/alberto-calvo-desktop@2x.jpg 2x">
+      <source
+        media="(min-width: 415px)"
+        srcset="images/alberto-calvo-tablet.jpg 1x,
+                images/alberto-calvo-tablet@2x.jpg 2x">
+      <img class="background"
+        src="images/alberto-calvo-phone.jpg" alt="Me smiling in front of a laptop full of stickers. It wasn't mine, I promise"
+        srcset="/images/alberto-calvo-phone@2x.jpg 2x" width="100%">
+    </picture>
   </section>
 
   <nav class="nav-main display">
     <ol>
       <li><a href="#about-me">About me</a></li>
       <li><a href="#about-us">About us</a></li>
-      <li><a href="#pretty-pixels">Pretty pixels</a></li>
+      <li><a href="#selected-pixels">Selected pixels</a></"li>
       <li><a href="#what-people-say">What people say</a></li>
       <li><a href="#resume">Résumé</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#colophon">Colophon</a></li>
     </ol>
   </nav>
 
@@ -57,8 +69,8 @@ body-class: progress-indicator
 
     <p>Your products breathe that strong and unique personality. Jason did <a href="https://www.youtube.com/watch?v=UCeYTysLyGI">a tour of Hey</a>, in which he was able to present a product that breaks with everything established without all the fanfare so common nowadays. And that made a great impression on me.</p>
 
-    <h3 class="display">I have a lot to contribute to Basecamp</h3>
-    <p><a href="http://thinkcage.com/svn/">Like Jason</a>, I’m not a fanboy either. Even the most incredible things can be improved, and I have been fortunate to have been able to prove it to myself by working for three years on one of the products I have <em>loved</em> the most in my life: <a href="https://www.sketch.com/">Sketch</a>. There I helped improve many essential aspects of the product, its ecosystem, the brand, and the company, which you can <a href="#sketch">check out in my résumé</a>. All the differences aside, Basecamp reminds me a bit of Sketch.</p>
+    <h3 class="display">I have a lot to offer</h3>
+    <p><a href="http://thinkcage.com/svn/">Like Jason</a>, I’m not a fanboy either. Even the most incredible things can be improved, and I have been fortunate to prove it to myself by working for three years on one of the products I have <em>loved</em> the most in my life: <a href="https://www.sketch.com/">Sketch</a>. There I helped improve many essential aspects of the product, its ecosystem, the brand, and the company, which you can <a href="#sketch">check out in my résumé</a>. All the differences aside, Basecamp reminds me a bit of Sketch.</p>
 
     <p>But I’m not a rockstar; <em>I’m a long-distance runner</em>. I prefer to keep a low profile, <em>work hard</em> to do incredible things with my team, and let the work speak for itself.</p>
 
@@ -69,13 +81,155 @@ body-class: progress-indicator
     <p>I believe that many of my capacities can <em>explode</em> in an environment more akin to my principles, such as Basecamp. But I also know that I have areas where I need to <em>improve</em>. I want to have the opportunity to do it by working with brilliant people who can help me continue to grow, and that <em>together</em> we can make a better Basecamp for the future.</p>
   </section>
 
+  <section id="selected-pixels" class="wrapper visuals">
+    <h2 class="display display5 overline">Selected pixels</h2>
+    <h3 class="display">Great visuals can turn a good product into an <em>excellent</em> one</h3>
+      <p>Here are a few examples of things I contributed to look and <em>work</em> even better:</p>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/app-prisma-desktop.jpg 1x,
+                  images/app-prisma-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/app-prisma-tablet.jpg 1x,
+                  images/app-prisma-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/app-prisma-phone.jpg" alt="Cabify Prisma CMS, 2020"
+          srcset="/images/app-prisma-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Cabify Prisma <abbr title="Content Management System">CMS</abbr> page builder, 2020. Evolution of my initial concept designed by our Web team using <a href="#cabify-design-system">our Design System</a>.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/app-business-desktop.jpg 1x,
+                  images/app-business-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/app-business-tablet.jpg 1x,
+                  images/app-business-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/app-business-phone.jpg" alt="Cabify for Business journey creation, 2020"
+          srcset="images/app-business-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Cabify for Business journey creation, 2020. Designed by our Business team using <a href="#cabify-design-system">our Design System</a>.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/app-rider-desktop.jpg 1x,
+                  images/app-rider-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/app-rider-tablet.jpg 1x,
+                  images/app-rider-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/app-rider-phone.jpg" alt="Cabify Rider app, 2020"
+          srcset="images/app-rider-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Cabify Rider app, 2020. Designed by our Rider team using <a href="#cabify-design-system">our Design System</a>.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/web-corporate-social-responsibility-desktop.jpg 1x,
+                  images/web-corporate-social-responsibility-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/web-corporate-social-responsibility-tablet.jpg 1x,
+                  images/web-corporate-social-responsibility-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/web-corporate-social-responsibility-phone.jpg" alt="Cabify Corporate Social Responsibility web section, 2018"
+          srcset="images/web-corporate-social-responsibility-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Cabify Corporate Social Responsibility web section, 2018. Co-designed with Marta de la Fuente.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/sketch-logo-2016-desktop.jpg 1x,
+                  images/sketch-logo-2016-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/sketch-logo-2016-tablet.jpg 1x,
+                  images/sketch-logo-2016-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/sketch-logo-2016-phone.jpg" alt="Sketch logo, 2016"
+          srcset="images/sketch-logo-2016-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Sketch logo, 2016. Co-designed with Marcelo Marfil.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/pilot-2016-desktop.jpg 1x,
+                  images/pilot-2016-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/pilot-2016-tablet.jpg 1x,
+                  images/pilot-2016-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/pilot-2016-phone.jpg" alt="Pilot: a movies and TV shows app that never got released, 2016"
+          srcset="images/pilot-2016-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Pilot: a movies and TV shows app that never got released, 2016.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="images/starwave-player-concept-2013-desktop.jpg 1x,
+                  images/starwave-player-concept-2013-desktop@2x.jpg 2x">
+        <source
+          media="(min-width: 415px)"
+          srcset="images/starwave-player-concept-2013-tablet.jpg 1x,
+                  images/starwave-player-concept-2013-tablet@2x.jpg 2x">
+        <img loading="lazy"
+          src="images/starwave-player-concept-2013-phone.jpg" alt="Starwave: music app player concept, 2013"
+          srcset="images/starwave-player-concept-2013-phone@2x.jpg 2x">
+      </picture>
+      <figcaption class="display">Starwave: music app player concept, 2013.</figcaption>
+    </figure>
+
+    <figure class="full-width">
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcset="images/starwave-concept-2013-desktop.jpg 1x,
+                    images/starwave-concept-2013-desktop@2x.jpg 2x">
+          <source
+            media="(min-width: 415px)"
+            srcset="images/starwave-concept-2013-tablet.jpg 1x,
+                    images/starwave-concept-2013-tablet@2x.jpg 2x">
+          <img loading="lazy"
+            src="images/starwave-concept-2013-phone.jpg" alt="Starwave: music app concept, 2013"
+            srcset="images/starwave-concept-2013-phone@2x.jpg 2x">
+        </picture>
+        <figcaption class="display">Starwave: music app concept, 2013.</figcaption>
+    </figure>
+  </section>
+
   <section id="what-people-say" class="wrapper">
     <h2 class="display display5 overline">What people say about me</h2>
-    <p class="display display3">These are some kind recommendations I got from people that have worked with me over the years</p>
+    <p class="display display3">Some nice things people that have worked with me over the years wrote about our experience <em>together</em>:</p>
     <ol class="recommendations">
       <li>
         <blockquote>
-          <p>Alberto is an inspiration because of his passion for striving for the best. He also leads by example, and many people at Youzee found his enthusiasm and dedication, both inspiring and motivating, including myself. I learned a great deal from Alberto.</p>
+          <p>Alberto is an inspiration because of his passion for striving for the best. He also leads by example, and many people at Youzee found his enthusiasm and dedication both inspiring and motivating, including myself. I learned a great deal from Alberto.</p>
           <cite>— <a href="https://twitter.com/mrrocks">Fran Pérez</a>, direct design manager</cite>
         </blockquote>
       </li>
@@ -121,7 +275,7 @@ body-class: progress-indicator
   <section id="resume" class="wrapper dim">
     <h2 class="display display5 overline">Résumé</h2>
     <h3 id="cabify" class="display"><a href="https://cabify.com/en">Cabify</a></h3>
-    <h4 class="display">Principal product designer, Design system <small>Jun 2019 – Present</small></h4>
+    <h4 id="cabify-design-system" class="display">Principal product designer, Design system <small>Jun 2019 – Present</small></h4>
     <p>The design team reached a point where it was <em>essential</em> to define a shared <em>design system</em> that would avoid <em>fragmentation</em> and make us more <em>efficient</em>. I decided to pass the baton to someone else on the Web to continue the project, already on track, and <em>step forward to help</em> the team in this crucial area.</p>
 
     <p>We took advantage of our previous experience in the Web to lay the foundations of typography, color, and layout for our apps. And with this, we began to create the basic components that were fundamental to migrate all our projects and workflow to <em>Figma</em>. The system’s coverage has not stopped growing since then, and little by little, we are taking it to other projects, aside from product.</p>
@@ -158,7 +312,7 @@ body-class: progress-indicator
 
     <p>In parallel, I began to define and train the team on the foundations of a new <em>design system</em> for the web, focused on typography, color, and layout. I tried to improve <em>accessibility</em> and <abbr title="Search Engine Optimization">SEO</abbr> using <em>semantic markup</em> too.</p>
 
-    <p>We redesigned the main sections of the site: <em>Home</em>, <em>Driver</em>, and <em>Business</em>, moving away from the pure marketing and brand approach that until then had led the project, and focusing the discourse <em>on the product and our value proposition</em>. We based all these in an <em>exhaustive investigation</em> of the company’s and our potential clients’ needs we conducted.</p>
+    <p>We redesigned the main sections of the site: <em>Home</em>, <em>Driver</em>, and <em>Business</em>, moving away from the pure marketing and brand approach that until then had led the project and focusing the discourse <em>on the product and our value proposition</em>. We based all these on an <em>exhaustive investigation</em> of the company’s and our potential clients’ needs we conducted.</p>
 
     <p>The team grew, and we brought in a Product Manager and an Engineering Manager to spread the workload.</p>
 
@@ -177,7 +331,7 @@ body-class: progress-indicator
       <li><a href="https://www.sketch.com/support/"><em>Support</em> home page</a>, which serves as a hub for all the information and has a search input field as a central piece of attention. When you click in that field, you get the <abbr title="Frequently Asked Questions">FAQ</abbr> as suggestions before you start typing.</li>
       <li>That search engine was powered by <a href="https://algolia.com"><em>Algolia</em></a>, which allowed us to perform searches inside our <em>Jekyll</em> articles with <code>JavaScript</code>.</li>
       <li>Previously, the <em>Support</em> section was just a standalone page with a collection of all the questions and answers. But I decided to go further: created standalone pages for each, so the information was easier to browse and search, better for <abbr title="Search Engine Optimization">SEO</abbr>, but, more importantly, paved the path for writing <a href="https://www.sketch.com/support/troubleshooting/color-management/"><em>better articles</em></a> with way more detail than before. We <a href="https://www.sketch.com/support/licensing-and-sales/">categorized</a> the articles by one or several tags in the <em>front matter</em>.</li>
-      <li>I improved the <a href="https://www.sketch.com/support/contact/"><em>Contact</em> form</a> with smart <em>Support</em> article suggestions based on what you were writing as your subject—also powered by <em>Algolia</em>. I added contextual information depending on the topic you choose, and defined some description templates to help people complete the form properly, so we got better information from them.</li>
+      <li>I improved the <a href="https://www.sketch.com/support/contact/"><em>Contact</em> form</a> with smart <em>Support</em> article suggestions based on what you were writing as your subject—also powered by <em>Algolia</em>. I added contextual information depending on the topic you chose and defined some description templates to help people complete the form correctly, so we got better information from them.</li>
     </ul>
 
     <h4 class="display">Release process: Automation and awareness</h4>
@@ -267,6 +421,15 @@ body-class: progress-indicator
 
     <h4 class="display">Frontend developer <small>Mar 2008 – Jul 2009</small></h4>
     <p>I was a one-man-department for more than a year.</p>
-    <p>I coded several huge sites from scratch, and also tweaked and changed a lot made by others. I developed a bunch of top-level coding skills and the ability to work under pressure.</p>
+    <p>I coded several huge sites from scratch and also tweaked and changed a lot made by others. I developed a bunch of top-level coding skills and the ability to work under pressure.</p>
+  </section>
+
+  <section id="colophon" class="wrapper">
+    <h2 class="display display5 overline">Colohon</h2>
+    <h3 id="cabify" class="display">If you’ve made it this far, <em>thank you</em> for your time</h3>
+    <p>I have taken this challenge <em>very</em> seriously, and I hope I have transmitted it with all the effort I have put into creating this website. Thanks also for giving me the push I needed to update it after <em>7 years</em> finally!</p>
+    <p>In case you are curious, you can find me on <a href="https://twitter.com/pumpkin">Twitter</a> and <a href="https://www.linkedin.com/in/intemperie/">LinkedIn</a>.</p>
+
+    <p>I hope we can meet soon. Thanks again!</p>
   </section>
 </article>

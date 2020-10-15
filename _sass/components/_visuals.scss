@@ -1,0 +1,23 @@
+.wrapper.visuals {
+  padding-bottom: 0;
+}
+
+.visuals .full-width {
+  margin: 2rem auto 1rem;
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+.visuals .full-width:last-child {
+  margin-bottom: 0;
+}
+
+.visuals figcaption {
+  padding: 0 .5rem;
+}
+
+.visuals img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
