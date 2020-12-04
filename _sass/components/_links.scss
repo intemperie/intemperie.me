@@ -10,6 +10,8 @@ a {
   text-decoration-skip-ink: auto;
   color: inherit;
   font-style: inherit;
+  will-change: color;
+  transition: color .16s $ease-out-quart;
 }
 
 a:hover,
@@ -24,20 +26,22 @@ a::before {
   height: 100%;
   left: 0;
   right: 0;
+  top: 0;
   bottom: 0;
   z-index: -1;
   background-color: var(--color-accent);
   border-radius: 1px;
   backface-visibility: hidden;
-  will-change: transform;
   transform: scale(1, 0);
   transform-origin: bottom;
   mix-blend-mode: color;
+  will-change: transform;
+  transition: transform .16s cubic-bezier(.46, .01, .14, 1.35);
 }
 
 a:hover::before,
 a:focus:before {
-  transform: rotate(.6deg) scale(1.04, 1);
+  transform: scale(1.04, 1) rotate(.6deg);
   backface-visibility: hidden;
 }
 
@@ -48,13 +52,13 @@ a:focus:before {
   }
 }
 
-//Animate links if user hasn't set reduce motion (accessibility preference)
-@media (prefers-reduced-motion: no-preference) {
+//Don't animate links if user has set reduce motion (accessibility preference)
+@media (prefers-reduced-motion: reduce) {
   a {
-    transition: color .16s $ease-out-quart;
+    transition: none;
   }
 
   a::before {
-    transition: transform .16s cubic-bezier(.46, .01, .14, 1.35);
+    transition: none;
   }
 }
