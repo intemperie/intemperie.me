@@ -68,3 +68,7 @@ article > .wrapper {
   background-color: var(--background-color);
   pointer-events: none;
 }
+
+.wrapper.about {
+  padding-bottom: 0;
+}
