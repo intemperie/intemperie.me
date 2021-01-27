@@ -256,11 +256,12 @@ pre, code {
 code {
   padding: .2em .4em;
   background-color: var(--color-border);
+  text-shadow: 0 .055em 0 var(--background-color);
 }
 
 em {
   box-shadow: inset 0 -.5em 0 0 var(--color-border);
-  text-shadow: 0 .111em 0 var(--background-color);
+  text-shadow: 0 .055em 0 var(--background-color);
 }
 
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {

@@ -31,7 +31,7 @@ a::before {
   z-index: -1;
   background-color: var(--color-accent);
   border-radius: 1px;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform: scale(1, 0);
   transform-origin: bottom;
   mix-blend-mode: color;
@@ -50,6 +50,12 @@ a:focus:before {
   a:focus:before {
     transform: scale(1.04, 1);
   }
+}
+
+a:hover em,
+a:focus em {
+  box-shadow: none;
+  text-shadow: none;
 }
 
 //Don't animate links if user has set reduce motion (accessibility preference)
