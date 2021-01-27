@@ -3,7 +3,7 @@
   font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
   //font-size: 1.25em; // 20px (Asuming 16px as the browser initial font size)
   line-height: 1.5;
-  font-family: Barlow, sans-serif;
+  font-family: Barlow, -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 500;
   text-rendering: optimizeLegibility;
 }
@@ -33,7 +33,7 @@
 
 .display,
 .recommendations li::after {
-  font-family: "Barlow Condensed", "FS Industrie Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
   font-feature-settings: "liga" 1, "swsh" 1, "calt" 1, "salt" 1, "ss07" 1;
   font-weight: var(--font-weight-extra-bold);
   font-style: italic;
@@ -167,6 +167,7 @@ small,
 
 .display small {
   display: block;
+  margin-top: .25em;
   font-size: .6em;
   color: var(--color-accent);
 }
@@ -254,7 +255,7 @@ pre, code {
 }
 
 code {
-  padding: .2em .4em;
+  padding: .2em;
   background-color: var(--color-border);
   text-shadow: 0 .055em 0 var(--background-color);
 }
