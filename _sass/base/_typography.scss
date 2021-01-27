@@ -199,7 +199,7 @@ blockquote p::after {
 blockquote p::before {
   content: "\201C";
   left: -.8ch;
-  top: -1.1rem;
+  top: -.32em;
   position: absolute;
   font-size: var(--font-size-xxl);
 }
@@ -259,7 +259,7 @@ code {
 }
 
 em {
-  box-shadow: inset 0 -.5em 0 0 var(--color-border);
+  box-shadow: inset 0 -.5em 0 0 hsla(var(--color-highlight), .16);
 }
 
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
