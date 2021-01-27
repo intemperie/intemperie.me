@@ -1,35 +1,36 @@
+// Used https://google-webfonts-helper.herokuapp.com/
 /* source-serif-pro-italic - latin */
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: italic;
-  font-weight: 400;
-  src: local(''),
-       url('webfonts/source-serif-pro-v10-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('webfonts/source-serif-pro-v10-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-/* source-serif-pro-regular - latin */
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('webfonts/source-serif-pro-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('webfonts/source-serif-pro-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Source Serif Pro';
+//   font-style: italic;
+//   font-weight: 400;
+//   src: local(''),
+//        url('webfonts/source-serif-pro-v10-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//        url('webfonts/source-serif-pro-v10-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//   font-display: swap;
+// }
+//
+// /* source-serif-pro-regular - latin */
+// @font-face {
+//   font-family: 'Source Serif Pro';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local(''),
+//        url('webfonts/source-serif-pro-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//        url('webfonts/source-serif-pro-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//   font-display: swap;
+// }
 
 /* barlow-condensed-700italic - latin */
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: italic;
-  font-weight: 700;
-  src: local(''),
-       url('webfonts/barlow-condensed-v5-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('webfonts/barlow-condensed-v5-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Barlow Condensed';
+//   font-style: italic;
+//   font-weight: 700;
+//   src: local(''),
+//        url('webfonts/barlow-condensed-v5-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//        url('webfonts/barlow-condensed-v5-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//   font-display: swap;
+// }
 
 /* barlow-condensed-800italic - latin */
 @font-face {
@@ -39,5 +40,26 @@
   src: local(''),
        url('webfonts/barlow-condensed-v5-latin-800italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('webfonts/barlow-condensed-v5-latin-800italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+}
+
+/* barlow-500 - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('webfonts/barlow-v5-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('webfonts/barlow-v5-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+}
+/* barlow-500italic - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: italic;
+  font-weight: 500;
+  src: local(''),
+       url('webfonts/barlow-v5-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('webfonts/barlow-v5-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }

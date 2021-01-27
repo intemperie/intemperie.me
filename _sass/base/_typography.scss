@@ -1,8 +1,10 @@
 :root {
   // Typography
   font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
+  //font-size: 1.25em; // 20px (Asuming 16px as the browser initial font size)
   line-height: 1.5;
-  font-family: "Source Serif Pro", Georgia, serif;
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
 }
 
@@ -16,14 +18,16 @@
 @media screen and (min-width: 22.5em) and (min-height: 36em) {
   :root {
     // Variable font size locking from a 16px minimum size to 26px at 1200px
-    font-size: calc(1em + .8333vmin); // ((26-16)/1200) * 100
+    //font-size: calc(1em + .8333vmin); // ((26-16)/1200) * 100
+    font-size: calc(1em + .875vmin); // ((30-16)/1600) * 100
   }
 }
 
-// Wide screens (1200 × 675) – 16:9 aspect ratio
-@media screen and (min-width: 75em) and (min-height: 42.1875em) {
+// Wide screens (1600 × 675) – 16:9 aspect ratio
+@media screen and (min-width: 100em) and (min-height: 42.1875em) {
   :root {
-    font-size: 1.625em; // Locking at 26px maximum
+    //font-size: 1.625em; // Locking at 26px maximum
+    font-size: 1.875em; // Locking at 30px maximum
   }
 }
 
@@ -31,7 +35,7 @@
 .recommendations li::after {
   font-family: "Barlow Condensed", "FS Industrie Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
   font-feature-settings: "liga" 1, "swsh" 1, "calt" 1, "salt" 1, "ss07" 1;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extra-bold);
   font-style: italic;
   text-transform: uppercase;
 }
@@ -99,7 +103,7 @@ h6,
   display: inline-block;
   transform: translateY(50%);
   margin: auto;
-  border-bottom: .16rem solid var(--color-accent);
+  border-bottom: .20rem solid var(--color-accent);
 }
 
 .overline::before {
@@ -179,6 +183,7 @@ blockquote {
 blockquote p {
   margin: 0;
   position: relative;
+  font-style: italic;
 }
 
 blockquote cite {
@@ -193,10 +198,10 @@ blockquote p::after {
 
 blockquote p::before {
   content: "\201C";
-  left: -1ch;
-  top: -.25rem;
+  left: -.8ch;
+  top: -1.1rem;
   position: absolute;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
 }
 
 blockquote p::after {
@@ -210,11 +215,11 @@ blockquote p::after {
 
 .recommendations li {
   position: relative;
-  border-top: .16rem solid var(--background-color-dim);
+  border-top: .20rem solid var(--background-color-dim);
 }
 
 .recommendations li:last-child {
-  border-bottom: .16rem solid var(--background-color-dim);
+  border-bottom: .20rem solid var(--background-color-dim);
 }
 
 .recommendations li::after {
@@ -223,7 +228,7 @@ blockquote p::after {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   color: var(--background-color-dim);
 }
 
@@ -253,11 +258,16 @@ code {
   background-color: var(--color-border);
 }
 
+em {
+  box-shadow: inset 0 -.5em 0 0 var(--color-border);
+}
+
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
   .stroke {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var(--color-text);
     -webkit-text-stroke-width: .0625rem;
     paint-order: stroke fill;
+    box-shadow: none;
   }
 }

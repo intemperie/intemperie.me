@@ -80,6 +80,12 @@
 
 @include wide-and-below {
   .masthead > header {
-    grid-column: 4 /6;
+    grid-column: 4 / 6;
+  }
+}
+
+@include wide-and-above {
+  .masthead > header {
+    padding-right: 0;
   }
 }
