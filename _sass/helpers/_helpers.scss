@@ -24,7 +24,7 @@
 }
 
   *::selection:window-inactive {
-    background: hsla(var(--color-highlight), .48);
+    background: hsla(var(--color-highlight), .16);
   }
 
 /* Avoid the ugly focus ring in form elements in Safari (focus styles added later) */
