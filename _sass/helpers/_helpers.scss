@@ -20,12 +20,8 @@
 
 /*Selection color for pages*/
 *::selection {
-  background: hsla(var(--color-highlight), .24);
+  background: var(--color-accent);
 }
-
-  *::selection:window-inactive {
-    background: hsla(var(--color-highlight), .16);
-  }
 
 /* Avoid the ugly focus ring in form elements in Safari (focus styles added later) */
 :focus { outline: none; }

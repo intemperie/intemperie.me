@@ -1,7 +1,6 @@
 :root {
   // Typography
   font-size: 1.125em; // 18px (Asuming 16px as the browser initial font size)
-  //font-size: 1.25em; // 20px (Asuming 16px as the browser initial font size)
   line-height: 1.5;
   font-family: Barlow, -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 500;
@@ -15,7 +14,7 @@
 }
 
 // Small devices in landscape and above (360 × 576)
-@media screen and (min-width: 22.5em) and (min-height: 36em) {
+@media screen and (min-width: 22.5rem) and (min-height: 36rem) {
   :root {
     // Variable font size locking from a 16px minimum size to 26px at 1200px
     //font-size: calc(1em + .8333vmin); // ((26-16)/1200) * 100
@@ -24,7 +23,7 @@
 }
 
 // Wide screens (1600 × 675) – 16:9 aspect ratio
-@media screen and (min-width: 100em) and (min-height: 42.1875em) {
+@media screen and (min-width: 100rem) and (min-height: 42.1875rem) {
   :root {
     //font-size: 1.625em; // Locking at 26px maximum
     font-size: 1.875em; // Locking at 30px maximum
@@ -34,7 +33,6 @@
 .display,
 .recommendations li::after {
   font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-feature-settings: "liga" 1, "swsh" 1, "calt" 1, "salt" 1, "ss07" 1;
   font-weight: var(--font-weight-extra-bold);
   font-style: italic;
   text-transform: uppercase;
@@ -45,7 +43,6 @@ h1,
   font-size: var(--font-size-xxxl);
   margin: var(--font-space-xxxl) 0 var(--font-space-md); //48 x 24px
   line-height: 1; //40px
-  font-weight: var(--font-weight-extra-bold);
 }
 
 h2,
@@ -160,8 +157,7 @@ ul li + li {
   margin-top: .25rem;
 }
 
-small,
-.small {
+small {
   font-size: var(--font-size-sm);
 }
 
@@ -216,11 +212,11 @@ blockquote p::after {
 
 .recommendations li {
   position: relative;
-  border-top: .20rem solid var(--background-color-dim);
+  border-top: .20rem solid var(--background-color-alternate);
 }
 
 .recommendations li:last-child {
-  border-bottom: .20rem solid var(--background-color-dim);
+  border-bottom: .20rem solid var(--background-color-alternate);
 }
 
 .recommendations li::after {
@@ -230,7 +226,7 @@ blockquote p::after {
   bottom: 0;
   right: 0;
   font-size: var(--font-size-xxl);
-  color: var(--background-color-dim);
+  color: var(--background-color-alternate);
 }
 
 abbr {
@@ -260,10 +256,10 @@ code {
   text-shadow: 0 .055em 0 var(--background-color);
 }
 
-em {
-  box-shadow: inset 0 -.5em 0 0 var(--color-border);
-  text-shadow: 0 .055em 0 var(--background-color);
-}
+// em {
+//   box-shadow: inset 0 -.5em 0 0 var(--color-border);
+//   text-shadow: 0 .055em 0 var(--background-color);
+// }
 
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
   .stroke {

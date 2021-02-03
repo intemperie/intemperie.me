@@ -35,16 +35,16 @@ article > .wrapper {
   padding: 4rem 0;
 }
 
-.dim {
-  background-color: var(--background-color-dim);
+.alternate {
+  background-color: var(--background-color-alternate);
 }
 
-.dim::before {
+.alternate::before {
 
 }
 
 @include tablet-and-above {
-  .dim {
+  .alternate {
     margin: 0 .5rem;
   }
 }

@@ -11,7 +11,7 @@ a {
   color: inherit;
   font-style: inherit;
   will-change: color;
-  transition: color .16s $ease-out-quart;
+  transition: color .16s var(--easing);
 }
 
 a:hover,
@@ -36,7 +36,7 @@ a::before {
   transform-origin: bottom;
   mix-blend-mode: color;
   will-change: transform;
-  transition: transform .16s cubic-bezier(.46, .01, .14, 1.35);
+  transition: transform .16s var(--easing);
 }
 
 a:hover::before,
