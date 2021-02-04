@@ -33,16 +33,18 @@ a::before {
   border-radius: 1px;
   -webkit-backface-visibility: hidden;
   transform: scale(1, 0);
+  opacity: 0;
   transform-origin: bottom;
   mix-blend-mode: color;
-  will-change: transform;
-  transition: transform .16s var(--easing);
+  will-change: transform opacity;
+  transition: all .16s var(--easing);
 }
 
 a:hover::before,
 a:focus:before {
   transform: scale(1.04, 1) rotate(.6deg);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  opacity: 1;
 }
 
 @media (pointer: coarse) {
@@ -67,4 +69,13 @@ a:focus em {
   a::before {
     transition: none;
   }
+}
+
+a[href^="https://"]:not([href*="intemperie.me"])::after {
+   content: "\2197";//↗︎
+   display: inline-block;
+   margin-left: .125em;
+   font-size: .8em;
+   vertical-align: baseline;
+   opacity: .8;
 }

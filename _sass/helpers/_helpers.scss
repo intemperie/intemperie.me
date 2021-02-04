@@ -25,3 +25,15 @@
 
 /* Avoid the ugly focus ring in form elements in Safari (focus styles added later) */
 :focus { outline: none; }
+
+/*Image replacement*/
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}

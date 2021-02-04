@@ -5,6 +5,11 @@
   width: 100%;
   border-bottom: 1px solid var(--color-border);
   -webkit-mask-image: linear-gradient(to right, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 4%, hsla(0,0%,0%,1) 94%, hsla(0,0%,0%,0) 100%);
+  position: fixed;
+  z-index: 3;
+  background: var(--background-color-alternate);
+  -webkit-backdrop-filter: blur(2rem);
+  backdrop-filter: blur(2rem);
 }
 
 .nav-main::-webkit-scrollbar {
@@ -28,6 +33,35 @@
 .nav-main a {
   display: block;
   text-decoration: none;
+}
+
+.logo .iso {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-.12em);
+  margin-right: .25ch;
+  -webkit-backface-visibility: hidden;
+}
+
+.logo .iso .shape {
+  fill: var(--color-accent);
+  will-change: fill;
+  transition: fill .16s var(--easing);
+}
+
+.logo:hover .iso .shape,
+.logo:focus .iso .shape {
+  fill: var(--background-color);
+}
+
+.nav-main a.active {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: .10em;
+  text-underline-offset: .16em;
+  text-decoration-skip-ink: auto;
 }
 
 // Improve touch targets of the navigation for limited pointer devices (as touch)

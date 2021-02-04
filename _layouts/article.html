@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="/css/webfonts/barlow-v5-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/webfonts/barlow-v5-latin-500italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/webfonts/barlow-condensed-v5-latin-800italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/favicon-touch.png">
+<title>{{ page.title | replace: "-", " " }}</title>
+</head>
+<body class="{{ page.body-class }}">
+{% include nav-main.html %}
+<article>
+  <section class="masthead">
+    <header>
+      <h1 class="display display5 overline">Alberto Calvo</h1>
+      <h2 class="display display1">I design things that <em class="stroke">matter</em></h2>
+      <p>I’m a generalist designer passionate about solving <em>relevant</em> problems in a <em>simple</em>, <em>inclusive</em>, and <em>ethical</em> way. Currently, I’m leading the design system at <a href="https://www.crunchbase.com/organization/cabify">Cabify</a>.</p>
+    </header>
+
+    <picture class="full-width">
+      <source
+        media="(min-width: 1024px)"
+        srcset="images/alberto-calvo-desktop.jpg 1x,
+                images/alberto-calvo-desktop@2x.jpg 2x">
+      <source
+        media="(min-width: 415px)"
+        srcset="images/alberto-calvo-tablet.jpg 1x,
+                images/alberto-calvo-tablet@2x.jpg 2x">
+      <img class="background"
+        src="images/alberto-calvo-phone.jpg" alt="Me, smiling in front of a laptop full of stickers. It wasn‘t mine, I promise"
+        srcset="/images/alberto-calvo-phone@2x.jpg 2x" width="100%">
+    </picture>
+    <a href="#content" class="read-more" title="Read more… "><svg version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M8,32l2.70006e-13,3.6239e-06c-2.00142e-06,-13.2548 10.7452,-24 24,-24c13.2548,-2.00142e-06 24,10.7452 24,24c2.00142e-06,13.2548 -10.7452,24 -24,24l1.04907e-06,-1.77636e-13c-13.2548,2.58081e-06 -24,-10.7452 -24,-24c-2.41585e-13,-1.22349e-06 -3.76588e-13,-2.40041e-06 -4.26326e-13,-3.6239e-06Zm25.3973,9.44l11.0046,-11.0227l3.29827e-08,-3.29408e-08c0.782146,-0.781152 0.782952,-2.04845 0.00179993,-2.8306c-0.781152,-0.782146 -2.04845,-0.782952 -2.8306,-0.00179993c0,0 -2.1103e-08,2.10762e-08 -2.1103e-08,2.10762e-08l-9.59,9.6064l-9.59,-9.6064l-5.68786e-08,-5.68103e-08c-0.782146,-0.781207 -2.04949,-0.780446 -2.8307,0.00170011c-0.781207,0.782146 -0.780446,2.04949 0.00170011,2.8307l11.0043,11.0227l-5.66351e-09,-5.6753e-09c0.779612,0.781234 2.04493,0.782549 2.82616,0.00293715c0.000980065,-0.00097803 0.00195911,-0.00195708 0.00293714,-0.00293714Z" fill="currentColor" fill-rule="evenodd" class="icon" /></svg></a>
+  </section>
+
+  <section id="content" class="wrapper alternate">
+    {{ content }}
+  </section>
+</article>
+</body>
+</html>

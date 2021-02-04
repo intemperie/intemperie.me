@@ -32,15 +32,43 @@ body {
 }
 
 article > .wrapper {
-  padding: 4rem 0;
+  padding: 8rem 0;
 }
 
 .alternate {
   background-color: var(--background-color-alternate);
+  transform: matrix(1, -.056, 0, 1, 0, 0);
+  position: relative;
+  top: -2rem;
+}
+
+.alternate > * {
+  transform: matrix(1, .056, 0, 1, 0, 0);
+}
+
+.alternate::before,
+.alternate::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-color-alternate);
+  z-index: -1;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(.25rem);
+
 }
 
 .alternate::before {
+  top: 1rem;
+  transform: matrix(1, -0.012, 0, 1, 0, 0);
+}
 
+.alternate::after {
+  content: "";
+  top: 1.5rem;
+  transform: matrix(1, 0.024, 0, 1, 0, 0);
 }
 
 @include tablet-and-above {
@@ -69,6 +97,6 @@ article > .wrapper {
   pointer-events: none;
 }
 
-.wrapper.about {
-  padding-bottom: 0;
-}
+// .wrapper.about {
+//   padding-top: 2rem;
+// }

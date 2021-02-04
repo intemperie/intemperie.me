@@ -1,5 +1,6 @@
 .masthead header {
   padding: 2rem 1rem 1rem;
+  position: relative;
 }
 
 .masthead .display1 {
@@ -23,23 +24,34 @@
 
 @include tablet-and-above {
   .masthead {
-    min-height: 85vh;
+    min-height: 96vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr min(42%, 100%) 1fr;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     position: relative;
   }
 
+  .home .masthead {
+    grid-template-columns: 1fr 1fr 1fr min(42%, 100%) 1fr;
+  }
+
   .masthead > header {
-    grid-column: 4;
     align-self: center;
     padding: 2rem;
     z-index: 1;
   }
 
-  // .masthead img {
-  //   -webkit-mask-image: url(halftone-inverted.svg);
-  //   -webkit-mask-size: 4rem;
-  // }
+  .home .masthead > header {
+    grid-column: 4;
+  }
+
+  .about-me .masthead > header {
+    grid-column: 2 / 4;
+  }
+
+  .masthead img {
+    -webkit-mask-image: url(halftone-inverted.svg);
+    -webkit-mask-size: 3rem;
+  }
 
   .masthead .full-width {
     grid-column: 1 / 6;
@@ -57,8 +69,8 @@
 
     // Scrim
     -webkit-mask-image: linear-gradient(to bottom,
-      hsl(0, 0%, 0%) 0%,
-      hsla(0, 0%, 0%, 0.995) 14%,
+      hsla(0, 0%, 0%, 0) 0%,
+
       hsla(0, 0%, 0%, 0.983) 26.2%,
       hsla(0, 0%, 0%, 0.964) 36.8%,
       hsla(0, 0%, 0%, 0.938) 45.9%,
@@ -84,13 +96,46 @@
 }
 
 @include wide-and-below {
-  .masthead > header {
+  .home .masthead > header {
     grid-column: 4 / 6;
+  }
+
+  .about-me .masthead > header {
+    grid-column: 1 / 5;
   }
 }
 
 @include wide-and-above {
-  .masthead > header {
+  .home .masthead > header {
     padding-right: 0;
   }
+
+  .about-me .masthead > header {
+    padding-left: 0;
+  }
+}
+
+.read-more {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 50rem;
+  box-shadow: inset 0 0 0 .5rem var(--background-color);
+}
+
+.read-more::before {
+  border-radius: 50rem;
+  mix-blend-mode: initial;
+  transform: scale(0, 0);
+}
+
+.read-more:hover::before,
+.read-more:focus::before {
+  transform: scale(1);
 }

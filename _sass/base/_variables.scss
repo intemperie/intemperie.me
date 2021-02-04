@@ -30,27 +30,27 @@
   --module-space-xxxl: calc(9 * var(--space-unit)); //72px (90px)
 
   // Primary colors
-  --color-base-dark: 198, 16%, 18%;
+  --color-base-dark: 198, 16%, 16%;
   --color-base-light: 352, 32%, 98%;
   --color-highlight-light: 352, 72%, 48%;
   --color-highlight-dark: 352, 100%, 72%;
 
   // Light background colors
   --color-background-light: hsl(var(--color-base-light));
-  --color-background-light-alternate: hsla(var(--color-highlight-light), .04);
+  --color-background-light-alternate: hsla(var(--color-base-dark), .024);
   --color-background-dark: hsl(var(--color-base-dark));
-  --color-background-dark-alternate: hsla(var(--color-highlight-dark), .06);
+  --color-background-dark-alternate: hsla(var(--color-base-light), .010);
 
   // Text color
   --color-text-light: hsl(var(--color-base-dark));
   --color-text-dark: hsl(var(--color-base-light));
 
   // UI detail color
-  --color-border-light: hsla(var(--color-base-dark), .08);
-  --color-border-dark: hsla(var(--color-base-light), .08);
+  --color-border-light: hsla(var(--color-base-dark), .02);
+  --color-border-dark: hsla(var(--color-base-light), .02);
 
   //Easing
-  --easing: cubic-bezier(.46, .01, .14, 1.35);
+  --easing: cubic-bezier(.46, .01, .14, 1.40);
 
   // Defaults (light mode)
   --background-color: var(--color-background-light);
@@ -60,7 +60,7 @@
   --color-accent: hsl(var(--color-highlight-light));
 }
 
-// Dark mode
+// // Dark mode
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: var(--color-background-dark);
