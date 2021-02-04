@@ -1,5 +1,5 @@
 .masthead header {
-  padding: 2rem 1rem 1rem;
+  padding: 5rem 1rem 1rem;
   position: relative;
 }
 
@@ -20,6 +20,10 @@
   display: block;
   position: relative;
   z-index: 0;
+}
+
+.read-more {
+  display: none;
 }
 
 @include tablet-and-above {
@@ -70,10 +74,8 @@
     // Scrim
     -webkit-mask-image: linear-gradient(to bottom,
       hsla(0, 0%, 0%, 0) 0%,
-
-      hsla(0, 0%, 0%, 0.983) 26.2%,
-      hsla(0, 0%, 0%, 0.964) 36.8%,
-      hsla(0, 0%, 0%, 0.938) 45.9%,
+      hsla(0, 0%, 0%, 0.143) 10.8%,
+      hsla(0, 0%, 0%, 0.938) 26.9%,
       hsla(0, 0%, 0%, 0.903) 53.7%,
       hsla(0, 0%, 0%, 0.86) 60.4%,
       hsla(0, 0%, 0%, 0.807) 66.2%,
@@ -92,6 +94,31 @@
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+  }
+
+  .read-more {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -.95rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 50rem;
+    box-shadow: inset 0 0 0 .5rem var(--background-color);
+  }
+
+  .read-more::before {
+    border-radius: 50rem;
+    mix-blend-mode: initial;
+    transform: scale(0, 0);
+  }
+
+  .read-more:hover::before,
+  .read-more:focus::before {
+    transform: scale(1);
   }
 }
 
@@ -113,29 +140,4 @@
   .about-me .masthead > header {
     padding-left: 0;
   }
-}
-
-.read-more {
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  margin: 0 auto;
-  position: absolute;
-  bottom: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  border-radius: 50rem;
-  box-shadow: inset 0 0 0 .5rem var(--background-color);
-}
-
-.read-more::before {
-  border-radius: 50rem;
-  mix-blend-mode: initial;
-  transform: scale(0, 0);
-}
-
-.read-more:hover::before,
-.read-more:focus::before {
-  transform: scale(1);
 }

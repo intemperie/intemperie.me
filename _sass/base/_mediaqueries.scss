@@ -1,5 +1,6 @@
 /* SCSS Variables */
 $breakpoint-tablet-width: 768px;
+$breakpoint-desktop-width: 1112px;
 $breakpoint-desktop-wide-width: 1600px;
 
 @mixin tablet-and-below {
@@ -10,6 +11,12 @@ $breakpoint-desktop-wide-width: 1600px;
 
 @mixin tablet-and-above {
   @media screen and (min-width: #{$breakpoint-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-below {
+  @media screen and (max-width: #{$breakpoint-desktop-width}) {
     @content;
   }
 }

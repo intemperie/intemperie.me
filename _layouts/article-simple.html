@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | replace: "-", " " }}</title>
+<meta name="description" content="{{ page.description | strip_html }}">
+<link rel="preload" href="/css/webfonts/barlow-v5-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/webfonts/barlow-v5-latin-500italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/webfonts/barlow-condensed-v5-latin-800italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/favicon-touch.png">
+</head>
+<body class="simple {{ page.body-class }}">
+{% include nav-main.html %}
+<article class="wrapper alternate">
+  {{ content }}
+</article>
+{% include nav-footer.html %}
+</body>
+</html>

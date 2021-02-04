@@ -17,6 +17,7 @@ a {
 a:hover,
 a:focus {
   color: var(--background-color);
+  text-shadow: none !important;
 }
 
 a::before {
@@ -47,7 +48,7 @@ a:focus:before {
   opacity: 1;
 }
 
-@media (pointer: coarse) {
+@include tablet-and-below {
   a:hover::before,
   a:focus:before {
     transform: scale(1.04, 1);
@@ -60,7 +61,7 @@ a:focus em {
   text-shadow: none;
 }
 
-//Don't animate links if user has set reduce motion (accessibility preference)
+// Don't animate links if user has set reduce motion (accessibility preference)
 @media (prefers-reduced-motion: reduce) {
   a {
     transition: none;
@@ -71,7 +72,9 @@ a:focus em {
   }
 }
 
-a[href^="https://"]:not([href*="intemperie.me"])::after {
+// External links
+a[href^="https://"]:not([href*="intemperie.me"])::after,
+a[href^="mailto:"]::after {
    content: "\2197";//↗︎
    display: inline-block;
    margin-left: .125em;

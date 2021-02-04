@@ -8,26 +8,29 @@
   --font-size-xxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
   --font-size-xxxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
   --font-size-max: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) *var(--scalar) * .9rem);
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
+
+  --font-weight-regular: 500;
   --font-weight-extra-bold: 800;
 
   // Spacing
   --space-unit: .5rem;
 
-  --font-space-sm: calc(1 * var(--space-unit)); //8px (10px)
-  --font-space-md: calc(2 * var(--space-unit)); //16px (20px)
-  --font-space-lg: calc(3 * var(--space-unit)); //24px (30px)
-  --font-space-xl: calc(4 * var(--space-unit)); //32px (40px)
-  --font-space-xxl: calc(5 * var(--space-unit)); //40px (50px)
-  --font-space-xxxl: calc(6 * var(--space-unit)); //48px (60px)
+  --font-space-sm: calc(1 * var(--space-unit));
+  --font-space-md: calc(2 * var(--space-unit));
+  --font-space-lg: calc(3 * var(--space-unit));
+  --font-space-xl: calc(4 * var(--space-unit));
+  --font-space-xxl: calc(5 * var(--space-unit));
+  --font-space-xxxl: calc(6 * var(--space-unit));
 
-  --module-space-sm: calc(1 * var(--space-unit)); //8px (10px)
-  --module-space-md: calc(2 * var(--space-unit)); //16px (20px)
-  --module-space-lg: calc(3 * var(--space-unit)); //24px (30px)
-  --module-space-xl: calc(5 * var(--space-unit)); //40px (50px)
-  --module-space-xxl: calc(7 * var(--space-unit)); //56px (70px)
-  --module-space-xxxl: calc(9 * var(--space-unit)); //72px (90px)
+  // --module-space-sm: calc(1 * var(--space-unit));
+  // --module-space-md: calc(2 * var(--space-unit));
+  // --module-space-lg: calc(3 * var(--space-unit));
+  // --module-space-xl: calc(5 * var(--space-unit));
+  // --module-space-xxl: calc(7 * var(--space-unit));
+  // --module-space-xxxl: calc(9 * var(--space-unit));
+
+  // Easing
+  --easing: cubic-bezier(.46, .01, .14, 1.40);
 
   // Primary colors
   --color-base-dark: 198, 16%, 16%;
@@ -35,38 +38,35 @@
   --color-highlight-light: 352, 72%, 48%;
   --color-highlight-dark: 352, 100%, 72%;
 
-  // Light background colors
-  --color-background-light: hsl(var(--color-base-light));
-  --color-background-light-alternate: hsla(var(--color-base-dark), .024);
-  --color-background-dark: hsl(var(--color-base-dark));
-  --color-background-dark-alternate: hsla(var(--color-base-light), .010);
-
-  // Text color
-  --color-text-light: hsl(var(--color-base-dark));
-  --color-text-dark: hsl(var(--color-base-light));
-
-  // UI detail color
-  --color-border-light: hsla(var(--color-base-dark), .02);
-  --color-border-dark: hsla(var(--color-base-light), .02);
-
-  //Easing
-  --easing: cubic-bezier(.46, .01, .14, 1.40);
-
   // Defaults (light mode)
-  --background-color: var(--color-background-light);
-  --background-color-alternate: var(--color-background-light-alternate);
-  --color-text: var(--color-text-light);
-  --color-border: var(--color-border-light);
+  --background-color: hsl(var(--color-base-light));
+  --background-color-transparent: hsla(var(--color-base-light), .98);
+  --background-color-alternate: hsla(var(--color-base-dark), .024);
+  --color-text: hsl(var(--color-base-dark));
+  --color-border: hsla(var(--color-base-dark), .06);
   --color-accent: hsl(var(--color-highlight-light));
 }
 
-// // Dark mode
+// Dark mode
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: var(--color-background-dark);
-    --background-color-alternate: var(--color-background-dark-alternate);
-    --color-text: var(--color-text-dark);
-    --color-border: var(--color-border-dark);
+    --background-color: hsl(var(--color-base-dark));
+    --background-color-transparent: hsla(var(--color-base-dark), .98);
+    --background-color-alternate: hsla(var(--color-base-light), .010);
+    --color-text: hsl(var(--color-base-light));
+    --color-border: hsla(var(--color-base-light), .03);
     --color-accent: hsl(var(--color-highlight-dark));
+  }
+}
+
+@supports (backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem)) {
+  :root {
+    --background-color-transparent: hsla(var(--color-base-light), .72);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color-transparent: hsla(var(--color-base-dark), .56);
+    }
   }
 }
