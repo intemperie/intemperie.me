@@ -9,6 +9,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  scroll-margin-top: 1rem;
 }
 
 body {

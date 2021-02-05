@@ -8,6 +8,6 @@
     <li><a href="/about-me" {% if current[1] == 'about-me' %} class="active"{% endif %}>About me</a></li>
     <li><a href="/work" {% if current[1] == 'work' %} class="active"{% endif %}>Work</a></li>
     <li><a href="/what-people-say" {% if current[1] == 'what-people-say' %} class="active"{% endif %}>What people say</a></li>
-    <li><a href="/playground" {% if current[1] == 'playground' %} class="active"{% endif %}>Playground</a></li>
+    <li><a href="/playground" class="playground{% if current[1] == 'playground' %} active{% endif %}">Playground</a></li>
   </ol>
 </nav>

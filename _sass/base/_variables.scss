@@ -38,6 +38,12 @@
   --color-highlight-light: 352, 72%, 48%;
   --color-highlight-dark: 352, 100%, 72%;
 
+  // Themes
+  --color-cabify-base-dark: 238,32%, 19%;
+  --color-cabify-base-light: 0, 100%, 100%;
+  --color-cabify-highlight-light: 252, 100%, 66%;
+  --color-cabify-highlight-dark: 249, 100%, 74%;
+
   // Defaults (light mode)
   --background-color: hsl(var(--color-base-light));
   --background-color-transparent: hsla(var(--color-base-light), .98);
@@ -47,6 +53,15 @@
   --color-accent: hsl(var(--color-highlight-light));
 }
 
+.cabify:root {
+  --background-color: hsl(var(--color-cabify-base-light));
+  --background-color-transparent: hsla(var(--color-cabify-base-light), .98);
+  --background-color-alternate: hsla(var(--color-cabify-base-dark), .010);
+  --color-text: hsl(var(--color-cabify-base-dark));
+  --color-border: hsla(var(--color-cabify-base-dark), .06);
+  --color-accent: hsl(var(--color-cabify-highlight-light));
+}
+
 // Dark mode
 @media (prefers-color-scheme: dark) {
   :root {
@@ -54,8 +69,17 @@
     --background-color-transparent: hsla(var(--color-base-dark), .98);
     --background-color-alternate: hsla(var(--color-base-light), .010);
     --color-text: hsl(var(--color-base-light));
-    --color-border: hsla(var(--color-base-light), .03);
+    --color-border: hsla(var(--color-base-light), .04);
     --color-accent: hsl(var(--color-highlight-dark));
+  }
+
+  .cabify:root {
+    --background-color: hsl(var(--color-cabify-base-dark));
+    --background-color-transparent: hsla(var(--color-cabify-base-dark), .98);
+    --background-color-alternate: hsla(var(--color-cabify-base-light), .016);
+    --color-text: hsl(var(--color-cabify-base-light));
+    --color-border: hsla(var(--color-cabify-base-light), .04);
+    --color-accent: hsl(var(--color-cabify-highlight-dark));
   }
 }
 
@@ -67,6 +91,10 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --background-color-transparent: hsla(var(--color-base-dark), .56);
+    }
+
+    .cabify:root {
+      --background-color-transparent: hsla(var(--color-cabify-base-dark), .56);
     }
   }
 }

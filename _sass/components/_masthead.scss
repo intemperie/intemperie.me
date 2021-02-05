@@ -42,6 +42,7 @@
     align-self: center;
     padding: 2rem;
     z-index: 1;
+    grid-column: 2 / 5;
   }
 
   .home .masthead > header {
@@ -68,13 +69,13 @@
     object-position: 50% 50%;
     position: absolute;
     left: 0;
-    opacity: .20;
+    opacity: .24;
     z-index: 0;
 
     // Scrim
     -webkit-mask-image: linear-gradient(to bottom,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.143) 10.8%,
+      hsla(0, 0%, 0%, 1) 0%,
+      hsla(0, 0%, 0%, 0.943) 10.8%,
       hsla(0, 0%, 0%, 0.938) 26.9%,
       hsla(0, 0%, 0%, 0.903) 53.7%,
       hsla(0, 0%, 0%, 0.86) 60.4%,
@@ -87,6 +88,18 @@
       hsla(0, 0%, 0%, 0.273) 91.1%,
       hsla(0, 0%, 0%, 0.143) 95.3%,
       hsla(0, 0%, 0%, 0) 100%);
+  }
+
+  //Vignette
+  .masthead::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: inset 0 0 16rem var(--background-color);
   }
 
   .masthead .background {

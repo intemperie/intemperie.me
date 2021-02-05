@@ -1,19 +1,50 @@
-.visuals .full-width {
+.work .overline {
+  left: 0;
+  width: 100%;
+}
+
+.work .overline::before {
+  flex: 1 1;
+  width: auto;
+}
+
+.work .overline + .display {
+  margin: var(--font-space-md) 0 0;
+}
+
+.work .company,
+.work .position {
+  text-align: center;
+}
+
+.work .full-width {
   margin: 2rem auto 1rem;
   text-align: center;
   font-size: var(--font-size-sm);
 }
 
-.visuals .full-width:last-child {
+.work .full-width:last-child {
   margin-bottom: 0;
 }
 
-.visuals figcaption {
+.work figcaption {
   padding: 0 .5rem;
 }
 
-.visuals img {
+.work img {
   width: 100%;
   max-width: 1600px;
   height: auto;
+}
+
+.display.position {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: .20rem solid var(--color-accent);
+}
+
+.company + .display.position {
+  border-top: 0 none;
+  padding-top: 0;
+  margin-top: var(--font-space-md);;
 }
