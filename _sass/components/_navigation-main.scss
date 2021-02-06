@@ -58,6 +58,14 @@
   padding: 1rem;
 }
 
+.nav-main li:first-child {
+  padding-left: 0;
+}
+
+.nav-main li:last-child {
+  padding-right: 0;
+}
+
 .nav-main a,
 .nav-footer a {
   display: block;

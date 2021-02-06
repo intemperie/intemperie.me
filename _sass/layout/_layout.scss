@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 
-.simple {
+.simple body {
   padding-top: 3rem;
 }
 
@@ -42,6 +42,7 @@ article.wrapper {
 
 .alternate {
   background-color: var(--background-color-alternate);
+  overflow: hidden;
 }
 
 .nav-main + .alternate {

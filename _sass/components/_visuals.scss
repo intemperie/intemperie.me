@@ -1,15 +1,57 @@
-.work .overline {
-  left: 0;
-  width: 100%;
+// .work .overline {
+//   left: 0;
+//   width: 100%;
+// }
+//
+// .work .overline::before {
+//   flex: 1 1;
+//   width: auto;
+// }
+
+.work .display__background {
+  margin: 0 0 0 -.05em;
+  font-size: var(--font-size-max);
+  position: absolute;
+  opacity: .08;
+  text-align: center;
 }
 
-.work .overline::before {
-  flex: 1 1;
-  width: auto;
-}
-
-.work .overline + .display {
+.company {
   margin: var(--font-space-md) 0 0;
+}
+
+  .company:first-of-type {
+    margin-top: 0;
+  }
+
+.timeline {
+  margin: 8rem 0 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  display: block;
+  width: .20rem;
+  height: 6rem;
+  background: var(--color-border);
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.position.timeline + .position.timeline {
+  margin-top: 5rem;
+}
+
+.position.timeline + .position.timeline::before {
+  height: 3rem;
+  top: -4rem;
+}
+
+.company + .position {
+  margin-top: var(--font-space-sm);
 }
 
 .work .company,
@@ -17,34 +59,71 @@
   text-align: center;
 }
 
-.work .full-width {
+.media {
   margin: 2rem auto 1rem;
   text-align: center;
+}
+
+.media figcaption {
+  padding: 0 .5rem;
   font-size: var(--font-size-sm);
 }
 
-.work .full-width:last-child {
-  margin-bottom: 0;
-}
-
-.work figcaption {
-  padding: 0 .5rem;
-}
-
-.work img {
-  width: 100%;
+.media .project-data,
+.media img {
   max-width: 1600px;
+  margin: 0 auto;
+}
+
+.media img {
+  width: 100%;
   height: auto;
 }
 
-.display.position {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: .20rem solid var(--color-accent);
+.media .project-data {
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.company + .display.position {
-  border-top: 0 none;
-  padding-top: 0;
-  margin-top: var(--font-space-md);;
+@include wide-and-below {
+  .project-data > * {
+    padding: 0 1rem;
+  }
 }
+
+.project-data .team {
+  width: 90%;
+  padding-right: 2rem;
+}
+
+.project-data .team ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.project-data .team li {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.project-data .team li:not(:last-child)::after {
+  content: ", "
+}
+
+.project-data .team li:last-child:not(:only-child)::after {
+  content: "."
+}
+
+// .display.position {
+//   margin-top: 2rem;
+//   padding-top: 2rem;
+//   border-top: .20rem solid var(--color-border);
+// }
+//
+// .company + .display.position {
+//   border-top: 0 none;
+//   padding-top: 0;
+//   margin-top: var(--font-space-md);;
+// }

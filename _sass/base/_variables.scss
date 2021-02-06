@@ -7,7 +7,7 @@
   --font-size-xl: calc(var(--scalar) * var(--scalar) * 1rem);
   --font-size-xxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
   --font-size-xxxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
-  --font-size-max: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) *var(--scalar) * .9rem);
+  --font-size-max: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);;
 
   --font-weight-regular: 500;
   --font-weight-extra-bold: 800;
@@ -21,13 +21,6 @@
   --font-space-xl: calc(4 * var(--space-unit));
   --font-space-xxl: calc(5 * var(--space-unit));
   --font-space-xxxl: calc(6 * var(--space-unit));
-
-  // --module-space-sm: calc(1 * var(--space-unit));
-  // --module-space-md: calc(2 * var(--space-unit));
-  // --module-space-lg: calc(3 * var(--space-unit));
-  // --module-space-xl: calc(5 * var(--space-unit));
-  // --module-space-xxl: calc(7 * var(--space-unit));
-  // --module-space-xxxl: calc(9 * var(--space-unit));
 
   // Easing
   --easing: cubic-bezier(.46, .01, .14, 1.40);
@@ -47,7 +40,7 @@
   // Defaults (light mode)
   --background-color: hsl(var(--color-base-light));
   --background-color-transparent: hsla(var(--color-base-light), .98);
-  --background-color-alternate: hsla(var(--color-base-dark), .024);
+  --background-color-alternate: hsla(var(--color-base-dark), .016);
   --color-text: hsl(var(--color-base-dark));
   --color-border: hsla(var(--color-base-dark), .06);
   --color-accent: hsl(var(--color-highlight-light));
