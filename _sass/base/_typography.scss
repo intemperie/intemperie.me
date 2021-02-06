@@ -68,6 +68,24 @@ h6,
   letter-spacing: .04em;
 }
 
+@supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
+  .stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var(--color-text);
+    -webkit-text-stroke-width: .0625rem;
+    paint-order: stroke fill;
+  }
+}
+
+.display__background {
+  margin: 0 0 0 -.05em;
+  font-size: calc(1rem + 40vw);
+  position: absolute;
+  color: var(--color-border);
+  -webkit-text-stroke-color: var(--color-border);
+  text-align: center;
+}
+
 .overline {
   display: flex;
   flex-direction: row;
@@ -242,13 +260,4 @@ code {
   padding: .2em;
   background-color: var(--color-border);
   text-shadow: 0 .055em 0 var(--background-color);
-}
-
-@supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
-  .stroke {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: var(--color-text);
-    -webkit-text-stroke-width: .0625rem;
-    paint-order: stroke fill;
-  }
 }

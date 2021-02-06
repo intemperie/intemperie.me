@@ -8,13 +8,6 @@
 //   width: auto;
 // }
 
-.work .display__background {
-  margin: 0 0 0 -.05em;
-  font-size: var(--font-size-max);
-  position: absolute;
-  opacity: .08;
-  text-align: center;
-}
 
 .company {
   margin: var(--font-space-md) 0 0;
@@ -36,17 +29,22 @@
   height: 6rem;
   background: var(--color-border);
   position: absolute;
-  top: -7rem;
+  top: -8rem;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.position {
+  margin-bottom: 2rem;
 }
 
 .position.timeline + .position.timeline {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .position.timeline + .position.timeline::before {
-  height: 3rem;
+  height: 2rem;
   top: -4rem;
 }
 
@@ -60,7 +58,7 @@
 }
 
 .media {
-  margin: 2rem auto 1rem;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 
