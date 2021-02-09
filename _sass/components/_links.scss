@@ -14,7 +14,7 @@ a {
   transition: color .16s var(--easing);
 }
 
-a:is(:hover,:focus) {
+a:is(:hover, :focus) {
   color: var(--background-color);
   text-shadow: none !important;
 }
@@ -40,7 +40,7 @@ a::before {
   transition: all .16s var(--easing);
 }
 
-a:is(:hover,:focus)::before {
+a:is(:hover, :focus)::before {
   transform: scale(1.04, 1) rotate(.6deg);
   -webkit-backface-visibility: hidden;
   opacity: 1;
@@ -52,7 +52,7 @@ a:is(:hover,:focus)::before {
   }
 }
 
-a:is(:hover,:focus) em {
+a:is(:hover, :focus) em {
   box-shadow: none;
   text-shadow: none;
 }

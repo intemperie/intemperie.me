@@ -264,4 +264,9 @@ hr {
   height: .2rem;
   background-color: var(--color-border);
   border: 0 none;
+  margin: 2rem 0 2rem;
+}
+
+hr + * {
+  margin-top: 2rem;
 }
