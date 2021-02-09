@@ -264,11 +264,11 @@ code {
 
 hr {
   display: block;
-  width: 100%;
+  width: calc(100% - 2rem);
   height: .2rem;
-  background-color: var(--color-border);
+  margin: 2rem auto;
   border: 0 none;
-  margin: 2rem 0 2rem;
+  background-color: var(--color-border);
 }
 
 hr + * {
