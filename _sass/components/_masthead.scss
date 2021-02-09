@@ -5,6 +5,7 @@
 
 .masthead .display1 {
   padding-bottom: var(--font-space-md);
+  margin-bottom: var(--font-space-md);
   border-bottom: .20rem solid var(--color-accent);
 }
 
@@ -128,8 +129,7 @@
     transform: scale(0, 0);
   }
 
-  .read-more:hover::before,
-  .read-more:focus::before {
+  .read-more:is(:hover,:focus)::before {
     transform: scale(1);
   }
 }

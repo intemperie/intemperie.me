@@ -31,10 +31,16 @@
   --color-highlight-light: 352, 72%, 48%;
   --color-highlight-dark: 352, 100%, 72%;
 
-  // Themes
+  // Theme labs
+  --color-labs-base-dark: 0,0%, 16%;
+  --color-labs-base-light: 0, 0%, 98%;
+  --color-labs-highlight-light: 182, 80%, 26%;
+  --color-labs-highlight-dark: 175, 100%, 54%;
+
+  // Theme Cabify
   --color-cabify-base-dark: 238,32%, 19%;
   --color-cabify-base-light: 0, 100%, 100%;
-  --color-cabify-highlight-light: 252, 100%, 66%;
+  --color-cabify-highlight-light: 252, 100%, 72%;
   --color-cabify-highlight-dark: 249, 100%, 74%;
 
   // Defaults (light mode)
@@ -53,6 +59,15 @@
   --color-text: hsl(var(--color-cabify-base-dark));
   --color-border: hsla(var(--color-cabify-base-dark), .06);
   --color-accent: hsl(var(--color-cabify-highlight-light));
+}
+
+.labs:root {
+  --background-color: hsl(var(--color-labs-base-light));
+  --background-color-transparent: hsla(var(--color-labs-base-light), .98);
+  --background-color-alternate: hsla(var(--color-labs-base-dark), .010);
+  --color-text: hsl(var(--color-cabify-labs-dark));
+  --color-border: hsla(var(--color-labs-base-dark), .06);
+  --color-accent: hsl(var(--color-labs-highlight-light));
 }
 
 // Dark mode
@@ -74,20 +89,41 @@
     --color-border: hsla(var(--color-cabify-base-light), .04);
     --color-accent: hsl(var(--color-cabify-highlight-dark));
   }
+
+  .labs:root {
+    --background-color: hsl(var(--color-labs-base-dark));
+    --background-color-transparent: hsla(var(--color-labs-base-dark), .98);
+    --background-color-alternate: hsla(var(--color-labs-base-light), .016);
+    --color-text: hsl(var(--color-labs-base-light));
+    --color-border: hsla(var(--color-labs-base-light), .04);
+    --color-accent: hsl(var(--color-labs-highlight-dark));
+  }
 }
 
 @supports (backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem)) {
   :root {
-    --background-color-transparent: hsla(var(--color-base-light), .72);
+    --background-color-transparent: hsla(var(--color-base-light), .80);
+  }
+
+  .cabify:root {
+    --background-color-transparent: hsla(var(--color-cabify-base-light), .80);
+  }
+
+  .labs:root {
+    --background-color-transparent: hsla(var(--color-labs-base-light), .80);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color-transparent: hsla(var(--color-base-dark), .56);
+      --background-color-transparent: hsla(var(--color-base-dark), .72);
     }
 
     .cabify:root {
-      --background-color-transparent: hsla(var(--color-cabify-base-dark), .56);
+      --background-color-transparent: hsla(var(--color-cabify-base-dark), .72);
+    }
+
+    .labs:root {
+      --background-color-transparent: hsla(var(--color-labs-base-dark), .72);
     }
   }
 }

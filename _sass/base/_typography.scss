@@ -1,7 +1,7 @@
 :root {
   font-size: clamp(1.125rem, calc(1em + .875vmin), 1.875rem);
   line-height: 1.5;
-  font-family: Barlow, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 500;
   text-rendering: optimizeLegibility;
 }
@@ -12,9 +12,10 @@
   }
 }
 
+:is(h1, h2, h3, h4, h5, h6),
 .display,
 .recommendations li::after {
-  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: var(--font-weight-extra-bold);
   font-style: italic;
   text-transform: uppercase;
@@ -23,14 +24,14 @@
 h1,
 .display1 {
   font-size: var(--font-size-xxxl);
-  margin: var(--font-space-xxxl) 0 var(--font-space-md); //48 x 24px
+  margin: var(--font-space-xxxl) 0 var(--font-space-sm); //48 x 24px
   line-height: 1; //40px
 }
 
 h2,
 .display2 {
   font-size: var(--font-size-xxl);
-  margin: var(--font-space-xxl) 0 var(--font-space-lg); //32 x 20px
+  margin: var(--font-space-xxl) 0 var(--font-space-sm); //32 x 20px
   line-height: 1.15;
 }
 
@@ -60,16 +61,23 @@ h5,
 }
 
 h6,
-.display6,
- {
+.display6 {
   font-size: var(--font-size-sm);
   margin: var(--font-space-md) 0 0; //24 x 8px
   line-height: 1.5;
   letter-spacing: .04em;
 }
 
+
+// Remove spaces after headings, especially useful to prevent margin stacking in h + h
+:is(h1, h2, h3, h4, h5, h6) + p,
+:is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6)[class],
+:is(h1, h2, h3, h4, h5, h6).tight {
+  margin-top: 0;
+}
+
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
-  .stroke {
+  .display__stroke {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var(--color-text);
     -webkit-text-stroke-width: .09375rem;
@@ -89,13 +97,8 @@ h6,
 .overline {
   display: flex;
   flex-direction: row;
-  margin-top: 0;
   margin-bottom: var(--font-space-sm);
   color: var(--color-accent);
-}
-
-.overline__secondary {
-  color: var(--color-text);
 }
 
 .overline::before,
@@ -105,11 +108,6 @@ h6,
   transform: translateY(50%);
   margin: auto;
   border-bottom: .20rem solid var(--color-accent);
-}
-
-.overline__secondary::before,
-.overline__secondary::after {
-  border-bottom-color: var(--color-border);
 }
 
 .overline::before {
@@ -128,12 +126,10 @@ h6,
   left: -1rem;
 }
 
+// Let the overline breathe when there's a heading below
+.overline + :is(h1, h2, h3, h4, h5, h6),
 .overline + .display {
   margin-top: var(--font-space-sm);
-}
-
-.display + p {
-  margin-top: 0;
 }
 
 p {
@@ -171,7 +167,7 @@ small,
   font-size: var(--font-size-sm);
 }
 
-.display small {
+:is(h1, h2, h3, h4, h5, h6, h1[class], h2[class], h3[class], h4[class], h5[class], h6[class]) small {
   display: block;
   margin-top: .25em;
   font-size: .6em;
@@ -260,4 +256,12 @@ code {
   padding: .2em;
   background-color: var(--color-border);
   text-shadow: 0 .055em 0 var(--background-color);
+}
+
+hr {
+  display: block;
+  width: 100%;
+  height: .2rem;
+  background-color: var(--color-border);
+  border: 0 none;
 }

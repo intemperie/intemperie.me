@@ -14,8 +14,7 @@ a {
   transition: color .16s var(--easing);
 }
 
-a:hover,
-a:focus {
+a:is(:hover,:focus) {
   color: var(--background-color);
   text-shadow: none !important;
 }
@@ -41,22 +40,19 @@ a::before {
   transition: all .16s var(--easing);
 }
 
-a:hover::before,
-a:focus:before {
+a:is(:hover,:focus)::before {
   transform: scale(1.04, 1) rotate(.6deg);
   -webkit-backface-visibility: hidden;
   opacity: 1;
 }
 
 @include tablet-and-below {
-  a:hover::before,
-  a:focus:before {
+  a:is(:hover,:focus)::before {
     transform: scale(1.04, 1);
   }
 }
 
-a:hover em,
-a:focus em {
+a:is(:hover,:focus) em {
   box-shadow: none;
   text-shadow: none;
 }
