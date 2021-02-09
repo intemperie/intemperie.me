@@ -1,5 +1,5 @@
 :root {
-  font-size: clamp(1.125rem, calc(1em + .875vmin), 1.875rem);
+  font-size: clamp(1.125rem, calc(1rem + .875vmin), 1.875rem);
   line-height: 1.5;
   font-family: Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 500;
@@ -99,6 +99,7 @@ h6,
   flex-direction: row;
   margin-bottom: var(--font-space-sm);
   color: var(--color-accent);
+  line-height: 1;
 }
 
 .overline::before,
@@ -184,22 +185,18 @@ blockquote {
 }
 
 blockquote p {
-  margin: 0;
   position: relative;
   font-style: italic;
 }
 
 blockquote cite {
+  display: inline-block;
   font-size: var(--font-size-sm);
+  margin-top: var(--font-space-md);
   font-style: italic;
 }
 
-blockquote p::before,
-blockquote p::after {
-  color: var(--color-accent);
-}
-
-blockquote p::before {
+blockquote p:first-child::before {
   content: "\201C";
   left: -.8ch;
   top: -.32em;
@@ -207,9 +204,16 @@ blockquote p::before {
   font-size: var(--font-size-xxl);
 }
 
-blockquote p::after {
+blockquote p:only-of-type::after,
+blockquote p:nth-child(n+2)::after {
   content: "\201D";
 }
+
+blockquote p::before,
+blockquote p::after {
+  color: var(--color-accent);
+}
+
 
 .recommendations {
   counter-reset: recommendations;

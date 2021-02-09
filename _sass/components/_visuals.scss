@@ -1,5 +1,9 @@
+.timeline {
+  margin-bottom: 2rem;
+}
+
 .timeline:not(:first-of-type) {
-  margin: 8rem 0 2rem;
+  margin-top: 8rem;
   position: relative;
 }
 
