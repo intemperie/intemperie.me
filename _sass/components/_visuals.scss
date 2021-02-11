@@ -75,18 +75,18 @@
 }
 
 .project-data .team {
-  width: 90%;
+  width: 100%;
   padding-right: 2rem;
 }
 
-.project-data .team ul {
+.project-data .team :is(ol, ul) {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
 }
 
 .project-data .team li {
-  display: inline-block;
+  display: inline;
   margin-top: 0;
 }
 
@@ -94,6 +94,14 @@
   content: ", "
 }
 
+.project-data .team li:last-child:not(:only-child)::before {
+  content: "and ";
+}
+
 .project-data .team li:last-child:not(:only-child)::after {
-  content: "."
+  content: ".";
+}
+
+.project-data .responsibilities li:not(:first-child) {
+  text-transform: lowercase;
 }

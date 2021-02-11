@@ -3,20 +3,19 @@ a {
   white-space: nowrap;
   position: relative;
   z-index: 2;
+  color: inherit;
+  font-style: inherit;
   text-decoration: underline solid;
   text-decoration-color: var(--color-accent);
   text-decoration-thickness: .10em;
   text-underline-offset: .16em;
   text-decoration-skip-ink: auto;
-  color: inherit;
-  font-style: inherit;
   will-change: color;
   transition: color .16s var(--easing);
 }
 
 a:is(:hover, :focus) {
   color: var(--background-color);
-  text-shadow: none !important;
 }
 
 a::before {
@@ -36,7 +35,7 @@ a::before {
   opacity: 0;
   transform-origin: bottom;
   mix-blend-mode: color;
-  will-change: transform opacity;
+  will-change: transform;
   transition: all .16s var(--easing);
 }
 
@@ -50,11 +49,6 @@ a:is(:hover, :focus)::before {
   a:is(:hover,:focus)::before {
     transform: scale(1.04, 1);
   }
-}
-
-a:is(:hover, :focus) em {
-  box-shadow: none;
-  text-shadow: none;
 }
 
 // Don't animate links if user has set reduce motion (accessibility preference)
