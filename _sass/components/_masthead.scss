@@ -69,6 +69,7 @@
     z-index: 0;
     filter: contrast(1.1);
     will-change: transform;
+    background-color: var(--color-text);
     // Scrim
     -webkit-mask-image: linear-gradient(to bottom,
       hsla(0, 0%, 0%, 1) 0%,
@@ -85,6 +86,12 @@
       hsla(0, 0%, 0%, 0.273) 91.1%,
       hsla(0, 0%, 0%, 0.143) 95.3%,
       hsla(0, 0%, 0%, 0) 100%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .masthead .full-width {
+      background-color: transparent;
+    }
   }
 
   .masthead .background {
