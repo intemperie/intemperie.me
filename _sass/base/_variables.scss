@@ -26,10 +26,15 @@
   --easing: cubic-bezier(.46, .01, .14, 1.40);
 
   // Primary colors
-  --color-base-dark: 252, 32%, 16%;
-  --color-base-light: 252, 32%, 98%;
-  --color-highlight-light: 352, 64%, 56%;
-  --color-highlight-dark: 352, 100%, 72%;
+  // Morado + Rojo
+  // --color-base-dark: 252, 32%, 16%;
+  // --color-base-light: 252, 32%, 98%;
+  // --color-highlight-light: 352, 64%, 56%;
+  // --color-highlight-dark: 352, 100%, 72%;
+  --color-base-dark: 40, 3%, 19%;
+  --color-base-light: 35, 51%, 93%;
+  --color-highlight-light: 11, 62%, 56%;
+  --color-highlight-dark: 11, 68%, 67%;
 
   // Theme labs
   --color-labs-base-dark: 252, 32%, 16%;
@@ -84,7 +89,7 @@
   .cabify:root {
     --background-color: hsl(var(--color-cabify-base-dark));
     --background-color-transparent: hsla(var(--color-cabify-base-dark), .98);
-    --background-color-alternate: hsla(var(--color-cabify-base-light), .016);
+    --background-color-alternate: hsla(var(--color-cabify-base-light), .012);
     --color-text: hsl(var(--color-cabify-base-light));
     --color-border: hsla(var(--color-cabify-base-light), .04);
     --color-accent: hsl(var(--color-cabify-highlight-dark));
@@ -93,7 +98,7 @@
   .labs:root {
     --background-color: hsl(var(--color-labs-base-dark));
     --background-color-transparent: hsla(var(--color-labs-base-dark), .98);
-    --background-color-alternate: hsla(var(--color-labs-base-light), .016);
+    --background-color-alternate: hsla(var(--color-labs-base-light), .012);
     --color-text: hsl(var(--color-labs-base-light));
     --color-border: hsla(var(--color-labs-base-light), .04);
     --color-accent: hsl(var(--color-labs-highlight-dark));

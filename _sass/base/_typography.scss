@@ -1,21 +1,27 @@
 :root {
   font-size: clamp(1.125rem, calc(1rem + .875vmin), 1.875rem);
   line-height: 1.5;
-  font-family: Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 500;
+  font-family: /*"Recoleta alt", Recoleta, Moranga,*/ Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: var(--font-weight-regular);
   text-rendering: optimizeLegibility;
 }
 
 @include desktop-and-below {
   :root {
-    --scalar: 1.333;
+    --scalar: 1.333; // Perfect fourth
+  }
+}
+
+@include wide-and-above {
+  :root {
+    --scalar: 1.618; // Golden ratio
   }
 }
 
 :is(h1, h2, h3, h4, h5, h6),
 .display,
 .recommendations li::after {
-  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: /*"Recoleta alt", Recoleta, Moranga,*/ "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: var(--font-weight-extra-bold);
   font-style: italic;
   text-transform: uppercase;
@@ -139,10 +145,15 @@ p {
 }
 
 .first__letter::first-letter {
-  -webkit-initial-letter: 2;
-  initial-letter: 2;
-  margin-right: .6ch;
   color: var(--color-accent);
+}
+
+@supports (-webkit-initial-letter: 2) {
+  .first__letter::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    margin-right: .6ch;
+  }
 }
 
 ul,
