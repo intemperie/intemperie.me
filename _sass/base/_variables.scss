@@ -10,6 +10,7 @@
   --font-size-max: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);;
 
   --font-weight-regular: 500;
+  --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
 
   // Spacing
@@ -27,14 +28,14 @@
 
   // Primary colors
   // Morado + Rojo
-  // --color-base-dark: 252, 32%, 16%;
-  // --color-base-light: 252, 32%, 98%;
-  // --color-highlight-light: 352, 64%, 56%;
-  // --color-highlight-dark: 352, 100%, 72%;
-  --color-base-dark: 40, 3%, 19%;
-  --color-base-light: 35, 51%, 93%;
-  --color-highlight-light: 11, 62%, 56%;
-  --color-highlight-dark: 11, 68%, 67%;
+  --color-base-dark: 252, 32%, 16%;
+  --color-base-light: 252, 32%, 98%;
+  --color-highlight-light: 352, 64%, 56%;
+  --color-highlight-dark: 352, 100%, 72%;
+  // --color-base-dark: 40, 3%, 19%;
+  // --color-base-light: 35, 51%, 93%;
+  // --color-highlight-light: 11, 62%, 56%;
+  // --color-highlight-dark: 11, 68%, 67%;
 
   // Theme labs
   --color-labs-base-dark: 252, 32%, 16%;

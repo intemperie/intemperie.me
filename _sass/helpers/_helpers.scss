@@ -21,6 +21,7 @@
 /*Selection color for pages*/
 *::selection {
   background: var(--color-accent);
+  color: var(--background-color);
 }
 
 /* Avoid the ugly focus ring in form elements in Safari (focus styles added later) */

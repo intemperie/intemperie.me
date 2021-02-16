@@ -1,6 +1,7 @@
 .nav-main {
   display: flex;
   width: 100%;
+  letter-spacing: .01em;
 }
 
 .nav-main {
@@ -20,6 +21,12 @@
     background: var(--background-color-transparent);
     -webkit-backdrop-filter: blur(2rem);
     backdrop-filter: blur(2rem);
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-margin-top: 1rem;
   }
 }
 

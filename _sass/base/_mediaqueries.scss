@@ -16,10 +16,17 @@ $breakpoint-desktop-wide-width: 1600px;
 }
 
 @mixin desktop-and-below {
-  @media screen and (max-width: #{$breakpoint-desktop-width}) {
+  @media screen and (max-width: #{$breakpoint-desktop-width - 1px}) {
     @content;
   }
 }
+
+@mixin desktop-and-above {
+  @media screen and (min-width: #{$breakpoint-desktop-width}) {
+    @content;
+  }
+}
+
 
 @mixin wide-and-below {
   @media screen and (max-width: #{$breakpoint-desktop-wide-width - 1px}) {

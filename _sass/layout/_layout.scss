@@ -17,7 +17,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  scroll-margin-top: 1rem;
 }
 
 *:first-child {
@@ -79,7 +78,6 @@ article.wrapper {
   }
 
   .masthead + .alternate {
-
     position: relative;
     top: -2rem;
   }
@@ -100,7 +98,8 @@ article.wrapper {
     pointer-events: none;
     -webkit-backdrop-filter: blur(.25rem);
     backdrop-filter: blur(.25rem);
-
+    // -webkit-mask-image: url(halftone-inverted.svg);
+    // -webkit-mask-size: 3rem;
   }
 
   .alternate::before {
@@ -137,4 +136,58 @@ article.wrapper {
   width: 100%;
   background-color: var(--background-color);
   pointer-events: none;
+}
+
+@include wide-and-below {
+  .home .info {
+    padding: 0 1rem;
+  }
+}
+
+@include desktop-and-above {
+  .home .info {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+  }
+
+  .principles { grid-area: 1 / 1 / 2 / 4; }
+  .quote { grid-area: 1 / 4 / 2 / 7; }
+  .experience { grid-area: 2 / 1 / 3 / 4; }
+  .talks { grid-area: 2 / 4 / 3 / 7; }
+}
+
+.home .quote {
+  padding: 0;
+  align-self: center;
+  position: relative;
+  top: calc(var(--font-space-xl) * -1);
+}
+
+.home .quote::before {
+  content: "\25AB \25AB \25AB";
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  display: block;
+  margin: 0 auto 2rem;
+  transform: skew(-.16rad);
+  color: var(--color-border);
+  line-height: 1;
+}
+
+.quote .display {
+  margin-top: var(--font-space-lg);
+}
+
+.quote .space-between {
+  // color: var(--color-border);
+}
+
+.quote .view-more {
+  margin-top: 2rem;
 }

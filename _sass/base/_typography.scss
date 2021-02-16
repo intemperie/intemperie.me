@@ -1,7 +1,7 @@
 :root {
   font-size: clamp(1.125rem, calc(1rem + .875vmin), 1.875rem);
   line-height: 1.5;
-  font-family: /*"Recoleta alt", Recoleta, Moranga,*/ Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: var(--font-weight-regular);
   text-rendering: optimizeLegibility;
 }
@@ -21,7 +21,7 @@
 :is(h1, h2, h3, h4, h5, h6),
 .display,
 .recommendations li::after {
-  font-family: /*"Recoleta alt", Recoleta, Moranga,*/ "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: var(--font-weight-extra-bold);
   font-style: italic;
   text-transform: uppercase;
@@ -74,7 +74,6 @@ h6,
   letter-spacing: .04em;
 }
 
-
 // Remove spaces after headings, especially useful to prevent margin stacking in h + h
 :is(h1, h2, h3, h4, h5, h6) + p,
 :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6)[class],
@@ -83,7 +82,8 @@ h6,
 }
 
 @supports ((-webkit-text-stroke-color: #fff) and (-webkit-text-fill-color: transparent)) {
-  .display__stroke {
+  .display__stroke,
+  .recommendations li::after {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var(--color-text);
     -webkit-text-stroke-width: .09375rem;
@@ -91,13 +91,17 @@ h6,
   }
 }
 
+.display__background,
+.recommendations li::after {
+  -webkit-text-stroke-color: var(--color-border);
+}
+
 .display__background {
   margin: 0 0 0 -.05em;
   font-size: calc(1rem + 40vw);
   position: absolute;
-  color: var(--color-border);
-  -webkit-text-stroke-color: var(--color-border);
   text-align: center;
+  color: var(--color-border);
 }
 
 .overline {
@@ -106,13 +110,18 @@ h6,
   margin-bottom: var(--font-space-sm);
   color: var(--color-accent);
   line-height: 1;
+  letter-spacing: .01em;
+}
+
+.overline:not(:first-child) {
+  margin-top: var(--font-space-xxxl);
 }
 
 .overline::before,
 .overline::after {
   content: "";
   display: inline-block;
-  transform: translateY(50%);
+  transform: translateY(50%) skew(-.16rad);
   margin: auto;
   border-bottom: .20rem solid var(--color-accent);
 }
@@ -133,10 +142,23 @@ h6,
   left: -1rem;
 }
 
-// Let the overline breathe when there's a heading below
-.overline + :is(h1, h2, h3, h4, h5, h6),
-.overline + .display {
-  margin-top: var(--font-space-sm);
+.masthead .overline + h2 {
+  position: relative;
+}
+
+.masthead .overline + h2::after {
+  content: "";
+  position: absolute;
+  bottom: -.20rem;
+  left: 0;
+  right: 0;
+  transform: skew(-.16rad);
+  border-bottom: .20rem solid var(--color-accent);
+}
+
+// Let the overline breathe when there's something below
+.overline + * {
+  margin-top: var(--font-space-md);
 }
 
 p {
@@ -144,15 +166,13 @@ p {
   word-wrap: break-word; //Preventing ultra long words to break the layout
 }
 
-.first__letter::first-letter {
-  color: var(--color-accent);
-}
-
 @supports (-webkit-initial-letter: 2) {
   .first__letter::first-letter {
     -webkit-initial-letter: 2;
     initial-letter: 2;
     margin-right: .6ch;
+    color: var(--color-accent);
+    font-style: normal;
   }
 }
 
@@ -175,9 +195,21 @@ ul li + li {
   margin-top: .25rem;
 }
 
+.list-clean,
+.list-clean__children :is(ul, ol) {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
 small,
 .small {
   font-size: var(--font-size-sm);
+  line-height: 1.5;
 }
 
 :is(h1, h2, h3, h4, h5, h6, h1[class], h2[class], h3[class], h4[class], h5[class], h6[class]) small {
@@ -202,20 +234,19 @@ blockquote p {
 }
 
 blockquote cite {
-  display: inline-block;
-  font-size: var(--font-size-sm);
-  margin-top: var(--font-space-md);
+  display: block;
   font-style: italic;
 }
 
-blockquote p:first-child::before {
+blockquote p:first-of-type::before {
   content: "\201C";
-  left: -.8ch;
-  top: -.32em;
+  left: -.45em;
+  line-height: 1em;
   position: absolute;
   font-size: var(--font-size-xxl);
 }
 
+// Quotes
 blockquote p:only-of-type::after,
 blockquote p:nth-child(n+2)::after {
   content: "\201D";
@@ -226,10 +257,14 @@ blockquote p::after {
   color: var(--color-accent);
 }
 
-
 .recommendations {
   counter-reset: recommendations;
   list-style: none;
+}
+
+.recommendations cite {
+  font-size: var(--font-size-sm);
+  margin-top: var(--font-space-md);
 }
 
 .recommendations li {
@@ -243,7 +278,7 @@ blockquote p::after {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xxxl);
   color: var(--color-border);
 }
 
@@ -277,12 +312,18 @@ code {
 hr {
   display: block;
   width: calc(100% - 2rem);
+  width: 100%;
   height: .2rem;
   margin: 2rem auto;
   border: 0 none;
   background-color: var(--color-border);
+  transform: skew(-.16rad);
 }
 
-hr + * {
-  margin-top: 2rem;
+// hr + * {
+//   margin-top: 2rem;
+// }
+
+.accent {
+  color: var(--color-accent);
 }

@@ -4,9 +4,8 @@
 }
 
 .masthead .display1 {
-  padding-bottom: var(--font-space-md);
+  padding-bottom: var(--font-space-lg);
   margin-bottom: var(--font-space-md);
-  border-bottom: .20rem solid var(--color-accent);
 }
 
 .masthead .caption {
@@ -48,16 +47,19 @@
 
   .home .masthead > header {
     grid-column: 4;
+    max-width: 34rem;
   }
 
   .about-me .masthead > header {
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
+    max-width: 46rem;
   }
 
   .masthead .full-width {
     grid-column: 1 / 6;
   }
 
+  // Background
   .masthead .full-width {
     width: 100%;
     height: 100%;
@@ -88,12 +90,14 @@
       hsla(0, 0%, 0%, 0) 100%);
   }
 
+  // Fix for halftone in light mode
   @media (prefers-color-scheme: dark) {
     .masthead .full-width {
       background-color: transparent;
     }
   }
 
+  // Image
   .masthead .background {
     width: 100%;
     height: 100%;
@@ -103,7 +107,7 @@
     -webkit-mask-size: 3rem;
   }
 
-  //Vignette
+  // Vignette
   .masthead::after {
     content: "";
     display: block;
@@ -115,7 +119,6 @@
     box-shadow: inset 0 0 9rem var(--background-color);
     pointer-events: none;
   }
-
 
   .read-more {
     display: block;
@@ -139,6 +142,12 @@
 
   .read-more:is(:hover,:focus)::before {
     transform: scale(1);
+  }
+
+  .masthead h2,
+  .masthead h1 {
+    // -webkit-mask-image: url(halftone-inverted.svg);
+    // -webkit-mask-size: 3rem;
   }
 }
 

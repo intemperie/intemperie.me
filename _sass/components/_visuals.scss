@@ -105,3 +105,30 @@
 .project-data .responsibilities li:not(:first-child) {
   text-transform: lowercase;
 }
+
+// .featured {
+//   margin-top: var(--font-space-sm);
+// }
+
+.featured > li:not(:last-child) {
+  margin-bottom: var(--font-space-md);
+  display: block;
+}
+
+.featured .display5 {
+  margin-bottom: 0;
+}
+
+// .featured .date {
+//   color: var(--color-accent);
+// }
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.featured .description {
+  display: block;
+}

@@ -5,17 +5,30 @@ a {
   z-index: 2;
   color: inherit;
   font-style: inherit;
+
+  will-change: color;
+  transition: color .16s var(--easing);
+}
+
+a:not(.button) {
   text-decoration: underline solid;
   text-decoration-color: var(--color-accent);
   text-decoration-thickness: .10em;
   text-underline-offset: .16em;
   text-decoration-skip-ink: auto;
-  will-change: color;
-  transition: color .16s var(--easing);
 }
 
 a:is(:hover, :focus) {
   color: var(--background-color);
+}
+
+.button {
+  text-decoration: none;
+  color: var(--color-accent);
+  border: .05em solid var(--color-accent);
+  border-radius: 1px;
+  padding: .4em 1em .5em;
+  //font-weight: var(--font-weight-bold);
 }
 
 a::before {
@@ -62,13 +75,24 @@ a:is(:hover, :focus)::before {
   }
 }
 
+// Icon after links
+a[href^="https://"]:not([href*="intemperie.me"])::after,
+a[href^="mailto:"]::after,
+a.view-more::after {
+  display: inline-block;
+  margin-left: .125em;
+  font-size: .8em;
+  vertical-align: baseline;
+  opacity: .8;
+}
+
 // External links
 a[href^="https://"]:not([href*="intemperie.me"])::after,
 a[href^="mailto:"]::after {
    content: "\2197";//↗︎
-   display: inline-block;
-   margin-left: .125em;
-   font-size: .8em;
-   vertical-align: baseline;
-   opacity: .8;
+}
+
+// View more links
+a.view-more::after {
+  content: "\2192";//→
 }
