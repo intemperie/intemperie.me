@@ -69,7 +69,7 @@
     left: 0;
     opacity: .24;
     z-index: 0;
-    filter: contrast(1.1);
+    //filter: contrast(1.1) grayscale(1);
     will-change: transform;
     background-color: var(--color-text);
     // Scrim

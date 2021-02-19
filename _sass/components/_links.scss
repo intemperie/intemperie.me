@@ -26,6 +26,7 @@ a:is(:hover, :focus) {
   text-decoration: none;
   color: var(--color-accent);
   border: .05em solid var(--color-accent);
+  border-bottom-width: .10em;
   border-radius: 1px;
   padding: .4em 1em .5em;
   //font-weight: var(--font-weight-bold);

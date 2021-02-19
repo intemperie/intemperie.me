@@ -1,10 +1,13 @@
 /* SCSS Variables */
 $breakpoint-tablet-width: 768px;
+$breakpoint-tablet-height: 1024px;
 $breakpoint-desktop-width: 1112px;
+$breakpoint-desktop-height: 786px;
 $breakpoint-desktop-wide-width: 1600px;
+$breakpoint-desktop-wide-height: 900px;
 
 @mixin tablet-and-below {
-  @media screen and (max-width: #{$breakpoint-tablet-width - 1px}) {
+  @media screen and (max-width: #{$breakpoint-tablet-width - .02px}) {
     @content;
   }
 }
@@ -16,26 +19,26 @@ $breakpoint-desktop-wide-width: 1600px;
 }
 
 @mixin desktop-and-below {
-  @media screen and (max-width: #{$breakpoint-desktop-width - 1px}) {
+  @media screen and (max-width: #{$breakpoint-desktop-width - .02px}) and (max-height: #{$breakpoint-desktop-height - .02px}) {
     @content;
   }
 }
 
 @mixin desktop-and-above {
-  @media screen and (min-width: #{$breakpoint-desktop-width}) {
+  @media screen and (min-width: #{$breakpoint-desktop-width}) and (min-height: #{$breakpoint-desktop-height}) {
     @content;
   }
 }
 
 
 @mixin wide-and-below {
-  @media screen and (max-width: #{$breakpoint-desktop-wide-width - 1px}) {
+  @media screen and (max-width: #{$breakpoint-desktop-wide-width - .02px}) and (max-height: #{$breakpoint-desktop-wide-height - .02px}) {
     @content;
   }
 }
 
 @mixin wide-and-above {
-  @media screen and (min-width: #{$breakpoint-desktop-wide-width}) {
+  @media screen and (min-width: #{$breakpoint-desktop-wide-width}) and (min-height: #{$breakpoint-desktop-wide-height}) {
     @content;
   }
 }

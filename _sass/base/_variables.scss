@@ -1,13 +1,13 @@
 :root {
   --scalar: 1.5; // Ratio: Perfect fifth
 
-  --font-size-sm: calc(1 / var(--scalar) * 1rem);
+  --font-size-sm: calc(1 / var(--scalar) * var(--font-size-md));
   --font-size-md: 1rem;
-  --font-size-lg: calc(var(--scalar) * 1rem);
-  --font-size-xl: calc(var(--scalar) * var(--scalar) * 1rem);
-  --font-size-xxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
-  --font-size-xxxl: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
-  --font-size-max: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);;
+  --font-size-lg: calc(var(--font-size-md) * var(--scalar));
+  --font-size-xl: calc(var(--font-size-lg) * var(--scalar));
+  --font-size-xxl: calc(var(--font-size-xl) * var(--scalar));
+  --font-size-xxxl: calc(var(--font-size-xxl) * var(--scalar));
+  --font-size-max: calc(var(--font-size-md) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar));;
 
   --font-weight-regular: 500;
   --font-weight-bold: 700;
@@ -29,7 +29,7 @@
   // Primary colors
   // Morado + Rojo
   --color-base-dark: 252, 32%, 16%;
-  --color-base-light: 252, 32%, 98%;
+  --color-base-light: 252, 32%, 92%;
   --color-highlight-light: 352, 64%, 56%;
   --color-highlight-dark: 352, 100%, 72%;
   // --color-base-dark: 40, 3%, 19%;
@@ -39,8 +39,8 @@
 
   // Theme labs
   --color-labs-base-dark: 252, 32%, 16%;
-  --color-labs-base-light: 252, 32%, 98%;
-  --color-labs-highlight-light: 180, 80%, 32%;
+  --color-labs-base-light: 252, 32%, 92%;
+  --color-labs-highlight-light: 269, 64%, 48%;
   --color-labs-highlight-dark: 175, 100%, 54%;
 
   // Theme Cabify
